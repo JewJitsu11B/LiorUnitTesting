@@ -13,8 +13,17 @@ Rat facts. The Mathlib-dependent real-number band enclosures (sqrt2, phi) live i
 separate `CALConsistencyReal` library so the fast core stays dependency-light.
 -/
 
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "v4.14.0"
+
 package «CALConsistency» where
   leanOptions := #[⟨`autoImplicit, false⟩]
 
+/-- Dependency-free core: dimension identities + rational band checks (decide). -/
 @[default_target]
 lean_lib «CALConsistency» where
+
+/-- Mathlib-dependent: real-number band enclosures for the irrational/transcendental
+    predictions we were unsure Mathlib could handle (FSC tight band, transcendental tail). -/
+@[default_target]
+lean_lib «CALConsistencyReal» where
