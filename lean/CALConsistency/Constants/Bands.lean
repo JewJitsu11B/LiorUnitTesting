@@ -70,4 +70,43 @@ theorem pmns_th13_in_band :
 theorem ckm_cabibbo_in_band :
     22434 * 182 ≤ 41 * 100000 ∧ 41 * 100000 ≤ 22568 * 182 := by decide
 
+/-! ## Batch 2: five more rational-prediction constants (pure decide). -/
+
+/-- Heaviest neutrino: m_nu3 = m_e * alpha^3 / 4, alpha = 1/137.036,
+    m_e = 510.99895 keV. Exact (meV): 1996089648437500/40209071635979 = 49.6428.
+    NuFIT sqrt|dm2_31| = 49.53 +- 0.33 meV => band [49.20, 49.86] = [246/5, 2493/50]. -/
+theorem mnu3_in_band :
+    246 * 40209071635979 ≤ 1996089648437500 * 5
+  ∧ 1996089648437500 * 50 ≤ 2493 * 40209071635979 := by decide
+
+/-- CKM atmospheric: sin th23 = A * sin^2 th12 = (5/6)*(41/182)^2 = 8405/198744 = 0.042291.
+    PDG 0.04182 +- 0.00085 => band [0.04097, 0.04267]. -/
+theorem ckm_th23_in_band :
+    4097 * 198744 ≤ 8405 * 100000
+  ∧ 8405 * 100000 ≤ 4267 * 198744 := by decide
+
+/-- Charm quark: m_c = 4*Lambda_QCD*C_EW(u)*(211/128), Lambda_QCD = 218 MeV,
+    C_EW(u) = 1 - sin^2thW/2 = 1 - 0.23122/2. Exact (MeV): 2034008561/1600000 = 1271.26.
+    PDG 1273 +- 4.6 => band [1268.4, 1277.6] = [6342/5, 6388/5]. -/
+theorem mc_in_band :
+    6342 * 1600000 ≤ 2034008561 * 5
+  ∧ 2034008561 * 5 ≤ 6388 * 1600000 := by decide
+
+/-- Top quark: m_t = m_H*C_EW(u)*(42/27 + 1/882), m_H = v*28/55 (v = 246.22).
+    Exact (GeV): 1494884682317/8662500000 = 172.570. PDG 172.52 +- 0.33
+    => band [172.19, 172.85] = [17219/100, 3457/20]. -/
+theorem mt_in_band :
+    17219 * 8662500000 ≤ 1494884682317 * 100
+  ∧ 1494884682317 * 20 ≤ 3457 * 8662500000 := by decide
+
+/-- Second neutrino: m_nu2 = m_nu3 / sqrt(R), R = dm2_31/dm2_21 = 9728/297 (B15).
+    m_nu2 in [lo,hi] <=> lo^2*R <= m_nu3^2 <= hi^2*R (all positive), a RATIONAL check
+    by squaring -- no sqrt needed. m_nu2 = 8.674 meV; NuFIT 8.678 +- 0.104
+    => band [8.574, 8.782] meV. (m_nu3^2 numerator = 1996089648437500^2.) -/
+theorem mnu2_in_band :
+    1241560928 * 1616769441827290935487288441
+      ≤ 3984373884599342346191406250000 * 515625
+  ∧ 3984373884599342346191406250000 * 4640625
+      ≤ 11722775648 * 1616769441827290935487288441 := by decide
+
 end CALConsistency.Bands
