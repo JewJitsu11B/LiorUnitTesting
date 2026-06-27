@@ -6,3 +6,4 @@ in its independently-cited experimental band, with no `sorry` and no axioms beyo
 -/
 import CALConsistencyReal.Ns
 import CALConsistencyReal.FineStructureIR
+import CALConsistencyReal.Higgs

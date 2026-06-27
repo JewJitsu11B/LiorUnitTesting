@@ -109,4 +109,34 @@ theorem mnu2_in_band :
   ∧ 3984373884599342346191406250000 * 4640625
       ≤ 11722775648 * 1616769441827290935487288441 := by decide
 
+/-! ## Batch 3: the remaining sqrt-constants, reduced to rational by isolating the
+    single sqrt and squaring (positive product => both sides valid). -/
+
+/-- CKM reactor: sin th13 = (5/6)(1/sqrt7)(41/182)^3 = K/sqrt7, K = 344605/36171408.
+    pred in [lo,hi] <=> sqrt7 in [K/hi, K/lo] <=> (K/hi)^2 <= 7 <= (K/lo)^2.
+    pred = 0.003601; PDG sin th13 = 0.00369 +- 0.00011 => [0.00358, 0.00380]. -/
+theorem ckm_th13_in_band :
+    215378125 ^ 2 ≤ 7 * 85907094 ^ 2
+  ∧ 7 * 404667627 ^ 2 ≤ 1076890625 ^ 2 := by decide
+
+/-- Scalar amplitude: A_s = (Lqcd/mt)^3 * (1 + (7/135) sqrt(mH/mt)),
+    Lqcd=218 MeV, mt=172.69 GeV, mH=125.35 GeV. Isolate the sqrt and square:
+    A_s in [lo,hi] <=> sqrt(mH/mt) in [a,b] <=> a^2 <= mH/mt <= b^2, with mH/mt = 12535/17269.
+    pred = 2.1006e-9; Planck 2018 A_s = (2.105 +- 0.030)e-9 => [2.075, 2.135]e-9. -/
+theorem As_in_band :
+    351949015360269 ^ 2 * 17269 ≤ 12535 * 580172992000000 ^ 2
+  ∧ 12535 * 2900864960000000 ^ 2 ≤ 3428323328660661 ^ 2 * 17269 := by decide
+
+/-- Strong-CP angle (geometric): theta_QCD = (Lambda_QCD/M_Pl)^2,
+    Lambda_QCD=0.218 GeV, M_Pl=1.221e19 GeV => 3.19e-42, well below the neutron-EDM
+    bound theta < 1e-10. NOTE: this is a LOOSE one-sided bound-consistency check (~30
+    orders of margin), not a tight band -- low teeth, included for completeness. -/
+theorem thetaQCD_below_bound :
+    47524 < 1490841 * 10 ^ 28 := by decide
+
+/- Non-transcendental constants with NO independent experimental band (not band-checkable):
+   sin^2 thW|GUT = 3/8 (a GUT boundary condition, not directly measured),
+   m_nu1 = 0 (exact prediction, unmeasured), alpha_B = 71/135 (validated only through Y_B).
+   These are exact framework values; there is nothing external to test them against here. -/
+
 end CALConsistency.Bands
