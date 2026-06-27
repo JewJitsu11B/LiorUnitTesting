@@ -9,3 +9,4 @@ dependent real-number band enclosures live in a separate library.
 -/
 import CALConsistency.Primitives.Dimensions
 import CALConsistency.Constants.RationalChecks
+import CALConsistency.Constants.Bands
