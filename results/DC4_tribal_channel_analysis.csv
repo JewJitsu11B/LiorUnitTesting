@@ -1,0 +1,6 @@
+quantity,value
+delta_lens_cross_tribe,0.011251121759414673
+delta_content_cross_tribe,209803664.0
+content_to_lens_delta_ratio,18647355212.007538
+interpretation,H1: content detects tribalization at cross-tribe pairs; lens does not
+verdict,H1_supported

@@ -1,0 +1,13 @@
+nu,form,mean_H,frac_positive
+0.5,nist,1.4728494534210768e-05,1.0
+0.5,dual_tsallis,0.014110351912677288,1.0
+0.5,mixed_renyi_tsallis,-10.152463912963867,0.0
+1.0,nist,0.0,0.0
+1.0,dual_tsallis,0.0,0.0
+1.0,mixed_renyi_tsallis,0.0,0.0
+1.5,nist,-2.2968045243487722e-07,0.0
+1.5,dual_tsallis,-0.00020802718063350767,0.0
+1.5,mixed_renyi_tsallis,13597164.0,1.0
+2.0,nist,-7.692852221907742e-08,0.0
+2.0,dual_tsallis,-0.0001903888478409499,0.0
+2.0,mixed_renyi_tsallis,16591871.0,1.0

@@ -1,0 +1,6 @@
+quantity,value
+pearson_r_lens_content,-0.046997841540295224
+p_value,2.578847593111978e-06
+H0_threshold,0.5
+H1_threshold,0.3
+verdict,H1_supported

@@ -1,0 +1,3 @@
+case,r2_shape,chi2,dof,expected_outcome,pass
+exact_qexp_synthetic,0.9819949811428135,53.263071414201164,38,R2_shape>0.9 (true positive check),True
+adversarial_bestfit_exp,0.9801764428400733,,,q-exp R2_shape > best-fit-exp R2_shape on field data,True

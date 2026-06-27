@@ -1,0 +1,3 @@
+quantity,value
+mean_delta_content,10726947840.0
+interpretation,content is bilocal sensor if delta_content > 0
