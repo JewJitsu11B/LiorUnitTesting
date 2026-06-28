@@ -1,0 +1,4 @@
+form_A,form_B,mean_abs_diff
+nist,dual_tsallis,6.63871833239682e-05
+nist,mixed_renyi_tsallis,16352092.0
+dual_tsallis,mixed_renyi_tsallis,16352092.0

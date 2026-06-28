@@ -1,0 +1,15 @@
+quantity,value
+alpha_K,1.5
+w_c,0.3
+w_d,0.1
+q_fixed_pred,1.6666666666666665
+tc_fixed_pred,0.6666666666666666
+A_data_derived,-0.2553518499142144
+G_inf_data_derived,-0.08943489836894084
+r2_shape,0.9980194855390395
+r2_tail,0.9896367661173779
+chi2,93.54876293751002
+dof,38
+secondary_fit_q,1.5796237723898727
+secondary_fit_tau_c,0.8847947579187578
+verdict,H1_qexponential_shape

@@ -1,0 +1,4 @@
+rank,form,mean_delta_H
+1,mixed_renyi_tsallis,293540.09375
+2,dual_tsallis,2.0649538328143535e-06
+3,nist,8.81991724099862e-09

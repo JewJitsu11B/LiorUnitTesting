@@ -1,0 +1,4 @@
+quantity,value
+max_delta_nu,4.76837158203125e-07
+mean_delta_lens,6.571412303202351e-09
+interpretation,lens invariant to factorization if delta_lens ~ 0

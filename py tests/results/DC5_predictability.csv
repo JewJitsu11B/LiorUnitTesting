@@ -1,0 +1,8 @@
+quantity,value
+slope,-215598076979.5952
+intercept,-72747849150.0824
+pearson_r,-0.04351849529452242
+R_squared,0.0018938594326993697
+H0_threshold_R2,0.5
+H1_threshold_R2,0.25
+verdict,H1_supported

@@ -1,0 +1,4 @@
+form,log_range,has_variation
+nist,25.454151153564453,True
+dual_tsallis,5.35671854019165,True
+mixed_renyi_tsallis,0.8745822906494141,False
