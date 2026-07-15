@@ -160,22 +160,40 @@ factor is `-i`, not `+i`. Invisible at alpha = 0 and 2 (where `e^{i.pi} = e^{-i.
 alpha = 2 closure is protected from it; wrong at alpha = 1 and 3. The manual is clean here: it writes
 the corners as `cos(alpha.pi/2) = 1, 0, -1, 0`, which is even and therefore sign-blind.
 
-**3.6 "Split (2,2)" is a typo for (4,4), and the manual already says so.**
-`born_axiomatic.tex` l.38 (abstract) and l.139 (`lem:signature`) describe the carrier as having a
-"split (2,2) norm" and a "split-signature (2,2) carrier". `Re N(q) = sum(x_mu^2 - y_mu^2)` on R^8
-has eigenvalues `[-1,-1,-1,-1,+1,+1,+1,+1]`: signature **(4,4)**.
+**3.6 "Split (2,2)" should be (4,4). RESOLVED IN BOTH FILES.**
+`born_axiomatic.tex` l.38 (abstract) and `lem:signature` described the carrier as having a "split
+(2,2) norm" and a "split-signature (2,2) carrier". `Re N(q) = sum(x_mu^2 - y_mu^2)` on R^8 has
+eigenvalues `[-1,-1,-1,-1,+1,+1,+1,+1]`: signature **(4,4)**.
 
-This is not merely the auditor's arithmetic disagreeing with the paper. `CAL_Unified_Manual.tex` states it correctly and in more
-detail, in the closure-chain table (~l.393):
+**Provenance -- an earlier draft of this report had this wrong.** It was first written up as a typo
+in the Born paper contradicting its parent, on the grounds that `CAL_Unified_Manual.tex` had it
+right in the closure-chain table (~l.393): "Derived from the carrier's `(4,4) = (1,3) (+) (3,1)`
+split". That table was right, but the manual *also* asserted `(2,2)` in its projection-cascade
+subsection: the heading read `(6,2) -> (2,2) -> (1,3)`, and the prose called `C(x)H` "the `(2,2)`
+algebraic carrier ... whose intrinsic split-signature norm is `(2,2)`". The manual contradicted
+*itself*, l.393 against the cascade, and `born_axiomatic.tex` was faithfully copying the cascade.
+The Born paper was not mistyping; it was inheriting.
 
-> Derived from the carrier's `(4,4) = (1,3) (+) (3,1)` split
+The tell was internal to that paragraph: it insisted "the dimension count is preserved (eight real
+either way)" four lines after labelling those eight dimensions `(2,2)`, which is four-dimensional.
+Under `(2,2)` the first arrow silently loses four dimensions while the prose claims it does not.
+Only `(4,4)` makes the cascade's own bookkeeping work: `(6,2) -> (4,4) -> (1,3)` is `8 -> 8 -> 4`,
+arrow 1 a change of operative quadratic form (dimension preserved, as stated) and arrow 2 the
+Hermitian projection discarding the `(3,1)` anti-Hermitian summand.
 
-which is exactly the computed spectrum (`(1,3)` contributes one plus and three minus, `(3,1)` three
-plus and one minus). So the Born paper contradicts its own parent manuscript, and the fix is a
-one-character correction in two places. (2,2) is a legitimate quaternionic signature -- it is the
-split-quaternion norm, and it does occur here on particular real 4-dim slices, e.g. the real span
-of `{1, i_q, i.j_q, i.k_q}` giving `x0^2 + x1^2 - x2^2 - x3^2` -- but it cannot describe the
-8-real-dimensional carrier that `Herm(q)` projects from.
+`(2,2)` is a legitimate quaternionic signature -- it is the split-quaternion norm, carried here by
+the real span of `{1, i, hj, hk}` giving `x0^2 + x1^2 - x2^2 - x3^2`. It is a four-dimensional
+subalgebra, not the eight-dimensional carrier that `Herm(q)` projects from. That is almost
+certainly where the number came from.
+
+**Both files are now fixed.** The manual's cascade reads `(6,2) -> (4,4) -> (1,3)` with an explicit
+dimension column, and adds a derivation this audit did not have: for `Z = a + hb` with `a,b` in `H`,
+`N(Z) = (|a|^2 - |b|^2) + 2h<a,b>`, whose real part is manifestly neutral (confirmed here on random
+trials). It now states outright that `(2,2)` "belongs to the split-quaternion subalgebra
+`span_R{1, i, hj, hk} = M_2(R)` ... a four-dimensional *part* of the carrier rather than the
+carrier", independently reaching the same subalgebra identified above. `born_axiomatic.tex` l.38,
+l.54 and `lem:signature` now say `(4,4)`, with `lem:signature` naming the `(3,1)` kernel it
+annihilates.
 
 **3.6a The glossary's direct sum should be a superposition.** `CAL_Unified_Manual.tex` l.4762
 (pre-fold l.6412) glosses the source current as "cost/thermal `(+)` phase/action", using the
