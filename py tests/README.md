@@ -63,6 +63,47 @@ Additional sweeps and diagnostics: `exp_corr_sweep.py`, `exp_nubar_twosided.py`,
 `exp_cp_kernel_sweep.py`, `exp_born_input.py`, `exp_trough_principled_E.py`, and
 `exp_closed_loop_field.py` (the closed-loop field harness).
 
+#### The Born-rule audit group (2026-07)
+
+Eight scripts checking the derivation in `born_axiomatic.tex` and the `thm:Born_fp` chain in
+`CAL_Unified_Manual.tex`. Written up in `reports_n_findings/CAL_BORN_AUDIT_2026-07.md`. These do
+**not** duplicate `exp_two_closures.py` (C1-C7); each adds a distinct claim. Several are negatives
+and are kept as negatives.
+
+- `exp_clifford_conjugation_identification.py` - the bar IS Clifford conjugation and the dagger IS
+  REVERSION in Cl(3,0), so the Born closure is the canonical geometric-algebra norm rather than a
+  bespoke composite. Also refutes the claim that reversion sends `t + x` to `t - x` (it fixes
+  grade-1 vectors; Clifford conjugation is what flips them).
+- `exp_born_form_uniqueness.py` - Lemma 4.3's uniqueness is false: `a|q0|^2 + b*sum|qk|^2` with
+  `a != b` passes every invariance the lemma states. Repaired by requiring invariance under the
+  spinor action `q -> u q` (SU(2)), which costs unitarity as a premise.
+- `exp_born_paravector_forward_cone.py` - `W^dag W` is a forward-cone paravector (grade 0+1 only),
+  `t^2 - |x|^2 = |det W|^2`, null exactly on the zero divisors, rank 2 generic / 1 on the cone.
+  Also: the Born weight is a time component, not a Lorentz scalar.
+- `exp_born_invariance_vs_positivity.py` - for quadratic forms the algebra gives positive XOR
+  invariant; `|N(W)|^2` escapes only by going quartic and degenerate, and fails Parseval. Also the
+  "split (2,2)" carrier computes to (4,4).
+- `exp_born_fixedpoint_channel_width.py` - **headline negative.** The Born fixed point requires
+  `tau = 2` (the map returns its input only there), while the theorem states it "requires no
+  condition on the channel width tau" and its own proof preamble says Steps 1-4 "read off the
+  channel width it requires".
+- `exp_frft_even_order_reality.py` - `F^alpha` preserves reality iff alpha is even (`F^2` is
+  parity), but being real-linear it cannot *create* reality: a complex action channel stays complex
+  at every alpha.
+- `exp_holomorphic_dual_channels.py` - `H = -ln|psi|^2` is harmonic and its holomorphic dual is
+  `arg(psi)`; good structure, but absent from the manuscript, which instead needs an imaginary
+  action. Includes the decisive check that `theta_R = theta_I` plus Cauchy-Riemann forces both
+  drivers constant.
+- `exp_polar_form_interference.py` - the quaternionic polar form `J = rho e^{n theta}` destroys the
+  interference cross term (`|J|^2 = rho^2`), reintroduces the preferred quaternionic direction the
+  centrality argument forecloses, and confines `J` to a 2-of-8-dimensional slice.
+
+**Import note.** `cal/` lives at the repo root, one level above this folder, and Python puts the
+*script's* directory on `sys.path` -- not the cwd. So a bare `from cal.biquaternion import ...`
+raises `ModuleNotFoundError` when an `exp_*.py` is run directly, which is why the audit scripts
+insert the parent directory on `sys.path` first. This affects the older `exp_*.py` scripts too:
+they currently need `PYTHONPATH=<repo root>` to run standalone.
+
 ### `reports_n_findings/`
 - `FINDINGS_REPORT.md` - a written summary of the validated results, the methods, and the
   "so what" for each, including the one honest negative.
