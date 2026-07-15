@@ -15,9 +15,27 @@ Audited: `SourceDocs/born_axiomatic.tex` (327 lines) and `SourceDocs/CAL_Unified
 algebraically and against the source text. 25 reader/verifier agents across two passes; the second
 pass returned 0 of 8 findings refuted under both adversarial refutation and steelman review.
 
-**Caveat on line numbers.** The manual was folded from 6661 to 5013 lines during the audit; the
-earlier version is preserved as `SourceDocs/CAL_Unified_Manual_pre-fold.tex`. Some material cited
-below survives **only** in the pre-fold file. Every citation names its file.
+**Caveat on line numbers -- read this before chasing a citation.** `CAL_Unified_Manual.tex` is
+under active edit and its line numbers move. It was folded from 6661 to 5013 lines during the audit
+(the earlier version is preserved as `SourceDocs/CAL_Unified_Manual_pre-fold.tex`) and had grown to
+5149 lines by the time this report was finished. Line numbers cited for the manual are **as of the
+5013-line state** and several have already shifted -- e.g. "not a quaternionic imaginary" moved
+l.541 -> l.556, and thm:Born_fp's tau claim moved l.1357 -> l.1472.
+
+The **stable anchors are the LaTeX labels and the verbatim quotes**, both given alongside every
+manual citation below. Use those; treat the line numbers as a hint. The relevant labels:
+
+| label | what it is |
+|---|---|
+| `def:source` | the two-channel source current (the additive definition) |
+| `def:J-closed` | the closed form, and the `theta_R = theta_I` closure condition |
+| `def:channel-angle` | `theta = alpha.pi/2` |
+| `thm:Born_fp` | the Born fixed point, and the "no condition on tau" claim |
+| `thm:scalar` | the `A = C^2/4` scalar identity (what `Thm. IX.6` should point at) |
+
+Citations to `born_axiomatic.tex` (327 lines) and to the pre-fold manual are stable; neither is
+being edited. Some material cited below survives **only** in the pre-fold file. Every citation
+names its file.
 
 ## 2. Confirmed / positive
 
@@ -70,8 +88,8 @@ dagger-unit group, not SU(2). The one-line proof was never affected -- it only e
 
 **3.1 (headline) The Born fixed point requires `tau = 2`, and the theorem denies it.**
 
-`thm:Born_fp` states (`CAL_Unified_Manual.tex` l.1357, and `CAL_Unified_Manual_pre-fold.tex`
-l.2256-2257): the closure "is fixed by the closure order alpha = 2 alone and **requires no condition
+`thm:Born_fp` states (`CAL_Unified_Manual.tex`, label `thm:Born_fp`, ~l.1472 and moving; and
+`CAL_Unified_Manual_pre-fold.tex` l.2256-2257): the closure "is fixed by the closure order alpha = 2 alone and **requires no condition
 on the channel width tau**." Its own proof preamble (pre-fold l.2261) concedes: "Steps 1-4 verify
 that it is a fixed point of T and **read off the channel width it requires**."
 
@@ -147,8 +165,8 @@ the corners as `cos(alpha.pi/2) = 1, 0, -1, 0`, which is even and therefore sign
 "split (2,2) norm" and a "split-signature (2,2) carrier". `Re N(q) = sum(x_mu^2 - y_mu^2)` on R^8
 has eigenvalues `[-1,-1,-1,-1,+1,+1,+1,+1]`: signature **(4,4)**.
 
-This is not merely the auditor's arithmetic disagreeing with the paper. `CAL_Unified_Manual.tex`
-l.393 states it correctly and in more detail:
+This is not merely the auditor's arithmetic disagreeing with the paper. `CAL_Unified_Manual.tex` states it correctly and in more
+detail, in the closure-chain table (~l.393):
 
 > Derived from the carrier's `(4,4) = (1,3) (+) (3,1)` split
 
@@ -169,7 +187,13 @@ The distinction matters and runs the paper's way, not against it. A direct sum a
 term and no interference** -- which would destroy the mechanism l.2683 depends on ("the Born rule
 recovers probability from the interference of the two"). The two channels are both multiples of the
 identity in the central C factor, so they are parallel rather than orthogonal, and the correct word
-is superposition. The glossary symbol should be `+`, not `(+)`.
+is superposition.
+
+**Status: FIXED.** The glossary entry in `CAL_Unified_Manual.tex` now reads "cost/thermal `+`
+phase/action (a superposition, not a direct sum: the channels are parallel, so the cross term
+survives and is what the Born weight reads)". The other 22 uses of `(+)` in the manual are genuine
+direct sums (spinor polarization `V = W (+) W*`, the `(4,4) = (1,3) (+) (3,1)` split, and
+representation decompositions) and were left alone.
 
 **3.7 A and B cancel; A = B divides by zero; "structure constants" is unbacked.** The normalized
 measure is `(A-B)^2|W_psi|^2 / [(A-B)^2 int |W_psi|^2]`, so A and B drop out entirely and Axiom 2's
@@ -203,7 +227,7 @@ width": pre-fold 1, current 0, born_axiomatic 0). The tau arithmetic is currentl
 **three times** -- including for the `A = C^2/4` scalar identity that Cor 6.5 and Thm 6.1 Step 4 both
 lean on -- plus `\cite[Thm.~IX.4]` and `\cite[\S IX]`. The manual has Parts I, II, III, V, VI, VII
 (the pre-fold version had I-VII; the fold dropped Part IV). **There is no Part IX in either
-version.** The theorem itself exists as `thm:scalar` (current l.1438), just not under that number.
+version.** The theorem itself exists under the label `thm:scalar`, just not under that number.
 Part VI is "The fine-structure constant", so "Theorem VI.1" is not the Born fixed point either.
 Likely stale numbering from an earlier draft, but it should be repaired, since Thm IX.6 is doing
 real work.
@@ -231,15 +255,16 @@ conjugate; it is `i` times it.
 `J = rho e^{n_hat theta} = exp[-H/tau + n_hat S/hbar_eff]` fails three ways:
 
 - *No interference.* `|rho e^{n theta}|^2 = rho^2` identically, because `|e^{n theta}| = 1`. The
-  action drops out of the Born weight entirely. The manuscript needs the opposite: l.2683 says "the
-  Born rule P = |W|^2 recovers probability from the **interference of the two**". Interference comes
+  action drops out of the Born weight entirely. The manuscript needs the opposite: the manual says "the Born rule `P = |W|^2` recovers
+  probability from the **interference of the two**" (~l.2798). Interference comes
   from addition of amplitudes, never from the polar decomposition of one.
-- *It contradicts centrality by name.* `CAL_Unified_Manual.tex` l.540-541: "The unit `i` is the
-  privileged commuting imaginary of the C factor, **not a quaternionic imaginary**"; l.604-607: the
-  phase "must not depend on a **preferred quaternionic direction**". A unit imaginary quaternion is
+- *It contradicts centrality by name.* `CAL_Unified_Manual.tex`, just after label `def:source`
+  (~l.556): "The unit `i` is the privileged commuting imaginary of the C factor, **not a
+  quaternionic imaginary**"; and (~l.622) the phase "must not depend on a **preferred quaternionic
+  direction**". A unit imaginary quaternion is
   exactly that, and does not commute with the orthogonal generators. The centrality argument is what
-  *generates* the substrate (l.618-638: "Quaternions alone are insufficient because they lack a
-  privileged commuting imaginary direction"), so adopting the polar form collapses the reason the
+  *generates* the substrate ("Quaternions alone are insufficient because they lack a
+  privileged commuting imaginary direction", in the same subsection as `def:source`), so adopting the polar form collapses the reason the
   framework has `C(x)H` at all.
 - *It collapses the algebra.* `J = rho e^{n theta}` lives entirely in the slice
   `C_n = span{1, n_hat}`: 2 of the algebra's 8 real dimensions.
@@ -250,7 +275,8 @@ anti-holomorphic (`d_z F = 0`). Verified: `F = zbar` also gives `lap(Re e^F) = 0
 is neither (`F = |z|^2`) is the only one that breaks harmonicity. So the harmonicity of `J` does
 not even single out holomorphy, let alone this particular `F`.
 
-**5.3 The decisive incompatibility.** `def:J-closed` (`CAL_Unified_Manual.tex` l.1001-1003) sets
+**5.3 The decisive incompatibility.** `def:J-closed` (`CAL_Unified_Manual.tex`, label
+`def:J-closed`, ~l.1115) sets
 "At closure the two coincide, `theta_R = theta_I =: varphi(x,t)`". Impose holomorphy on top: if
 `u = v` and Cauchy-Riemann holds (`u_x = v_y`, `u_y = -v_x`), then `u_x = u_y` and `u_y = -u_x`,
 forcing `u_x = u_y = 0`. Both drivers are constant and `J` is constant. **The manuscript's own
