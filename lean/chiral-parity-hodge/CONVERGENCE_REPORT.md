@@ -16,6 +16,8 @@ Model: middle grade `k = m` of `n = 2m`, blades = `m`-subsets of `Fin (2m)`, `�
 | `RankSplit` | Prop 4.1 concrete: `card (Blade 4) = 70`, `rank P₊ = rank P₋ = 35`, `70 = 35 ⊕ 35`, via `rank = trace` for ℚ-idempotents (`LinearMap.IsProj.trace`) | clean, standard axioms |
 | `Forcing` | Cor 9.7 (`MW ⟺ p−q≡0 mod 8`); Thm 9.10 (`(4,4)` forced in n=8); 6 anchor checks | clean, 4 + 6 examples |
 | `Section9` | Weyl condition proved computably from `ω²=(-1)^{n(n-1)/2+q}` (`weyl_iff_wsign`, no axiom); one `CITED-AXIOM` (ABS classification) for the Majorana/type side; `forcing_n8_from_clifford` on top | clean; 1 cited axiom |
+| `Corollary8` | Cor 8.1 (4d case, m=2): real split `6 = 3 ⊕ 3` (Euclid/split), `⋆²=-1` complex structure (Lorentzian) | clean, 7 lemmas |
+| `BlockEigen` | Prop 5.1 / Cor 5.2: block forms, `⋆ω₁=σ₁ω₂`, `ω₊` a genuine `⋆`-eigenvector, block-dependent handedness | clean, standard axioms |
 
 ## No-cheating gate
 - grep gate (`audit.sh`): no `sorry` / `admit` / `native_decide` / uncited `axiom`.
@@ -43,5 +45,8 @@ trace-vs-rank scope.
   Atiyah–Bott–Shapiro classification of `Cl(p,q)`), which Mathlib v4.14.0 lacks and the paper itself
   cites. `Section9.majorana_iff_realstructure` is tagged `CITED-AXIOM`; `forcing_n8_from_clifford`
   legitimately shows it in `#print axioms`. The Weyl half of that bridge is proved, not cited.
-- Still NOT formalized (feasible, not yet done): general-grade Lemma 3.1 (only `k = m`), Prop 4.3
-  (paired-grade extension), Prop 5.1 / Cor 5.2 (block eigenvectors, handedness label).
+- Also formalized: Corollary 8.1 (classical 4d case, `Corollary8`) and Proposition 5.1 / Cor 5.2
+  (block eigenvectors and handedness, `BlockEigen`).
+- Still NOT formalized: the general-grade Lemma 3.1 (only `k = m`) and Prop 4.3 (the paired-grade
+  `Zₖ`), which need a rectangular / paired-grade star (`Λᵏ → Λⁿ⁻ᵏ` for `k ≠ m`) — a model
+  generalization, not a drop-in. Sections 3, 4, 5, 8 and the middle-grade forcing are complete.

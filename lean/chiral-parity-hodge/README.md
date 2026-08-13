@@ -31,6 +31,12 @@ oracle, `chiral_oracle.py`). Lean 4 (`v4.14.0`) + Mathlib.
   Atiyah–Bott–Shapiro, which Mathlib lacks and the paper itself cites), and
   `forcing_n8_from_clifford` rebuilds the forcing on top. Anchor checks for `(4,4)`, `(6,2)`,
   `(2,6)`, `(8,0)`, `(0,8)` included.
+- **Corollary 8.1** (`Corollary8`): the classical 4d case (`m=2`, `Λ²(ℝ⁴)`): `⋆²=+id` with the real
+  chiral split `6 = 3 ⊕ 3` in Euclidean/split signature, and `⋆²=−id` (a complex structure) in
+  Lorentzian signature.
+- **Proposition 5.1 / Corollary 5.2** (`BlockEigen`): the block volume forms `ω₁=e_{0123}`,
+  `ω₂=e_{4567}`; `⋆ω₁=σ₁ω₂`, `⋆ω₂=σ₂ω₁` with `σᵢ=(-1)^{qᵢ}`; `ω₊=ω₁+ω₂` is a genuine `⋆`-eigenvector
+  (`star_eigen`); and the handedness label depends on `q₁` (the block split), a declared convention.
 
 ## Oracle cross-check (`chiral_oracle.py`)
 
@@ -63,9 +69,11 @@ cited. Genuinely NOT formalized (and honestly out of reach or out of current sco
   development; the paper itself cites it. It is represented here as the single `CITED-AXIOM`
   `majorana_iff_realstructure`, so the `(4,4)` forcing's dependence on it is explicit rather than
   silent. (The Weyl half of the bridge IS proved: `weyl_iff_wsign`.)
-- the general-grade Lemma 3.1 (formalized at the middle grade `k = m`), Prop 4.3 (paired-grade
-  extension), and Prop 5.1 / Cor 5.2 (block eigenvectors, handedness label) — feasible extensions,
-  simply not yet done.
+- the general-grade Lemma 3.1 (formalized at the middle grade `k = m`) and Prop 4.3 (the
+  paired-grade `Zₖ` extension) — these require a rectangular / paired-grade star (`Λᵏ → Λⁿ⁻ᵏ` for
+  `k ≠ m`), i.e. a model generalization beyond the square middle-grade carrier used here. The
+  inversion-count proof of Lemma 3.1 generalizes cleanly; only the carrier needs the second blade
+  index. Not yet done. (Sections 3, 4, 5, 8 and the middle-grade forcing are complete.)
 
 ## Provenance
 

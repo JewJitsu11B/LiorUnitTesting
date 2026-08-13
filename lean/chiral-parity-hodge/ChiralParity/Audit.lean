@@ -4,6 +4,8 @@ import ChiralParity.ParityCriterion
 import ChiralParity.RankSplit
 import ChiralParity.Forcing
 import ChiralParity.Section9
+import ChiralParity.Corollary8
+import ChiralParity.BlockEigen
 
 /-!
 # Axiom audit (no-cheating gate)
@@ -39,5 +41,10 @@ namespace ChiralParity
 -- Section 9: Weyl side computable (no axiom); forcing on volume-element sign + CITED ABS axiom
 #print axioms weyl_iff_wsign
 #print axioms forcing_n8_from_clifford
+-- Corollary 8.1 (classical 4d case) and Proposition 5.1 / Cor 5.2 (block eigenvectors)
+#print axioms rank_split_4d
+#print axioms star4d_sq_odd
+#print axioms star_eigen
+#print axioms handedness_depends_on_block
 
 end ChiralParity

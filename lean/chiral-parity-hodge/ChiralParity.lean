@@ -5,6 +5,8 @@ import ChiralParity.ParityCriterion
 import ChiralParity.RankSplit
 import ChiralParity.Forcing
 import ChiralParity.Section9
+import ChiralParity.Corollary8
+import ChiralParity.BlockEigen
 
 /-!
 # ChiralParity: the parity criterion for native chiral projectors (Lean 4)
