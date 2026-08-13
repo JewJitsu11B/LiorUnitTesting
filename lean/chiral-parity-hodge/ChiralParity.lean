@@ -2,7 +2,9 @@ import ChiralParity.Carrier
 import ChiralParity.StarSquare
 import ChiralParity.EqualSplit
 import ChiralParity.ParityCriterion
+import ChiralParity.RankSplit
 import ChiralParity.Forcing
+import ChiralParity.Section9
 
 /-!
 # ChiralParity: the parity criterion for native chiral projectors (Lean 4)

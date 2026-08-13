@@ -19,11 +19,18 @@ oracle, `chiral_oracle.py`). Lean 4 (`v4.14.0`) + Mathlib.
   and when odd, the EXACT failure constants `P₊² − P₊ = −½·1` and `P₊P₋ = ½·1`; plus the parity
   characterization `starScalar = 1 ↔ Even (m²+q)`.
 - **Corollary 3.3**: at `n = 8` (`m = 4`), chiral pair iff `q` even.
-- **Proposition 4.1** (`EqualSplit`): `tr ⋆ = 0` (zero diagonal), the equal split
-  `tr P₊ = tr P₋`, and `P₊ + P₋ = 1`, `P₊ − P₋ = ⋆`.
-- **Corollary 9.7 / Theorem 9.10** (`Forcing`): for even `n`, Majorana–Weyl `⟺ p − q ≡ 0 (mod 8)`;
-  and in `n = 8`, Weyl ∧ Majorana ∧ (nonempty light cone) forces `(p,q) = (4,4)` uniquely
-  (`omega`). Anchor checks for `(4,4)`, `(6,2)`, `(2,6)`, `(8,0)`, `(0,8)` included.
+- **Proposition 4.1** (`EqualSplit`, `RankSplit`): `tr ⋆ = 0` (zero diagonal), the equal split
+  `tr P₊ = tr P₋`, and `P₊ + P₋ = 1`, `P₊ − P₋ = ⋆`; and the concrete DIMENSION split at `n = 8`,
+  `rank P₊ = rank P₋ = 35`, `rank P₊ + rank P₋ = 70` (`RankSplit`, via `rank = trace` for
+  ℚ-idempotents, `LinearMap.IsProj.trace`).
+- **Corollary 9.7 / Theorem 9.10** (`Forcing`, `Section9`): for even `n`, Majorana–Weyl
+  `⟺ p − q ≡ 0 (mod 8)`; and in `n = 8`, Weyl ∧ Majorana ∧ (nonempty light cone) forces
+  `(p,q) = (4,4)` uniquely. The **Weyl condition is proved computably** from the Clifford
+  volume-element sign `ω² = (-1)^{n(n-1)/2+q}` (`weyl_iff_wsign`, no axiom); the Majorana /
+  representation-type side is a single explicit **cited axiom** (`majorana_iff_realstructure`,
+  Atiyah–Bott–Shapiro, which Mathlib lacks and the paper itself cites), and
+  `forcing_n8_from_clifford` rebuilds the forcing on top. Anchor checks for `(4,4)`, `(6,2)`,
+  `(2,6)`, `(8,0)`, `(0,8)` included.
 
 ## Oracle cross-check (`chiral_oracle.py`)
 
@@ -48,13 +55,17 @@ every capstone shows only `[propext, Classical.choice, Quot.sound]`.
 
 ## Scope
 
-Formalizes the middle-grade parity criterion (Sections 3–4) and the mod-8 forcing (Cor 9.7 / Thm
-9.10). NOT formalized: the general-grade Lemma 3.1 (done at middle grade `k = m`), Prop 4.3
-(paired-grade extension), Prop 5.1 (block eigenvectors / handedness), and the Weyl/Majorana
-Clifford-classification bridge (Lemma 9.4), which the paper itself cites from Atiyah–Bott–Shapiro.
-Proposition 4.1's "equal split" is formalized at the level of equal TRACE (`tr P₊ = tr P₋`); the
-rank-equality `35 = 35` follows over ℚ since rank = trace for idempotents, but the rank statement
-itself is not separately formalized.
+Formalizes the middle-grade parity criterion (Sections 3–4), the concrete `70 = 35 ⊕ 35` rank
+split, and the mod-8 forcing (Cor 9.7 / Thm 9.10) with the Weyl side proved and the Majorana side
+cited. Genuinely NOT formalized (and honestly out of reach or out of current scope):
+- **Lemma 9.4 (the Atiyah–Bott–Shapiro classification of `Cl(p,q)` as matrix algebras over
+  ℝ/ℂ/ℍ)** — Mathlib v4.14.0 does not have it, and a from-scratch proof is a months-scale
+  development; the paper itself cites it. It is represented here as the single `CITED-AXIOM`
+  `majorana_iff_realstructure`, so the `(4,4)` forcing's dependence on it is explicit rather than
+  silent. (The Weyl half of the bridge IS proved: `weyl_iff_wsign`.)
+- the general-grade Lemma 3.1 (formalized at the middle grade `k = m`), Prop 4.3 (paired-grade
+  extension), and Prop 5.1 / Cor 5.2 (block eigenvectors, handedness label) — feasible extensions,
+  simply not yet done.
 
 ## Provenance
 

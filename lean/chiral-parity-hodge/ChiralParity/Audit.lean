@@ -1,7 +1,9 @@
 import ChiralParity.StarSquare
 import ChiralParity.EqualSplit
 import ChiralParity.ParityCriterion
+import ChiralParity.RankSplit
 import ChiralParity.Forcing
+import ChiralParity.Section9
 
 /-!
 # Axiom audit (no-cheating gate)
@@ -30,5 +32,12 @@ namespace ChiralParity
 #print axioms mw_iff_mod8
 #print axioms forcing_n8
 #print axioms forcing_n8_full
+-- Proposition 4.1 concrete rank split 70 = 35 ⊕ 35
+#print axioms rank_eq_trace_of_idempotent
+#print axioms rank_Pplus_n8
+#print axioms rank_split_n8
+-- Section 9: Weyl side computable (no axiom); forcing on volume-element sign + CITED ABS axiom
+#print axioms weyl_iff_wsign
+#print axioms forcing_n8_from_clifford
 
 end ChiralParity
