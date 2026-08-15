@@ -7,6 +7,9 @@ import ChiralParity.Forcing
 import ChiralParity.Section9
 import ChiralParity.Corollary8
 import ChiralParity.BlockEigen
+import ChiralParity.General
+import ChiralParity.GeneralStar
+import ChiralParity.PairedGrade
 
 /-!
 # ChiralParity: the parity criterion for native chiral projectors (Lean 4)

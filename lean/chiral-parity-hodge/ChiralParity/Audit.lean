@@ -6,6 +6,8 @@ import ChiralParity.Forcing
 import ChiralParity.Section9
 import ChiralParity.Corollary8
 import ChiralParity.BlockEigen
+import ChiralParity.GeneralStar
+import ChiralParity.PairedGrade
 
 /-!
 # Axiom audit (no-cheating gate)
@@ -46,5 +48,10 @@ namespace ChiralParity
 #print axioms star4d_sq_odd
 #print axioms star_eigen
 #print axioms handedness_depends_on_block
+-- General-grade Lemma 3.1 (all k) and Proposition 4.3 (paired-grade operator)
+#print axioms gstar_sq
+#print axioms gZ_sq
+#print axioms star_is_endo_iff
+#print axioms chiral_grade_parity_n8
 
 end ChiralParity

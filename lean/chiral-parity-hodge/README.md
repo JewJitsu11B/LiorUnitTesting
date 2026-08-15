@@ -37,6 +37,11 @@ oracle, `chiral_oracle.py`). Lean 4 (`v4.14.0`) + Mathlib.
 - **Proposition 5.1 / Corollary 5.2** (`BlockEigen`): the block volume forms `ω₁=e_{0123}`,
   `ω₂=e_{4567}`; `⋆ω₁=σ₁ω₂`, `⋆ω₂=σ₂ω₁` with `σᵢ=(-1)^{qᵢ}`; `ω₊=ω₁+ω₂` is a genuine `⋆`-eigenvector
   (`star_eigen`); and the handedness label depends on `q₁` (the block split), a declared convention.
+- **General grade** (`General`, `GeneralStar`, `PairedGrade`): Lemma 3.1 for an ARBITRARY grade `k`
+  and its complement `j = n − k` — `⋆∘⋆ = (-1)^{k(n-k)+q}·id` (`gstar_sq`); Proposition 4.3 — the
+  paired operator `Z` on `Λᵏ ⊕ Λʲ` with `Z² = (-1)^{k(n-k)+q}·id` (`gZ_sq`), the middle grade is the
+  unique self-paired grade (`star_is_endo_iff`, `k=j ⟺ 2k=n`), and at `n=8` the chiral pair exists at
+  grade `k` iff `k` and `q` have the same parity (`chiral_grade_parity_n8`).
 
 ## Oracle cross-check (`chiral_oracle.py`)
 
@@ -61,19 +66,17 @@ every capstone shows only `[propext, Classical.choice, Quot.sound]`.
 
 ## Scope
 
-Formalizes the middle-grade parity criterion (Sections 3–4), the concrete `70 = 35 ⊕ 35` rank
-split, and the mod-8 forcing (Cor 9.7 / Thm 9.10) with the Weyl side proved and the Majorana side
-cited. Genuinely NOT formalized (and honestly out of reach or out of current scope):
+Formalizes Sections 3, 4, 5, 8, the general-grade Lemma 3.1 and Proposition 4.3, and the mod-8
+signature forcing (Cor 9.7 / Thm 9.10). The ONLY piece not proved from first principles is:
 - **Lemma 9.4 (the Atiyah–Bott–Shapiro classification of `Cl(p,q)` as matrix algebras over
   ℝ/ℂ/ℍ)** — Mathlib v4.14.0 does not have it, and a from-scratch proof is a months-scale
   development; the paper itself cites it. It is represented here as the single `CITED-AXIOM`
   `majorana_iff_realstructure`, so the `(4,4)` forcing's dependence on it is explicit rather than
-  silent. (The Weyl half of the bridge IS proved: `weyl_iff_wsign`.)
-- the general-grade Lemma 3.1 (formalized at the middle grade `k = m`) and Prop 4.3 (the
-  paired-grade `Zₖ` extension) — these require a rectangular / paired-grade star (`Λᵏ → Λⁿ⁻ᵏ` for
-  `k ≠ m`), i.e. a model generalization beyond the square middle-grade carrier used here. The
-  inversion-count proof of Lemma 3.1 generalizes cleanly; only the carrier needs the second blade
-  index. Not yet done. (Sections 3, 4, 5, 8 and the middle-grade forcing are complete.)
+  silent. The Weyl half of that bridge IS proved from first principles (`weyl_iff_wsign`).
+
+Everything else — including the general-grade star-square and the paired-grade operator, which were
+built on a `k`/`j` (`k + j = n`) carrier so no `n − k` subtraction appears in the types — is proved
+on only `[propext, Classical.choice, Quot.sound]`.
 
 ## Provenance
 

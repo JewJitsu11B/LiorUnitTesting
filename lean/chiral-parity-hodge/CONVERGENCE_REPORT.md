@@ -18,6 +18,8 @@ Model: middle grade `k = m` of `n = 2m`, blades = `m`-subsets of `Fin (2m)`, `�
 | `Section9` | Weyl condition proved computably from `ω²=(-1)^{n(n-1)/2+q}` (`weyl_iff_wsign`, no axiom); one `CITED-AXIOM` (ABS classification) for the Majorana/type side; `forcing_n8_from_clifford` on top | clean; 1 cited axiom |
 | `Corollary8` | Cor 8.1 (4d case, m=2): real split `6 = 3 ⊕ 3` (Euclid/split), `⋆²=-1` complex structure (Lorentzian) | clean, 7 lemmas |
 | `BlockEigen` | Prop 5.1 / Cor 5.2: block forms, `⋆ω₁=σ₁ω₂`, `ω₊` a genuine `⋆`-eigenvector, block-dependent handedness | clean, standard axioms |
+| `General` / `GeneralStar` | general-grade foundation and Lemma 3.1 for arbitrary `k`, `j` (`k+j=n`): `⋆∘⋆ = (-1)^{k·j+q}·id` (`gstar_sq`) | clean, standard axioms |
+| `PairedGrade` | Prop 4.3: paired operator `Z` on `Λᵏ ⊕ Λʲ`, `Z² = (-1)^{k·j+q}·id` (`gZ_sq`); middle-grade uniqueness; n=8 grade-parity rule | clean, standard axioms |
 
 ## No-cheating gate
 - grep gate (`audit.sh`): no `sorry` / `admit` / `native_decide` / uncited `axiom`.
@@ -45,8 +47,9 @@ trace-vs-rank scope.
   Atiyah–Bott–Shapiro classification of `Cl(p,q)`), which Mathlib v4.14.0 lacks and the paper itself
   cites. `Section9.majorana_iff_realstructure` is tagged `CITED-AXIOM`; `forcing_n8_from_clifford`
   legitimately shows it in `#print axioms`. The Weyl half of that bridge is proved, not cited.
-- Also formalized: Corollary 8.1 (classical 4d case, `Corollary8`) and Proposition 5.1 / Cor 5.2
-  (block eigenvectors and handedness, `BlockEigen`).
-- Still NOT formalized: the general-grade Lemma 3.1 (only `k = m`) and Prop 4.3 (the paired-grade
-  `Zₖ`), which need a rectangular / paired-grade star (`Λᵏ → Λⁿ⁻ᵏ` for `k ≠ m`) — a model
-  generalization, not a drop-in. Sections 3, 4, 5, 8 and the middle-grade forcing are complete.
+- Also formalized: Corollary 8.1 (classical 4d case, `Corollary8`), Proposition 5.1 / Cor 5.2
+  (block eigenvectors and handedness, `BlockEigen`), and the GENERAL-grade Lemma 3.1 + Proposition
+  4.3 (`General`, `GeneralStar`, `PairedGrade`) on a `k`/`j` (`k+j=n`) carrier.
+- The ONLY piece not proved from first principles: Lemma 9.4 (the Atiyah–Bott–Shapiro
+  classification), a single explicit `CITED-AXIOM`; its Weyl half is proved (`weyl_iff_wsign`).
+  Sections 3, 4, 5, 8, the general grade, and the forcing are otherwise complete.
