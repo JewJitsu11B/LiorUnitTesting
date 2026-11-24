@@ -1,0 +1,70 @@
+=== Lemma weyl: int_0^inf s^(alpha-1) e^{i omega s} ds vs Gamma(alpha)(-i omega)^(-alpha) ===
+alpha=0.1 omega=1.0  |quad-claim|=1.4122e-45  |principal power - Def weyl phase form|=2.18953e-47
+alpha=0.1 omega=-1.0  |quad-claim|=1.4122e-45  |principal power - Def weyl phase form|=2.18953e-47
+alpha=0.1 omega=2.5  |quad-claim|=1.75162e-46  |principal power - Def weyl phase form|=8.75812e-47
+alpha=0.1 omega=-0.4  |quad-claim|=1.4013e-45  |principal power - Def weyl phase form|=1.76525e-46
+alpha=0.3 omega=1.0  |quad-claim|=3.91675e-46  |principal power - Def weyl phase form|=0.0
+alpha=0.3 omega=-1.0  |quad-claim|=3.91675e-46  |principal power - Def weyl phase form|=0.0
+alpha=0.3 omega=2.5  |quad-claim|=3.50325e-46  |principal power - Def weyl phase form|=8.75812e-47
+alpha=0.3 omega=-0.4  |quad-claim|=3.91675e-46  |principal power - Def weyl phase form|=8.75812e-47
+alpha=0.5 omega=1.0  |quad-claim|=1.75162e-46  |principal power - Def weyl phase form|=8.75812e-47
+alpha=0.5 omega=-1.0  |quad-claim|=1.75162e-46  |principal power - Def weyl phase form|=8.75812e-47
+alpha=0.5 omega=2.5  |quad-claim|=8.75812e-47  |principal power - Def weyl phase form|=4.37906e-47
+alpha=0.5 omega=-0.4  |quad-claim|=1.75162e-46  |principal power - Def weyl phase form|=1.75162e-46
+alpha=0.9 omega=1.0  |quad-claim|=2.80397e-46  |principal power - Def weyl phase form|=0.0
+alpha=0.9 omega=-1.0  |quad-claim|=2.80397e-46  |principal power - Def weyl phase form|=0.0
+alpha=0.9 omega=2.5  |quad-claim|=1.53267e-46  |principal power - Def weyl phase form|=0.0
+alpha=0.9 omega=-0.4  |quad-claim|=7.00649e-46  |principal power - Def weyl phase form|=0.0
+alpha=0.99 omega=1.0  |quad-claim|=2.40848e-46  |principal power - Def weyl phase form|=5.47382e-47
+alpha=0.99 omega=-1.0  |quad-claim|=2.40848e-46  |principal power - Def weyl phase form|=5.47382e-47
+alpha=0.99 omega=2.5  |quad-claim|=1.04687e-46  |principal power - Def weyl phase form|=2.25795e-47
+alpha=0.99 omega=-0.4  |quad-claim|=4.98118e-46  |principal power - Def weyl phase form|=1.36846e-46
+
+=== Lemma weyl at alpha >= 1 (and the endpoint alpha <= 0): partial integrals int_0^T ===
+alpha=0.5  formula value (1.2533141 + 1.2533141j)
+   T=10     partial=(1.0953062 + 1.5251235j)   |partial - formula|=0.314399
+   T=10.5   partial=(0.99033542 + 1.411673j)   |partial - formula|=0.306978
+   T=100    partial=(1.2022504 + 1.1673418j)   |partial - formula|=0.0999938
+   T=100.5  partial=(1.2497302 + 1.1536338j)   |partial - formula|=0.0997448
+   T=400    partial=(1.2108012 + 1.279632j)   |partial - formula|=0.0499998
+   T=400.5  partial=(1.2034192 + 1.2560267j)   |partial - formula|=0.0499686
+alpha=1.0  formula value (0.0 + 1.0j)
+   T=10     partial=(-0.54402111 + 1.8390715j)   |partial - formula|=1.0
+   T=10.5   partial=(-0.87969576 + 1.4755369j)   |partial - formula|=1.0
+   T=100    partial=(-0.50636564 + 0.13768113j)   |partial - formula|=1.0
+   T=100.5  partial=(-0.030959967 + 0.00047937467j)   |partial - formula|=1.0
+   T=400    partial=(-0.85091936 + 1.5252963j)   |partial - formula|=1.0
+   T=400.5  partial=(-0.99859247 + 1.0530384j)   |partial - formula|=1.0
+alpha=1.5  formula value (-0.62665707 + 0.62665707j)
+   T=10     partial=(-2.4829076 + 3.2010303j)   |partial - formula|=3.17381
+   T=10.5   partial=(-3.5563766 + 2.0360835j)   |partial - formula|=3.25111
+   T=100    partial=(-5.6473273 - 8.0220635j)   |partial - formula|=10.0004
+   T=100.5  partial=(-0.88718959 - 9.395298j)   |partial - formula|=10.0253
+   T=400    partial=(-17.658203 + 11.111327j)   |partial - formula|=20.0
+   T=400.5  partial=(-20.612341 + 1.6631411j)   |partial - formula|=20.0125
+alpha=1.0 Abel damping 0.01: |Abel - formula| = 0.0099995
+alpha=1.0 Abel damping 0.0001: |Abel - formula| = 0.0001
+alpha=1.5 Abel damping 0.01: |Abel - formula| = 0.0132925
+alpha=1.5 Abel damping 0.0001: |Abel - formula| = 0.000132934
+alpha=0: int_delta^1 s^-1 cos(s) ds for delta=1e-3,1e-6,1e-9: ['6.6679438', '13.575699', '20.483454']
+
+=== Lemma W (a): eq. jonquiere continued to z = r e^{i theta}, |z|>1, vs direct summation ===
+worst |jonquiere - direct| over 84 points: 4.48416e-44
+term-by-term k-sum |k|<=1000 vs Hurwitz form: diff 0.00367034 (expected tail ~ 0.00519203)
+term-by-term k-sum |k|<=10000 vs Hurwitz form: diff 0.00116094 (expected tail ~ 0.00164186)
+
+=== Lemma W (b): unit circle, vs (i) Levin-accelerated series, (ii) Bose-type integral ===
+worst |jonquiere - Bose integral| on unit circle: 4.60135e-46
+worst |jonquiere - Levin-accelerated series| on unit circle: 7.99895e-46
+worst |jonquiere(principal) - Bose integral| for Im phi>0 (|z|<1), both signs of Re phi: 4.64788e-44
+jump across Re phi=0 at Im phi=0.3 (z=e^-0.3 in (0,1)), alpha=0.5: (0.0 - 4.258345797j)
+jump across Re phi=0 at Im phi=-0.3 (z>1): 7.07424e-30
+
+=== Lemma W (c): vs mpmath.polylog: W = (1-x) Li_{-alpha}(x)/Gamma(1+alpha), x=1/z ===
+worst |jonquiere - polylog| where polylog evaluated: 7.22213e-46  polylog failures: 0
+
+=== Lemma W: non-principal alternative (shows the convention matters) ===
+phi=-1.3: W with arg(i phi)=+pi/2 for the k=0 term differs from the true W by 1.15483 ; principal gives 3.28429e-47
+alpha=1.01, z=e^0.1: |jonquiere - direct| = 2.10195e-44
+alpha=1.001, z=e^0.1: |jonquiere - direct| = 7.00649e-45
+alpha=1.7, z=e^0.1: |jonquiere - direct| = 2.8026e-44

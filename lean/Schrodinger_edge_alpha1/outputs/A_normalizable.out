@@ -1,0 +1,48 @@
+=== Table normalizable: kernel truncated at 400 lags and normalized over those lags; companion-matrix roots, polished in mpmath ===
+  exponential, width 10    eps=0.01  largest |z| = 0.97677072 (z=(0.97677072 + 0.0j))  decay/update = 0.0235   paper: 0.97677   all inside: True
+  exponential, width 100   eps=0.01  largest |z| = 0.99205353 (z=(0.99199351 + 0.010913096j))  decay/update = 0.007978   paper: 0.99205   all inside: True
+  power law j^-1.5         eps=0.01  largest |z| = 0.9865625 (z=(0.98653254 + 0.0076883061j))  decay/update = 0.01353   paper: 0.98656   all inside: True
+  Dirac                    eps=0.01  largest |z| = 0.97979377 (z=(0.97979377 + 0.0j))  decay/update = 0.02041   paper: 0.97979   all inside: True
+  exponential, width 10    eps=0.0001  largest |z| = 0.99979979 (z=(0.99979979 + 0.0j))  decay/update = 0.0002002   paper: 0.99980 (all four)   all inside: True
+  exponential, width 100   eps=0.0001  largest |z| = 0.99979809 (z=(0.99979809 + 0.0j))  decay/update = 0.0002019   paper: 0.99980 (all four)   all inside: True
+  power law j^-1.5         eps=0.0001  largest |z| = 0.99979969 (z=(0.99979969 + 0.0j))  decay/update = 0.0002003   paper: 0.99980 (all four)   all inside: True
+  Dirac                    eps=0.0001  largest |z| = 0.99979998 (z=(0.99979998 + 0.0j))  decay/update = 0.0002   paper: 0.99980 (all four)   all inside: True
+
+=== same kernels WITHOUT truncation (infinite sums, exact) ===
+  exponential width 10   eps=1e-2  roots ['0.9180667', '0.97677072']  largest |z| = 0.97677072
+  exponential width 100  eps=1e-2  roots ['(0.99002492 + 0.0099750209j)', '(0.99002492 - 0.0099750209j)']  largest |z| = 0.99007517
+  Dirac                  eps=1e-2  largest |z| = 0.97979377
+  power law j^-1.5 (infinite) eps=1e-2 start (0.98 + 0.03j) -> root (0.98020531 + 0.0019099738j)  |z|=0.98020717  |F|=1.42e-43
+  power law j^-1.5 (infinite) eps=1e-2 start (0.99 + 0.005j) -> root (0.98020531 + 0.0019099738j)  |z|=0.98020717  |F|=1.42e-43
+  power law j^-1.5 (infinite) eps=1e-2 start (0.9998 + 0.0001j) -> root (0.98020531 + 0.0019099738j)  |z|=0.98020717  |F|=1.42e-43
+  exponential width 10   eps=1e-4  roots ['0.90493763', '0.99979979']  largest |z| = 0.99979979
+  exponential width 100  eps=1e-4  roots ['0.99015191', '0.99979793']  largest |z| = 0.99979793
+  Dirac                  eps=1e-4  largest |z| = 0.99979998
+  power law j^-1.5 (infinite) eps=1e-4 start (0.98 + 0.03j) -> root (0.99980002 + 1.9189544e-6j)  |z|=0.99980002  |F|=3.47e-44
+  power law j^-1.5 (infinite) eps=1e-4 start (0.99 + 0.005j) -> root (0.99980002 + 1.9189544e-6j)  |z|=0.99980002  |F|=3.47e-44
+  power law j^-1.5 (infinite) eps=1e-4 start (0.9998 + 0.0001j) -> root (0.99980002 + 1.9189544e-6j)  |z|=0.99980002  |F|=3.47e-44
+
+=== Remark powerlaw: 'damps at about 2(1-alpha) per update when (1-alpha) x mean lag is small' ===
+  exponential, width 10    eps=0.01  decay/update / (1-alpha) = 2.35033   (1-alpha)*mean lag = 0.105   root is real: True
+  exponential, width 100   eps=0.01  decay/update / (1-alpha) = 0.797821   (1-alpha)*mean lag = 0.93   root is real: False
+  power law j^-1.5         eps=0.01  decay/update / (1-alpha) = 1.35286   (1-alpha)*mean lag = 0.153   root is real: False
+  Dirac                    eps=0.01  decay/update / (1-alpha) = 2.04132   (1-alpha)*mean lag = 0.01   root is real: True
+  exponential, width 10    eps=0.0001  decay/update / (1-alpha) = 2.00231   (1-alpha)*mean lag = 0.00105   root is real: True
+  exponential, width 100   eps=0.0001  decay/update / (1-alpha) = 2.01931   (1-alpha)*mean lag = 0.0093   root is real: True
+  power law j^-1.5         eps=0.0001  decay/update / (1-alpha) = 2.00332   (1-alpha)*mean lag = 0.00153   root is real: True
+  Dirac                    eps=0.0001  decay/update / (1-alpha) = 2.0004   (1-alpha)*mean lag = 0.0001   root is real: True
+  exponential, width 10    eps=1e-06  decay/update / (1-alpha) = 2.00002   (1-alpha)*mean lag = 1.05e-05   root is real: True
+  exponential, width 100   eps=1e-06  decay/update / (1-alpha) = 2.00019   (1-alpha)*mean lag = 9.3e-05   root is real: True
+  power law j^-1.5         eps=1e-06  decay/update / (1-alpha) = 2.00003   (1-alpha)*mean lag = 1.53e-05   root is real: True
+  Dirac                    eps=1e-06  decay/update / (1-alpha) = 2.0   (1-alpha)*mean lag = 1e-06   root is real: True
+
+=== Thm normalizable: search for a counterexample (random nonnegative kernels, sum 1, 60 lags) ===
+  trials: 3000, largest |root| seen: 0.999999990000 (theorem: < 1)
+  delta at lag 1, alpha=0.5: max|z| = 0.707106781187 ; 1 - max|z| = 2.929e-01 ; (1-alpha) = 5.0e-01
+  delta at lag 1, alpha=0.999999: max|z| = 0.999997999998 ; 1 - max|z| = 2.000e-06 ; (1-alpha) = 1.0e-06
+  delta at lag 2, alpha=0.5: max|z| = 0.872175357025 ; 1 - max|z| = 1.278e-01 ; (1-alpha) = 5.0e-01
+  delta at lag 2, alpha=0.999999: max|z| = 0.999997999996 ; 1 - max|z| = 2.000e-06 ; (1-alpha) = 1.0e-06
+  delta at lag 3, alpha=0.5: max|z| = 0.932377285220 ; 1 - max|z| = 6.762e-02 ; (1-alpha) = 5.0e-01
+  delta at lag 3, alpha=0.999999: max|z| = 0.999997999994 ; 1 - max|z| = 2.000e-06 ; (1-alpha) = 1.0e-06
+  delta at lag 7, alpha=0.5: max|z| = 0.987455127701 ; 1 - max|z| = 1.254e-02 ; (1-alpha) = 5.0e-01
+  delta at lag 7, alpha=0.999999: max|z| = 0.999997999986 ; 1 - max|z| = 2.000e-06 ; (1-alpha) = 1.0e-06

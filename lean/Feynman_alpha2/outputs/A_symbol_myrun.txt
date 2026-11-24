@@ -1,0 +1,111 @@
+PASS Def profile d=2 FT of 2D density by quadrature vs sinc: diff 2.19e-47
+PASS Def profile d=3 FT of uniform sphere vs sinc: diff 2.19e-47
+PASS Def profile d=1 FT of uniform segment vs sinc: diff 2.19e-47
+PASS Prop symbol alpha=0.05 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 1.12e-46
+PASS Prop symbol alpha=0.25 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 2.08e-46
+PASS Prop symbol alpha=0.5 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 1.66e-46
+PASS Prop symbol alpha=0.9 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 4.82e-46
+PASS Prop symbol alpha=1 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 1.73e-46
+PASS Prop symbol alpha=1.1 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 2.58e-46
+PASS Prop symbol alpha=1.5 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 3.72e-46
+PASS Prop symbol alpha=1.9 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 1.73e-46
+PASS Prop symbol alpha=2 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 1.76e-46
+PASS Prop symbol alpha=2.1 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 2.82e-46
+PASS Prop symbol alpha=2.5 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 3.73e-46
+PASS Prop symbol alpha=3 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 3.45e-45
+PASS Prop symbol alpha=4.5 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 2.62e-41
+PASS Prop symbol alpha=7 quadrature vs closed form vs polar form over 5 (s,k), 2 with complex s: max rel diff 4.77e-35
+PASS Prop symbol alpha=1 limit general formula at alpha=1+1e-15 vs arctan(b/s)/b at complex s: diff 7.89e-16
+PASS Prop symbol alpha=1 log form [log(s+ib)-log(s-ib)]/(2ib) = arctan(b/s)/b at complex s: diff 0.0
+PASS Prop symbol k=0 alpha=0.5 quadrature vs s^-alpha: rel diff 0.0
+PASS Prop symbol k=0 alpha=2 quadrature vs s^-alpha: rel diff 0.0
+PASS Prop symbol k=0 alpha=3.3 quadrature vs s^-alpha: rel diff 3.89e-45
+PASS Thm lorentz alpha->0+ closed form at alpha=1e-20 is 1 + (1.42e-21 + 0.0j)
+PASS Def symbol Re s=0 alpha=1.5 omega=1.3 oscillatory quadrature on the imaginary axis vs principal-branch closed form: rel diff 1.65e-26 (value (-0.55360846 + 0.55360846j))
+PASS Def symbol Re s=0 alpha=1.5 omega=0.3 oscillatory quadrature on the imaginary axis vs principal-branch closed form: rel diff 1.47e-26 (value (3.3939174 + 0.90939743j))
+PASS Def symbol Re s=0 alpha=1.8 omega=-1.3 oscillatory quadrature on the imaginary axis vs principal-branch closed form: rel diff 4.0e-26 (value (-0.72498893 - 0.23556318j))
+PASS Thm near2 phase alpha=1.5 omega=1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 8.76e-47
+PASS Thm near2 phase alpha=1.5 omega=-1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 8.76e-47
+PASS Thm near2 phase alpha=1.9 omega=1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 1.09e-46
+PASS Thm near2 phase alpha=1.9 omega=-1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 1.09e-46
+PASS Thm near2 phase alpha=2.1 omega=1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 8.76e-47
+PASS Thm near2 phase alpha=2.1 omega=-1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 8.76e-47
+PASS Thm near2 phase alpha=2.6 omega=1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 0.0
+PASS Thm near2 phase alpha=2.6 omega=-1.3 m_alpha/|m_alpha| vs exp(i sgn(omega) alpha pi/2): diff 0.0
+PASS Thm lorentz alpha=0.5 non-invariance (quadrature) m at (0.8,0.6) vs (0.6,0.8), same R: differ by 0.0639414
+PASS Thm lorentz alpha=1 non-invariance (quadrature) m at (0.8,0.6) vs (0.6,0.8), same R: differ by 0.0866172
+PASS Thm lorentz alpha=1.5 non-invariance (quadrature) m at (0.8,0.6) vs (0.6,0.8), same R: differ by 0.0639414
+PASS Thm lorentz alpha=1.9 non-invariance (quadrature) m at (0.8,0.6) vs (0.6,0.8), same R: differ by 0.0156299
+PASS Thm lorentz alpha=2 invariance (quadrature) m_2 at (0.8,0.6) and (0.6,0.8), both R=1: 1.0, diff 0.0
+PASS Thm lorentz alpha=2.1 non-invariance (quadrature) m at (0.8,0.6) vs (0.6,0.8), same R: differ by 0.0168363
+PASS Thm lorentz alpha=3 non-invariance (quadrature) m at (0.8,0.6) vs (0.6,0.8), same R: differ by 0.2
+INFO Thm lorentz defect table h_alpha(phi)-1 at phi = 0.2, 0.6, 1.0, 1.4, pi/2 and max over (0,pi/2]
+INFO   alpha=0              0.0          0.0          0.0          0.0          0.0   max|.|=0.0
+INFO   alpha=0.25    0.00292704    0.0271173    0.0800749     0.173641     0.231839   max|.|=0.231839
+INFO   alpha=0.5     0.00502092    0.0467516     0.139494     0.307459     0.414214   max|.|=0.414214
+INFO   alpha=1       0.00669791    0.0626193     0.188395     0.420671     0.570796   max|.|=0.570796
+INFO   alpha=1.5     0.00502092    0.0467516     0.139494     0.307459     0.414214   max|.|=0.414214
+INFO   alpha=1.9     0.00127054    0.0117238    0.0343354    0.0734978    0.0974315   max|.|=0.0974315
+INFO   alpha=1.99   0.000133027   0.00122412   0.00356483   0.00756304    0.0099764   max|.|=0.0099764
+INFO   alpha=2              0.0          0.0          0.0          0.0          0.0   max|.|=0.0
+INFO   alpha=2.01  -0.000134353  -0.00123552  -0.00359325  -0.00760733   -0.0100231   max|.|=0.0100231
+INFO   alpha=2.1    -0.00140316   -0.0128639   -0.0371759   -0.0779237    -0.102102   max|.|=0.102102
+INFO   alpha=2.5    -0.00833475   -0.0751352    -0.209721     -0.41603    -0.528595   max|.|=0.528595
+INFO   alpha=3       -0.0199334    -0.174664    -0.459698    -0.830033         -1.0   max|.|=1.0
+INFO   alpha=4        -0.052626    -0.425095    -0.944098     -1.29481     -1.33333   max|.|=1.33333
+PASS Thm lorentz defect sign h_alpha(phi)-1 > 0 for 0<alpha<2 and < 0 for 2<alpha<8, all sampled phi in (0,pi/2]; alpha grid step 0.01
+PASS Thm lorentz zero set smallest max-defect over alpha in (0,8) other than alpha=2 is 0.008858 at alpha=0.01 (neighbours of 2); zero only at alpha=2 (and 0)
+PASS Thm lorentz symmetry h_alpha = h_(2-alpha) at sampled points
+PASS Thm lorentz leading coefficient (h-1)/phi^2 -> alpha(2-alpha)/6 at phi=1e-8: max deviation 1.71e-16
+PASS Thm lorentz next term phi^4 coefficient = alpha(2-alpha)(7-3(alpha-1)^2)/360: max deviation 5.07e-17
+PASS Table symbol alpha=1.5 numeric printed 1.054093, mine 1.054093 (1.05409255339), 7 of 7 printed digits agree
+PASS Table symbol alpha=1.5 closed printed 1.054093, mine 1.054093 (1.05409255339), 7 of 7 printed digits agree
+PASS Table symbol alpha=1.5 h(0.2) printed 1.0050, mine 1.0050 (1.0050209184), 5 of 5 printed digits agree
+PASS Table symbol alpha=1.5 h(0.6) printed 1.0468, mine 1.0468 (1.04675160154), 5 of 5 printed digits agree
+PASS Table symbol alpha=1.5 h(1.0) printed 1.1395, mine 1.1395 (1.13949392732), 5 of 5 printed digits agree
+PASS Table symbol alpha=1.5 h(1.4) printed 1.3075, mine 1.3075 (1.30745925973), 5 of 5 printed digits agree
+PASS Table symbol alpha=2.0 numeric printed 1.000000, mine 1.000000 (1.0), 7 of 7 printed digits agree
+PASS Table symbol alpha=2.0 closed printed 1.000000, mine 1.000000 (1.0), 7 of 7 printed digits agree
+PASS Table symbol alpha=2.0 h(0.2) printed 1.0000, mine 1.0000 (1.0), 5 of 5 printed digits agree
+PASS Table symbol alpha=2.0 h(0.6) printed 1.0000, mine 1.0000 (1.0), 5 of 5 printed digits agree
+PASS Table symbol alpha=2.0 h(1.0) printed 1.0000, mine 1.0000 (1.0), 5 of 5 printed digits agree
+PASS Table symbol alpha=2.0 h(1.4) printed 1.0000, mine 1.0000 (1.0), 5 of 5 printed digits agree
+PASS Table symbol alpha=2.5 numeric printed 0.913547, mine 0.913547 (0.913546879604), 6 of 6 printed digits agree
+PASS Table symbol alpha=2.5 closed printed 0.913547, mine 0.913547 (0.913546879604), 6 of 6 printed digits agree
+PASS Table symbol alpha=2.5 h(0.2) printed 0.9917, mine 0.9917 (0.991665247571), 4 of 4 printed digits agree
+PASS Table symbol alpha=2.5 h(0.6) printed 0.9249, mine 0.9249 (0.924864784988), 4 of 4 printed digits agree
+PASS Table symbol alpha=2.5 h(1.0) printed 0.7903, mine 0.7903 (0.790278773412), 4 of 4 printed digits agree
+PASS Table symbol alpha=2.5 h(1.4) printed 0.5840, mine 0.5840 (0.583969829801), 4 of 4 printed digits agree
+PASS Table symbol alpha=3.0 numeric printed 0.800000, mine 0.800000 (0.8), 6 of 6 printed digits agree
+PASS Table symbol alpha=3.0 closed printed 0.800000, mine 0.800000 (0.8), 6 of 6 printed digits agree
+PASS Table symbol alpha=3.0 h(0.2) printed 0.9801, mine 0.9801 (0.980066577841), 4 of 4 printed digits agree
+PASS Table symbol alpha=3.0 h(0.6) printed 0.8253, mine 0.8253 (0.82533561491), 4 of 4 printed digits agree
+PASS Table symbol alpha=3.0 h(1.0) printed 0.5403, mine 0.5403 (0.540302305868), 4 of 4 printed digits agree
+PASS Table symbol alpha=3.0 h(1.4) printed 0.1700, mine 0.1700 (0.1699671429), 4 of 4 printed digits agree
+PASS Sec9 defect row alpha=0 printed 0, mine 0 (0.0), 1 of 1 printed digits agree
+PASS Sec9 defect row alpha=0.5 printed 0.41, mine 0.41 (0.414213562373), 2 of 2 printed digits agree
+PASS Sec9 defect row alpha=1.5 printed 0.41, mine 0.41 (0.414213562373), 2 of 2 printed digits agree
+PASS Sec9 defect row alpha=1.9 printed 0.097, mine 0.097 (0.0974314895502), 2 of 2 printed digits agree
+PASS Sec9 defect row alpha=2 printed 0, mine 0 (0.0), 1 of 1 printed digits agree
+PASS Sec9 defect row alpha=2.1 printed 0.10, mine 0.10 (0.10210150855), 2 of 2 printed digits agree
+PASS Sec9 defect row alpha=3 printed 1.0, mine 1.0 (1.0), 2 of 2 printed digits agree
+PASS Table disp k=0.0 root E printed 1.0000000000, mine 1.0000000000 (1.0), 11 of 11 printed digits agree
+PASS Table disp k=0.0 sqrt(k^2+mu^2) printed 1.0000000000, mine 1.0000000000 (1.0), 11 of 11 printed digits agree
+PASS Table disp k=0.0 E^2 with factor -1 printed -1.00, mine -1.00 (-1.0), 3 of 3 printed digits agree
+PASS Table disp k=0.5 root E printed 1.1180339887, mine 1.1180339887 (1.11803398875), 11 of 11 printed digits agree
+PASS Table disp k=0.5 sqrt(k^2+mu^2) printed 1.1180339887, mine 1.1180339887 (1.11803398875), 11 of 11 printed digits agree
+PASS Table disp k=0.5 E^2 with factor -1 printed -0.75, mine -0.75 (-0.75), 2 of 2 printed digits agree
+PASS Table disp k=1.0 root E printed 1.4142135624, mine 1.4142135624 (1.41421356237), 11 of 11 printed digits agree
+PASS Table disp k=1.0 sqrt(k^2+mu^2) printed 1.4142135624, mine 1.4142135624 (1.41421356237), 11 of 11 printed digits agree
+PASS Table disp k=1.0 E^2 with factor -1 printed 0.00, mine 0.00 (2.74220022296e-46), 1 of 1 printed digits agree
+PASS Table disp k=2.0 root E printed 2.2360679775, mine 2.2360679775 (2.2360679775), 11 of 11 printed digits agree
+PASS Table disp k=2.0 sqrt(k^2+mu^2) printed 2.2360679775, mine 2.2360679775 (2.2360679775), 11 of 11 printed digits agree
+PASS Table disp k=2.0 E^2 with factor -1 printed 3.00, mine 3.00 (3.0), 3 of 3 printed digits agree
+PASS Table disp k=4.0 root E printed 4.1231056256, mine 4.1231056256 (4.12310562562), 11 of 11 printed digits agree
+PASS Table disp k=4.0 sqrt(k^2+mu^2) printed 4.1231056256, mine 4.1231056256 (4.12310562562), 11 of 11 printed digits agree
+PASS Table disp k=4.0 E^2 with factor -1 printed 15.00, mine 15.00 (15.0), 4 of 4 printed digits agree
+PASS Remark phase tachyon k=0 2 - K_2 symbol (by quadrature) vanishes at real s = sqrt(mu^2-k^2) = 1.0: residual 3.5e-46
+PASS Thm KG no growing mode k=0 2 + K_2 symbol at the same s is 4.0 (no root)
+PASS Remark phase tachyon k=0.5 2 - K_2 symbol (by quadrature) vanishes at real s = sqrt(mu^2-k^2) = 0.8660254: residual 3.5e-46
+PASS Thm KG no growing mode k=0.5 2 + K_2 symbol at the same s is 4.0 (no root)
+SUMMARY A_symbol: 0 failed check(s)

@@ -1,0 +1,69 @@
+== lattice: balanced alpha=2 law in 1+1 (c=1, tau_c=1, mu=1/sqrt2) ==
+INFO h=0.080  max rel L2 error vs spectral KG (t=60,70,80; +/- runs) = 7.088e-03 ; mu*tau_c = 0.706841 (range 0.706577..0.707029 over 7 k, 2 runs)  [2.5s]
+INFO h=0.040  max rel L2 error vs spectral KG (t=60,70,80; +/- runs) = 1.772e-03 ; mu*tau_c = 0.707040 (range 0.706974..0.707087 over 7 k, 2 runs)  [5.2s]
+INFO h=0.020  max rel L2 error vs spectral KG (t=60,70,80; +/- runs) = 4.431e-04 ; mu*tau_c = 0.707090 (range 0.707074..0.707102 over 7 k, 2 runs)  [38.4s]
+PASS Thm KG(1)-(2) lattice vs spectral KG rel L2 errors ['7.088e-03', '1.772e-03', '4.431e-04'], ratios ['4.00', '4.00'] (second order => 4)
+PASS Thm KG mass mu*tau_c=1/sqrt2 measured ['0.706841', '0.707040', '0.707090'] vs 0.707107; |diff| ['2.66e-04', '6.65e-05', '1.66e-05']
+PASS Thm KG mass (Richardson h->0) mu*tau_c = 0.7071068 vs 0.7071068
+INFO positive run: rel spread of ||J||^2 on t in [52.5,83.0] = 6.872e-13 ; of KG charge q = 1.290e-14 ; q/||J||^2 mean = +1.66691
+INFO negative run: rel spread of ||J||^2 on t in [52.5,83.0] = 6.868e-13 ; of KG charge q = 1.316e-14 ; q/||J||^2 mean = -1.66691
+INFO mixed    run: rel spread of ||J||^2 on t in [52.5,83.0] = 6.291e-04 ; of KG charge q = 1.737e-14 ; q/||J||^2 mean = +1.00014
+PASS Thm unitary(1)-(2) trace on one sign of frequency rel spread of ||J||^2: positive ['7.12e-13', '6.94e-13', '6.87e-13'], negative ['7.10e-13', '6.85e-13', '6.87e-13'] (h=[0.08, 0.04, 0.02])
+PASS Thm unitary(3) mixed frequencies not conserved rel spread of ||J||^2 = 6.291e-04 (one-sign runs: 6.9e-13); packet cross terms dephase after the source ends
+INFO mixed run, per-mode modulation depth of |Jhat_k|^2 at k=[np.float64(0.4), np.float64(0.6), np.float64(0.8), np.float64(1.0), np.float64(1.2), np.float64(1.4), np.float64(1.6)]: ['0.800', '0.800', '0.800', '0.800', '0.800', '0.800', '0.800']
+PASS Thm unitary(3) per-mode |Jhat_k|^2 oscillates modulation depth min 0.800 max 0.800
+PASS Thm unitary(3) cross terms at 2 omega max rel deviation of fitted frequency of |Jhat_k|^2 from 2 omega(k) = 3.94e-04
+PASS Thm unitary(4) KG charge conserved (+, -, mixed) spread of q / mean ||J||^2: ['2.15e-14', '2.19e-14', '1.74e-14']
+PASS Thm unitary(4) sign of charge q(+) = 3.47612, q(-) = -3.47612, q(mixed) = 2.607e+00 (||J_mixed||^2 = 2.60672)
+PASS Thm unitary(4) / Remark two norms inequality q-||J||^2 in [1.39075,1.39075], bound in [1.90341,1.90341], ||J||^2=2.08537
+PASS Thm unitary(2) closure Q and readout p_m constant max rel variation of Q entries 1.98e-09; p_1 = 0.571302 +- 6.2e-11; |<Ja,Jb>| = 0.9494
+PASS Thm KG mass, units check c=2 tau_c=0.5 mu*tau_c = 0.707042, 0.707091 -> extrap 0.707107 vs 0.707107
+== near alpha=2: time-stepped order-alpha law, one mode (c=1, tau_c=1/sqrt2, k=1) ==
+INFO alpha=1.90 root(my Newton)=1.370022-5.4354e-02i ; Thm near2 rate=-5.0274e-02 ; time-stepped rate dt=.04: -5.4696e-02 dt=.02: -5.4689e-02 extrap -5.4687e-02 ; omega fit 1.36962 ; env(t~50)=4.080e-02 env(t~200)=2.185e-05
+PASS Thm near2(2) alpha=1.90 rate vs exact root time-stepped -5.4687e-02 vs Im root -5.4354e-02 (rel diff 6.13e-03)
+PASS Thm near2(2) alpha=1.90 first-order formula Im root -5.4354e-02 vs (pi/4)(alpha-2)mu^2/|omega| = -5.0274e-02, rel diff 0.081 (delta=-0.10; O(delta) allowed)
+INFO alpha=1.95 root(my Newton)=1.393538-2.7532e-02i ; Thm near2 rate=-2.6544e-02 ; time-stepped rate dt=.04: -2.7599e-02 dt=.02: -2.7597e-02 extrap -2.7596e-02 ; omega fit 1.39354 ; env(t~50)=1.155e-01 env(t~200)=1.799e-03
+PASS Thm near2(2) alpha=1.95 rate vs exact root time-stepped -2.7596e-02 vs Im root -2.7532e-02 (rel diff 2.31e-03)
+PASS Thm near2(2) alpha=1.95 first-order formula Im root -2.7532e-02 vs (pi/4)(alpha-2)mu^2/|omega| = -2.6544e-02, rel diff 0.037 (delta=-0.05; O(delta) allowed)
+INFO alpha=2.00 root(my Newton)=1.414214+0.0000e+00i ; Thm near2 rate=+0.0000e+00 ; time-stepped rate dt=.04: -1.3184e-15 dt=.02: -3.4694e-16 extrap -2.3130e-17 ; omega fit 1.41423 ; env(t~50)=3.260e-01 env(t~200)=3.260e-01
+PASS Thm near2(1) conservative at alpha=2 fitted rate -3.47e-16 (dt extrap -2.31e-17), omega 1.41423 vs 1.41421; bounded: max|J| t in[50,300] = 3.260e-01
+INFO alpha=2.05 root(my Newton)=1.432250+2.7902e-02i ; Thm near2 rate=+2.8826e-02 ; time-stepped rate dt=.04: +2.7905e-02 dt=.02: +2.7903e-02 extrap +2.7902e-02 ; omega fit 1.43226 ; env(t~50)=1.163e+00 env(t~200)=7.938e+01
+PASS Thm near2(2) alpha=2.05 rate vs exact root time-stepped +2.7902e-02 vs Im root +2.7902e-02 (rel diff 6.16e-07)
+PASS Thm near2(2) alpha=2.05 first-order formula Im root +2.7902e-02 vs (pi/4)(alpha-2)mu^2/|omega| = +2.8826e-02, rel diff 0.032 (delta=0.05; O(delta) allowed)
+INFO alpha=2.10 root(my Newton)=1.447853+5.5902e-02i ; Thm near2 rate=+5.9468e-02 ; time-stepped rate dt=.04: +5.5905e-02 dt=.02: +5.5903e-02 extrap +5.5902e-02 ; omega fit 1.44786 ; env(t~50)=4.592e+00 env(t~200)=1.981e+04
+PASS Thm near2(2) alpha=2.10 rate vs exact root time-stepped +5.5902e-02 vs Im root +5.5902e-02 (rel diff 1.07e-06)
+PASS Thm near2(2) alpha=2.10 first-order formula Im root +5.5902e-02 vs (pi/4)(alpha-2)mu^2/|omega| = +5.9468e-02, rel diff 0.060 (delta=0.10; O(delta) allowed)
+INFO alpha=2-1e-02: Im root -5.545898e-03, formula -5.507409e-03, (Im/formula - 1)/delta = -0.699
+INFO alpha=2+1e-02: Im root +5.560500e-03, formula +5.598471e-03, (Im/formula - 1)/delta = -0.678
+INFO alpha=2-1e-03: Im root -5.552870e-04, formula -5.549044e-04, (Im/formula - 1)/delta = -0.689
+INFO alpha=2+1e-03: Im root +5.554329e-04, formula +5.558150e-04, (Im/formula - 1)/delta = -0.687
+INFO alpha=2-1e-04: Im root -5.553531e-05, formula -5.553148e-05, (Im/formula - 1)/delta = -0.688
+INFO alpha=2+1e-04: Im root +5.553677e-05, formula +5.554059e-05, (Im/formula - 1)/delta = -0.688
+PASS Thm near2(2) both signs same rate roots 1.432250+0.027902i and -1.432250+0.027902i
+INFO alpha=1.90 dt=0.04 envelope max|J| near t=[100, 200, 300, 400, 500, 600, 690]: ['3.281e-03', '2.187e-05', '6.279e-06', '3.584e-06', '2.314e-06', '1.627e-06', '1.246e-06']
+INFO alpha=1.90 dt=0.04 local power-law exponents ['7.23', '3.08', '1.95', '1.96', '1.93', '1.91'] ; oscillation frequency for t>400: 1.0000 (c|k| = 1, pole Re omega = 1.3700)
+INFO alpha=1.90 dt=0.02 envelope max|J| near t=[100, 200, 300, 400, 500, 600, 690]: ['3.283e-03', '2.185e-05', '6.279e-06', '3.584e-06', '2.314e-06', '1.627e-06', '1.246e-06']
+INFO alpha=1.90 dt=0.02 local power-law exponents ['7.23', '3.08', '1.95', '1.96', '1.93', '1.91'] ; oscillation frequency for t>400: 1.0000 (c|k| = 1, pole Re omega = 1.3700)
+INFO FINDING Thm near2 (not in paper): for alpha<2 the sourced solution does not decay exponentially at late time; pole part extrapolated to t=600 would be 5.2e-15, measured 1.627e-06; tail ~ t^-1.91 at frequency 1.000 = c|k| (expected t^-alpha from the light-cone branch points omega=+-c|k|)
+PASS Thm near2(2) late-time tail below 2 (extra, not in paper) power law exponent 1.91 (alpha=1.9), frequency 1.0000 (c|k|=1), dt-independent to 4.6e-07
+== nonrelativistic limit, spectral (hbar=m=1, packet exp(-x^2/8+ix), t=10) ==
+INFO (t/8)||k^4 psihat|| = 3.671511 (paper: 3.672)
+INFO c=   2  ||KG-Schr|| = 6.0577e-01  err*c^2 = 2.4231  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 5.5625e-01 <= bound 1.0854e+00
+INFO c=   4  ||KG-Schr|| = 2.0757e-01  err*c^2 = 3.3210  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 2.0350e-01 <= bound 2.7136e-01
+INFO c=   8  ||KG-Schr|| = 5.6076e-02  err*c^2 = 3.5889  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 5.6429e-02 <= bound 6.7840e-02
+INFO c=  16  ||KG-Schr|| = 1.4264e-02  err*c^2 = 3.6515  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 1.4462e-02 <= bound 1.6960e-02
+INFO c=  32  ||KG-Schr|| = 3.5806e-03  err*c^2 = 3.6665  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 3.6374e-03 <= bound 4.2400e-03
+INFO c=  64  ||KG-Schr|| = 8.9606e-04  err*c^2 = 3.6703  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 9.1072e-04 <= bound 1.0600e-03
+INFO c= 128  ||KG-Schr|| = 2.2407e-04  err*c^2 = 3.6712  bound*c^2 = 3.6715  norm drift 2.2e-16 | Cor feynman err 2.2777e-04 <= bound 2.6500e-04
+PASS Thm NR bound error <= t/(8 c^2) ||Delta^2 psi|| for c=2..128
+PASS Thm NR rate O(1/c^2) and coefficient err*c^2 -> 3.67120 at c=128 vs (t/8)||k^4 psihat|| = 3.67151
+PASS Cor feynman bound error of (mc^2/(hbar omega)) multiplier <= stated bound for c=2..128
+PASS Thm unitary(1) group law max |U(t1)U(t2)-U(t1+t2)| = 1.1e-13
+== nonrelativistic limit from the lattice law itself (hbar=m=1; mu=c^2, tau_c=1/(sqrt2 c^2)) ==
+INFO c=2 h=0.040: lattice vs Schr 4.9411e-01 ; lattice vs spectral KG+ 7.160e-03 ; spectral KG+ vs Schr 4.8913e-01 ; Thm NR bound 6.6538e-01  [0s]
+INFO c=2 h=0.020: lattice vs Schr 4.9028e-01 ; lattice vs spectral KG+ 1.790e-03 ; spectral KG+ vs Schr 4.8903e-01 ; Thm NR bound 6.6521e-01  [1s]
+PASS Thm NR on lattice-evolved state c=2 lattice-vs-Schr 4.9028e-01 (x c^2 = 1.961), bound 6.6521e-01, lattice discretisation error 1.8e-03
+INFO c=4 h=0.020: lattice vs Schr 1.7589e-01 ; lattice vs spectral KG+ 2.334e-02 ; spectral KG+ vs Schr 1.5890e-01 ; Thm NR bound 1.7102e-01  [2s]
+INFO c=4 h=0.010: lattice vs Schr 1.6284e-01 ; lattice vs spectral KG+ 5.837e-03 ; spectral KG+ vs Schr 1.5874e-01 ; Thm NR bound 1.7084e-01  [11s]
+PASS Thm NR on lattice-evolved state c=4 lattice-vs-Schr 1.6284e-01 (x c^2 = 2.605), bound 1.7084e-01, lattice discretisation error 5.8e-03
+elapsed 66s; failed checks: none

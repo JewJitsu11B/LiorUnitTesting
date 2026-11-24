@@ -1,0 +1,157 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.72in,top=0.65in,bottom=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\Real}{Re}
+
+\setlength{\parskip}{0pt}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1.6ex plus .4ex minus .2ex}{0.8ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus .3ex minus .2ex}{0.6ex}
+\AtBeginDocument{\setlength{\abovedisplayskip}{5pt plus 2pt minus 2pt}\setlength{\belowdisplayskip}{5pt plus 2pt minus 2pt}\setlength{\abovedisplayshortskip}{2pt}\setlength{\belowdisplayshortskip}{3pt}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{erratum}{Erratum}
+\renewcommand{\theerratum}{E\arabic{erratum}}
+
+\newcommand{\Derived}{\textup{\textsc{[Derived]}}\ }
+\newcommand{\Proposed}{\textup{\textsc{[Proposed]}}\ }
+\newcommand{\ProposedLimit}{\textup{\textsc{[Proposed limit]}}\ }
+\newcommand{\Open}{\textup{\textsc{[Open]}}\ }
+\newcommand{\Correction}{\textup{\textsc{[Correction]}}\ }
+\newcommand{\Confined}[1]{\textup{\textsc{[Confined: #1]}}\ }
+
+\begin{document}
+
+\begin{center}
+{\large\bfseries Addendum to \emph{An Axiomatic Derivation of the Feynman Path Sum at the Light-Cone Kernel Width and Closure Order $\alpha=2$ of the Causal Accumulation Law}}\\[4pt]
+Errata, and the Carrier Stress Tensor at $\alpha=2$\\[6pt]
+Samuel Leizerman\\[2pt]
+{\small LIOR Research Initiative \quad \href{mailto:sleizerm@asu.edu}{sleizerm@asu.edu} \quad ORCID: \href{https://orcid.org/0009-0000-0133-2291}{0009-0000-0133-2291}}\\[2pt]
+{\small Draft, November 2026}
+\end{center}
+
+\begin{abstract}
+This addendum to~\cite{feyn} does two things. Section~\ref{s:errata} corrects four statements: where the closure's sign acts at $\alpha=2$ (on the phase channel inside each carrier component, not on the memory integral), the status of the order $\alpha=0$ in the Lorentz-invariance theorem (trivial, not a second solution), the word ``retarded'', which becomes ``delayed'', and the reading of ``faithful limit'' in Rem.~7.2. None of the theorems of~\cite[\S\S4--8]{feyn} changes. Section~\ref{s:stress} adds the carrier stress tensor: the Lagrangian $\tr(\partial_\mu J^\dagger\partial^\mu J-\mu^2J^\dagger J)$, whose Euler--Lagrange equation is the off-source field equation of~\cite[Thm.~5.1]{feyn}, gives a symmetric, conserved $T^{\mu\nu}$, proposed as the $\alpha=2$ limit of the matter tensor of the full law. The improvement term is stated and its coefficient is left to the full law. A massive carrier averages to dust ($w=0$), not to a vacuum term, and its tensor is compared with the closure-dyad tensor of the information note.
+\end{abstract}
+
+\paragraph{References and labels.} Numbers such as ``Thm.~5.1'' or ``Rem.~3.1'' refer to~\cite{feyn}; its only numbered equation is Eq.~(1), $T=2J+r_1K_2J=S$. \Derived means the statement follows from the stated assumptions by direct calculation; \Proposed means an identification with CAL structure; \Open marks an obligation not discharged here. The source current is
+\begin{equation}\label{e:Z}
+J=\sum_{a=0}^{3}Z_a\,e_a,\qquad Z_a=A_a\,e^{-H_a/\tau_E}+B_a\,e^{iS_a/\hbar_{\rm eff}},\qquad A_a+B_a=1,\quad A_a\in[0,1],
+\end{equation}
+with $\{e_a\}=\{1,i,j,k\}$ and $J\in\mathbb C\otimes\mathbb H\cong M_2(\mathbb C)$, as in~\cite[Ax.~1]{feyn} and~\cite[Eq.~(61)]{infonote}.
+
+\section{Errata}\label{s:errata}
+
+\begin{erratum}[Where the closure's sign acts]\label{er:phase}
+\Proposed \emph{Affected:} the abstract (``Carrying the channel phase \dots\ so we use the additive law''), Rem.~1.1 (third input), Ax.~3 (``without the channel phase''), Rem.~3.1, the last column of Table~2, and Rem.~10.1 (``Choice: the additive law without the channel phase'').
+
+\emph{Correction.} The edge orientation $e^{-i\sigma\alpha\pi/2}$ of~\cite[Def.~2.3]{edge} equals $e^{-i\sigma\pi}=-1$ at $\alpha=2$ for both orientations. That factor acts on the phase channel inside each component of the carrier, shifting the argument of the phase term by $\pi$:
+\begin{equation}\label{e:flip}
+Z_a\big|_{\alpha=2}=A_a\,e^{-H_a/\tau_E}+B_a\,e^{iS_a/\hbar_{\rm eff}}\,e^{-i\sigma\pi}=A_a\,e^{-H_a/\tau_E}-B_a\,e^{iS_a/\hbar_{\rm eff}}.
+\end{equation}
+It does not multiply the memory integral as a whole. The memory keeps the law's own prefactor, $-(1-\alpha)=+1$ at $\alpha=2$, so the operator of Eq.~(1) is $2+r_1K_2$ with $r_1>0$, and that operator is the law at $\alpha=2$, not a choice. Writing $G_a=A_ae^{-H_a/\tau_E}$ and $P_a=B_ae^{iS_a/\hbar_{\rm eff}}$, the flip changes the sign of the cross term in each channel, $|Z_a|^2=|G_a|^2+|P_a|^2-2\Real(G_a\bar P_a)$; the phase term is kept, and the channel index is not summed.
+
+\emph{Consequences.} (i) Equation~(1) is linear in $J$, and the flip changes the component content of $J$, not the operator acting on it. Every theorem of~\cite[\S\S4--8]{feyn} therefore holds verbatim with $r_1>0$, including the real mass $mc^2=\hbar\sqrt{r_1/2}/\tau_c$. (ii) The computation of Rem.~3.1 stays correct as a statement about the rejected placement: a $-1$ on the whole memory replaces $\mu^2$ by $-\mu^2$ and makes the mass tachyonic, which is what the last column of Table~2 shows. (iii) The closing sentence of Rem.~3.1, ``If the phase is kept at $\alpha=2$, the coincidence weight must be negative there'', is withdrawn: the phase is kept, in Eq.~\eqref{e:flip}, and $r_1>0$. (iv) In Rem.~10.1 the item ``Choice'' is replaced by ``Proposed: the placement of the closure's $-1$ on the phase channel, Eq.~\eqref{e:flip}''. The placement is a proposal; the additive sign of the memory is the law.
+\end{erratum}
+
+\begin{erratum}[The order $\alpha=0$ in Theorem~4.2]\label{er:alpha0}
+\Correction \emph{Affected:} the abstract, \S1 (``Lorentz invariant exactly at $\alpha=2$''), the title of Thm.~4.2, and the sentence under the defect table of \S9 (``zero only at $\alpha=0$ and $\alpha=2$'').
+
+\emph{Correction.} On $\alpha\ge0$ the angular factor is constant at exactly two orders: $h_0(\varphi)=\sin(-\varphi)/(-\sin\varphi)\equiv1$ and $h_2\equiv1$. They are not on the same footing. At $\alpha=0$ the invariance is trivial: $\tau_c^{\alpha}m_\alpha=R^{-\alpha}h_\alpha\to1$ as $\alpha\to0^+$, so $K_0$ is the identity and there is no memory whose symbol could fail to be invariant. The symmetry $h_\alpha=h_{2-\alpha}$ of Thm.~4.2 maps this trivial point onto $\alpha=2$. So ``Lorentz invariance selects $\alpha=2$'' reads: among orders with a nontrivial memory, Lorentz invariance holds only at $\alpha=2$. Theorem~4.2 as stated, for $\alpha>0$, is unchanged, and so is the leading defect $\alpha(2-\alpha)\varphi^2/6$, which vanishes at both orders.
+\end{erratum}
+
+\begin{erratum}[``Retarded'' to ``delayed'']\label{er:delayed}
+\Correction \emph{Affected:} the abstract (twice), \S1 (three times, including the prose on causal-set chain sums), the line after the proof of Thm.~4.2 (``retarded prescription''), Cor.~4.3 (title and proof), Thm.~5.1(1), Thm.~6.1(3), the dispersion paragraph of \S9, Appendix~A, and Appendix~B. In each place read ``delayed''. The meaning is unchanged: supported in the closed forward cone of the source, so the response at a point depends only on its past light cone. Citation titles are not altered.
+\end{erratum}
+
+\begin{erratum}[``Not the faithful limit'' in Rem.~7.2]\label{er:faithful}
+\Correction The information note defines the faithful limit as lossless encoding of the past in the present, not as record-keeping. In that sense the pair $(J,\partial_tJ)$ carried forward at $\alpha=2$ \emph{is} the faithful limit: the memory reaches the whole past cone and the past is encoded in the present pair without separate records. Read Rem.~7.2 accordingly; the mathematics is unchanged.
+\end{erratum}
+
+\section{The carrier stress tensor at \texorpdfstring{$\alpha=2$}{alpha = 2}}\label{s:stress}
+
+\paragraph{Setting.} \ProposedLimit \Confined{Minkowski, gauge-neutral sector} In this section $c=1$, the metric is $\eta=\mathrm{diag}(+,-,-,-)$ as in~\cite{feyn}, $\Box=\partial^\mu\partial_\mu=\partial_t^2-\nabla^2$, and $\mu^2=r_1/(2\tau_c^2)$ as in Thm.~5.1. The transport is trivial (Ax.~2). We write $|X|^2=\tr(X^\dagger X)$ for $X\in M_2(\mathbb C)$ and $N=\tr(J^\dagger J)$. The identities below were checked symbolically (sympy) for a general $M_2(\mathbb C)$-valued field in $3+1$ dimensions, together with Propositions~\ref{p:dust}(a)--(b).
+
+\begin{definition}[Carrier Lagrangian]\label{d:lag}
+$\mathcal L=\tr\big(\partial_\mu J^\dagger\,\partial^\mu J-\mu^2J^\dagger J\big)$.
+\end{definition}
+
+Varying $J^\dagger$ gives $(\Box+\mu^2)J=0$, which is Thm.~5.1(2) on every open set where $S=0$. The Lagrangian is invariant under $J\mapsto UJV$ with $U,V\in U(2)$, which contains the left projectors of Thm.~7.3 and the quaternion frame rotations. It reproduces the local, source-free content of Eq.~(1) only; the law itself is nonlocal, and the Lagrangian is not claimed to generate it.
+
+\begin{proposition}[Symmetric, conserved tensor]\label{p:T}
+\Derived Let
+\begin{equation}\label{e:T}
+T^{\mu\nu}=\tr\big(\partial^\mu J^\dagger\,\partial^\nu J+\partial^\nu J^\dagger\,\partial^\mu J\big)-\eta^{\mu\nu}\mathcal L .
+\end{equation}
+\begin{enumerate}\itemsep1pt
+\item[(i)] $T^{\mu\nu}=T^{\nu\mu}$, and $T^{\mu\nu}$ equals the metric (Hilbert) tensor $2\,\partial\mathcal L/\partial g_{\mu\nu}-g^{\mu\nu}\mathcal L$ evaluated at $g=\eta$.
+\item[(ii)] For every field, $\partial_\mu T^{\mu\nu}=\tr\big((\Box+\mu^2)J^\dagger\,\partial^\nu J+\partial^\nu J^\dagger\,(\Box+\mu^2)J\big)$. Off the source it vanishes. Where the source acts, Thm.~5.1(2) gives $\partial_\mu T^{\mu\nu}=\tfrac12\tr\big(\Box S^\dagger\,\partial^\nu J+\partial^\nu J^\dagger\,\Box S\big)$: the source exchanges energy and momentum with the carrier.
+\item[(iii)] $T^{00}=|\partial_tJ|^2+\sum_i|\partial_iJ|^2+\mu^2N\ge0$ pointwise.
+\item[(iv)] $T^\mu{}_\mu=2\mu^2N-\Box N+\tr\big((\Box+\mu^2)J^\dagger J+J^\dagger(\Box+\mu^2)J\big)$, so $T^\mu{}_\mu=2\mu^2N-\Box N$ off the source.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) $\mathcal L$ depends on the metric only through $g^{\mu\nu}\tr(\partial_\mu J^\dagger\partial_\nu J)$, so the Hilbert tensor is the symmetrized canonical tensor, Eq.~\eqref{e:T}. (ii) Differentiate Eq.~\eqref{e:T}; the terms $\tr(\partial^\mu J^\dagger\partial_\mu\partial^\nu J+\partial_\mu\partial^\nu J^\dagger\partial^\mu J)$ cancel against $\partial^\nu\mathcal L$, and the mass terms of $\partial^\nu\mathcal L$ complete $\Box$ to $\Box+\mu^2$. (iii) Set $\mu=\nu=0$ in Eq.~\eqref{e:T}. (iv) Contract, and use $\Box N=\tr(\Box J^\dagger J+J^\dagger\Box J)+2\tr(\partial_\mu J^\dagger\partial^\mu J)$.
+\end{proof}
+
+The energy $E=\int T^{00}d^dx$ is the charge of a local conserved current, like the Klein--Gordon charge $q$ of Thm.~7.3(4). On positive frequency, with $\hat J(k)$ the spatial Fourier transform, $E=2\int\omega^2|\hat J|^2d^dk$, $q=\int(\omega/\mu)|\hat J|^2d^dk$ and $\|J\|^2=\int|\hat J|^2d^dk$; since $\omega\ge\mu$, $\|J\|^2\le q\le E/(2\mu^2)$. As in Rem.~7.4, only $\|J\|^2$ is not the charge of a local current.
+
+\paragraph{The limit.} \ProposedLimit Paper four~\cite{varclos} shows that the action of the full law is local, $\mathcal A=\int W\mathcal L\,d\mu$, with a history weight $W$, and that the matter tensor obeys the exchange law $\nabla^\mu(W\,T_{\mu\nu})=L_m\nabla_\nu W$. Where $W$ is constant the exchange law reduces to $\partial^\mu T_{\mu\nu}=0$. We propose that Eq.~\eqref{e:T} is the $\alpha=2$ limit of that matter tensor for the carrier: the full law at $\alpha=2$ on its gauge-neutral sector, off the source, with constant weight. The tensor is a quadratic readout of $J$, like the closure $Q=\int JJ^\dagger$ of Thm.~7.3; it is blind to the channel partition (it is $U(2)\times U(2)$ invariant) and does not replace the four-channel carrier, which Eq.~(1) evolves whole. \Open Finiteness of $W$ is an obligation on the geometry~\cite[Prop.~3.1]{varclos}, so ``constant $W$'' is a statement about the regime, not a computed value.
+
+\begin{remark}[The improvement term]\label{r:improve}
+\Derived For any real $\xi$,
+\begin{equation}\label{e:improve}
+T_\xi^{\mu\nu}=T^{\mu\nu}+\xi\big(\eta^{\mu\nu}\Box-\partial^\mu\partial^\nu\big)N
+\end{equation}
+is symmetric and conserved off the source, because $\partial_\mu(\eta^{\mu\nu}\Box-\partial^\mu\partial^\nu)N\equiv0$. For fields that decay in space the added term integrates to zero over a slice, so $E$ and the momentum are unchanged. The trace shifts by $3\xi\Box N$: $T_\xi{}^\mu{}_\mu=2\mu^2N-(1-3\xi)\Box N$ off the source. The value $\xi=\tfrac13$ removes the derivative term (in this normalization of $\mathcal L$ it is the conformal value $\tfrac16$ per real component). For $\xi\neq0$ the added term has no definite sign, and the pointwise positivity of Prop.~\ref{p:T}(iii) is lost.
+
+\Open Flat space does not fix $\xi$. In curved space the improvement corresponds to a coupling $\xi RN$, and the tensor form $(\eta^{\mu\nu}\Box-\partial^\mu\partial^\nu)$ is the same as that of the $(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)W$ term in paper four's metric equation $W(G_{\mu\nu}+\Lambda_0g_{\mu\nu})+(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)W=8\pi G\,WT_{\mu\nu}+\Theta_{\mu\nu}$~\cite{varclos}. Which $\xi$, if any, the full law fixes is left to it. No value is assumed here.
+\end{remark}
+
+\begin{proposition}[A massive carrier averages to dust]\label{p:dust}
+\Derived Let $\mu>0$.
+\begin{enumerate}\itemsep1pt
+\item[(a)] A positive-frequency plane wave $J=A\,e^{-ik\cdot x}$, $k^\mu=(\omega,\mathbf k)$, $\omega=\sqrt{\mathbf k^2+\mu^2}$, has $\mathcal L=0$ and $T^{\mu\nu}=2|A|^2k^\mu k^\nu$: a dyad of a future-timelike vector, with trace $2\mu^2|A|^2$.
+\item[(b)] A homogeneous carrier $J(t)=A\,e^{-i\mu t}+B\,e^{i\mu t}$ has pressure $p=T^{ii}=\mathcal L=|\partial_tJ|^2-\mu^2N$ in each direction. Its average over one period $2\pi/\mu$ is zero, and the averaged density is $2\mu^2(|A|^2+|B|^2)$. So $w=p/\rho$ averages to $0$; on one sign of frequency ($B=0$) $p=0$ exactly.
+\item[(c)] For a superposition of positive-frequency modes, averaging over their relative phases removes the cross terms and leaves $\sum_kw_k\,k^\mu k^\nu$ with $w_k=2|A_k|^2\ge0$. Then $0\le p/\rho<\tfrac13$, and $p/\rho\to0$ in the nonrelativistic limit $|\mathbf k|\ll\mu$.
+\end{enumerate}
+The carrier cannot supply a vacuum term ($w=-1$, $T^{\mu\nu}\propto\eta^{\mu\nu}$): that needs $\partial_\mu J=0$, and a constant $J$ solves $(\Box+\mu^2)J=0$ only if $J=0$.
+\end{proposition}
+
+\begin{proof}
+(a) $\partial_\mu J=-ik_\mu J$ and $k^2=\mu^2$, so $\mathcal L=(k^2-\mu^2)|A|^2=0$ and Eq.~\eqref{e:T} gives the dyad. (b) At $\mathbf k=0$, $T^{ij}=-\eta^{ij}\mathcal L=\delta^{ij}\mathcal L$. The cross terms of $|\partial_tJ|^2$ and $\mu^2N$ carry $e^{\pm2i\mu t}$ and average to zero; the diagonal terms give $\mu^2(|A|^2+|B|^2)$ in each, which cancel in $\mathcal L$ and add in $T^{00}$. (c) Sum (a) over modes: $\rho=\sum w_k\omega_k^2$ and $p=\sum w_k|\mathbf k|^2/3$, with $\omega_k^2=|\mathbf k|^2+\mu^2>|\mathbf k|^2$.
+\end{proof}
+
+In the CAL program the vacuum term comes from elsewhere: paper four finds it in the measure part of $\Theta_{\mu\nu}$, $\Lambda_{\rm eff}=\Lambda_0-8\pi G\,\sigma(1-\alpha)\,s\,\bar{\mathcal L}/W$~\cite[Sec.~6, vacuum-term corollary]{varclos}, with the history-term sign $\sigma=-1$ and $s$, $\bar{\mathcal L}$ as defined there. A massive $\alpha=2$ carrier contributes matter, not $\Lambda$.
+
+\begin{remark}[Comparison with the closure-dyad tensor]\label{r:dyad}
+The information note builds a rank-two tensor from the carrier without derivatives: the closure vector $x^\mu=\tfrac12\tr(\sigma^\mu\varrho)$ with $\varrho=JJ^\dagger\succeq0$, and the dyad sum $T^{\mu\nu}=\sum_iw_i\,x_i^\mu x_i^\nu$~\cite[Eqs.~(56)--(57)]{infonote}. The two tensors agree in kind and differ in origin.
+\begin{itemize}\itemsep1pt
+\item \emph{Same form.} Both are sums of dyads of future-causal vectors with nonnegative weights: Eq.~(57) by construction, Eq.~\eqref{e:T} after phase averaging (Prop.~\ref{p:dust}(c)). Both therefore satisfy the weak, null and dominant energy conditions in that form.
+\item \emph{Same dust.} A conserved dyad profile is pressureless dust~\cite[Sketch~3]{infonote}. The massive carrier is dust at rest or on average (Prop.~\ref{p:dust}(b)).
+\item \emph{Same null edge.} A rank-one closure gives null dust, with trace $\det\varrho=0$~\cite[Eq.~(58)]{infonote}. A plane wave with $\mu=0$ gives $T^{\mu\nu}=2|A|^2k^\mu k^\nu$ with $k^2=0$.
+\item \emph{Different origin.} The dyad vector is the value of the carrier at a point, and conservation of Eq.~(57) has to be imposed. The carrier tensor is built from the wave vector, and conservation follows from the field equation (Prop.~\ref{p:T}(ii)). The dyad trace $\sum_iw_i\det\varrho_i$ is nonnegative pointwise; the carrier trace $2\mu^2N-\Box N$ is nonnegative only after averaging, since $\Box N$ averages to zero for a bounded periodic $N$.
+\end{itemize}
+\Open Identifying the wave vector $k^\mu$ of the carrier tensor with the closure vector $x^\mu$ of the dyad tensor would need the soldering map that the information note leaves open~\cite[Sec.~3.3, Scope]{infonote}. It is not claimed here.
+\end{remark}
+
+\begin{thebibliography}{9}\small
+\bibitem{feyn} S. Leizerman, \emph{An Axiomatic Derivation of the Feynman Path Sum at the Light-Cone Kernel Width and Closure Order $\alpha=2$ of the Causal Accumulation Law}, LIOR Research Initiative (2026), dated November 12, 2026.
+\bibitem{edge} S. Leizerman, \emph{Schr\"odinger evolution at the $\alpha\to1^-$ edge of the Causal Accumulation Law: derived unitarity, the free Galilean limit, and carrier entanglement as time dilation}, LIOR Research Initiative (2026).
+\bibitem{infonote} S. Leizerman, \emph{On Information Physics: From State Distinguishability to Causal Accumulation} (2026), Eqs.~(56)--(61) and Sketch~3.
+\bibitem{varclos} S. Leizerman, \emph{Variational Closure and the History Weight in the Causal Accumulation Law}, draft (2026).
+\end{thebibliography}
+
+\end{document}

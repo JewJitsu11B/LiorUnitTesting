@@ -1,0 +1,13 @@
+PASS Prop checker(3) lattice formula vs author's recursion max |L_recursion - sum_n (i eps mu)^(2n+1) C(N_R-1,n) C(N_L-1,n)| = 0.0e+00 (N=16)
+INFO Table 6 t=4: 351 points, r range 0.25..3.75; max err 5.28e-07 at j=775 (grid edge j=1200, one-sided np.gradient); max over interior points 5.28e-07
+INFO Table 6 t=8: 376 points, r range 0.25..4.00; max err 2.46e-06 at j=1200 (grid edge j=1200, one-sided np.gradient); max over interior points 8.44e-08
+PASS Table 6 row t=8 max error is a grid-edge one-sided difference edge point error 2.46e-06 vs interior max 8.44e-08; r covered only up to 4.00 of 7.75
+INFO author time_step alpha=1.95: samples |J(50)|=8.03e-02 |J(200)|=1.43e-03 (rate from samples -2.6849e-02); envelopes 1.228e-01, 2.046e-03 (rate from envelopes -2.7859e-02); fitted rate -2.7495e-02; Im root -2.7532e-02
+PASS Table 3 caption time-stepped alpha=1.95 (author's stepper, fitted rate) -2.7495e-02 vs Im root -2.7532e-02
+INFO author time_step alpha=2.05: samples |J(50)|=6.31e-01 |J(200)|=5.85e+01 (rate from samples 3.0189e-02); envelopes 1.029e+00, 6.215e+01 (rate from envelopes 2.7337e-02); fitted rate 2.7903e-02; Im root 2.7902e-02
+PASS Table 3 caption time-stepped alpha=2.05 (author's stepper, fitted rate) 2.7903e-02 vs Im root 2.7902e-02
+INFO author time_step alpha=1.90 to T=600: envelopes at t=100,300,400,500,590: ['3.751e-03', '6.470e-06', '3.640e-06', '2.372e-06', '1.708e-06'] ; local power-law exponents ['5.79', '2.00', '1.92', '1.99'] ; pure pole decay from t=100 would give 1.0e-14 at t=590
+PASS Thm near2 late-time tail t^-alpha in the author's own stepper (extra) exponent 1.99 at alpha=1.9
+INFO alpha=2.01 k=5: my root 5.101172+1.5587e-03i ; author's F_cal/newton_c root 5.101172+1.5587e-03i ; first-order formula 1.5735e-03 ; paper caption 1.5e-3
+PASS Table 3 caption growth rate alpha=2.01 k=5 (two root finders agree) Im = 1.5587e-03 (paper prints 1.5e-3; script prints no such number)
+failed: none

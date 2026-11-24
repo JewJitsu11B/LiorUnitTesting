@@ -1,0 +1,89 @@
+== Table 1 (tab:symbol) ==
+N-TABLE symbol alpha=1.5 numeric 1.054093 closed 1.054093 h: 1.0050 1.0468 1.1395 1.3075
+PASS Table 1 row alpha=1.5 numeric 1.054093 closed 1.054093 (paper 1.054093); h ['1.0050', '1.0468', '1.1395', '1.3075'] (paper ['1.0050', '1.0468', '1.1395', '1.3075'])
+N-TABLE symbol alpha=2.0 numeric 1.000000 closed 1.000000 h: 1.0000 1.0000 1.0000 1.0000
+PASS Table 1 row alpha=2.0 numeric 1.000000 closed 1.000000 (paper 1.000000); h ['1.0000', '1.0000', '1.0000', '1.0000'] (paper ['1.0000', '1.0000', '1.0000', '1.0000'])
+N-TABLE symbol alpha=2.5 numeric 0.913547 closed 0.913547 h: 0.9917 0.9249 0.7903 0.5840
+PASS Table 1 row alpha=2.5 numeric 0.913547 closed 0.913547 (paper 0.913547); h ['0.9917', '0.9249', '0.7903', '0.5840'] (paper ['0.9917', '0.9249', '0.7903', '0.5840'])
+N-TABLE symbol alpha=3.0 numeric 0.800000 closed 0.800000 h: 0.9801 0.8253 0.5403 0.1700
+PASS Table 1 row alpha=3.0 numeric 0.800000 closed 0.800000 (paper 0.800000); h ['0.9801', '0.8253', '0.5403', '0.1700'] (paper ['0.9801', '0.8253', '0.5403', '0.1700'])
+N-TABLE defect alpha=0.5 4.142e-01
+PASS Sec 9 defect alpha=0.5 4.142e-01 (paper 4.1e-01)
+N-TABLE defect alpha=1.5 4.142e-01
+PASS Sec 9 defect alpha=1.5 4.142e-01 (paper 4.1e-01)
+N-TABLE defect alpha=1.9 9.743e-02
+PASS Sec 9 defect alpha=1.9 9.743e-02 (paper 9.7e-02)
+N-TABLE defect alpha=2.0 0.000e+00
+PASS Sec 9 defect alpha=2.0 0.000e+00 (paper 0)
+N-TABLE defect alpha=2.1 1.021e-01
+PASS Sec 9 defect alpha=2.1 1.021e-01 (paper 1.0e-01)
+N-TABLE defect alpha=3.0 1.000e+00
+PASS Sec 9 defect alpha=3.0 1.000e+00 (paper 1.0e+00)
+== Table 2 (tab:disp) ==
+N-TABLE disp k=0.0 root 1.0000000000 exact 1.0000000000 tachyon E^2 -1.00
+PASS Table 2 row k=0.0 root 1.0000000000 (paper 1.0000000000)
+N-TABLE disp k=0.5 root 1.1180339887 exact 1.1180339887 tachyon E^2 -0.75
+PASS Table 2 row k=0.5 root 1.1180339887 (paper 1.1180339887)
+N-TABLE disp k=1.0 root 1.4142135624 exact 1.4142135624 tachyon E^2 0.00
+PASS Table 2 row k=1.0 root 1.4142135624 (paper 1.4142135624)
+N-TABLE disp k=2.0 root 2.2360679775 exact 2.2360679775 tachyon E^2 3.00
+PASS Table 2 row k=2.0 root 2.2360679775 (paper 2.2360679775)
+N-TABLE disp k=4.0 root 4.1231056256 exact 4.1231056256 tachyon E^2 15.00
+PASS Table 2 row k=4.0 root 4.1231056256 (paper 4.1231056256)
+== Table 3 (tab:near2) ==
+N-TABLE near2 alpha=1.90 root 1.370022 Im -5.435e-02 (other branch -5.435e-02) formula 5.03e-02 winding 0,0,0
+PASS Table 3 row alpha=1.90 root 1.370022-5.435e-02i formula 5.03e-02 growing 0,0,0 (paper 1.370022 -5.435e-02 5.03e-02 0,0,0)
+N-TABLE near2 alpha=1.99 root 1.410296 Im -5.546e-03 (other branch -5.546e-03) formula 5.51e-03 winding 0,0,0
+PASS Table 3 row alpha=1.99 root 1.410296-5.546e-03i formula 5.51e-03 growing 0,0,0 (paper 1.410296 -5.546e-03 5.51e-03 0,0,0)
+N-TABLE near2 alpha=2.01 root 1.418025 Im +5.560e-03 (other branch +5.560e-03) formula 5.60e-03 winding 2,2,0
+PASS Table 3 row alpha=2.01 root 1.418025+5.560e-03i formula 5.60e-03 growing 2,2,0 (paper 1.418025 5.560e-03 5.60e-03 2,2,0)
+N-TABLE near2 alpha=2.05 root 1.432250 Im +2.790e-02 (other branch +2.790e-02) formula 2.88e-02 winding 2,2,2
+PASS Table 3 row alpha=2.05 root 1.432250+2.790e-02i formula 2.88e-02 growing 2,2,2 (paper 1.432250 2.790e-02 2.88e-02 2,2,2)
+N-TABLE near2 alpha=2.10 root 1.447853 Im +5.590e-02 (other branch +5.590e-02) formula 5.95e-02 winding 2,2,2
+PASS Table 3 row alpha=2.10 root 1.447853+5.590e-02i formula 5.95e-02 growing 2,2,2 (paper 1.447853 5.590e-02 5.95e-02 2,2,2)
+N-TABLE near2 alpha=2.01 k=5 Im 1.559e-03
+PASS Table 3 caption growth rate alpha=2.01 k=5 1.56e-03 (paper 1.5e-3)
+N-TABLE near2 alpha=2.01 winding on Im in [1e-4,200], |Re|<=200: 2.00,2.00,2.00
+N-TABLE near2 alpha=2.05 winding on Im in [1e-4,200], |Re|<=200: 2.00,2.00,2.00
+N-TABLE near2 alpha=2.10 winding on Im in [1e-4,200], |Re|<=200: 2.00,2.00,2.00
+== Table 4 (tab:pathsum) ==
+N-TABLE pathsum h=0.020 1.44e+02 1.15e+03 3.28e+01 3.35e-05 3.35e-05 3.35e-05
+PASS Table 4 row h=0.020 ['1.44e+02', '1.15e+03', '3.28e+01', '3.35e-05', '3.35e-05', '3.35e-05'] (paper ['1.44e+02', '1.15e+03', '3.28e+01', '3.35e-05', '3.35e-05', '3.35e-05'])
+N-TABLE pathsum h=0.010 1.44e+02 1.15e+03 3.28e+01 8.38e-06 8.38e-06 8.38e-06
+PASS Table 4 row h=0.010 ['1.44e+02', '1.15e+03', '3.28e+01', '8.38e-06', '8.38e-06', '8.38e-06'] (paper ['1.44e+02', '1.15e+03', '3.28e+01', '8.38e-06', '8.38e-06', '8.38e-06'])
+== Table 5 (tab:checker) ==
+N-TABLE checker eps=0.0200 err 3.891e-02 ratio --
+FAIL Table 5 row eps=0.02 3.891e-02 (paper 3.697e-02)
+N-TABLE checker eps=0.0100 err 1.914e-02 ratio 2.03
+FAIL Table 5 row eps=0.01 1.914e-02 (paper 1.810e-02)
+N-TABLE checker eps=0.0050 err 9.497e-03 ratio 2.02
+FAIL Table 5 row eps=0.005 9.497e-03 (paper 8.950e-03)
+N-TABLE checker eps=0.0025 err 4.729e-03 ratio 2.01
+FAIL Table 5 row eps=0.0025 4.729e-03 (paper 4.451e-03)
+== Table 6 (tab:descent) ==
+N-TABLE descent t=4 maxerr 5.28e-07 max|exact| 3.090e-02 points 351 (r up to 3.75 of cone radius 4)
+PASS Table 6 row t=4 err 5.28e-07 max 3.090e-02 pts 351 (paper 5.28e-07 3.090e-02 351)
+N-TABLE descent t=8 maxerr 8.44e-08 max|exact| 2.330e-03 points 375 (r up to 3.99 of cone radius 8)
+FAIL Table 6 row t=8 err 8.44e-08 max 2.330e-03 pts 375 (paper 2.46e-06 2.330e-03 376)
+== Sec 9 bullets and Table 7 (tab:NR) ==
+N-TABLE pair composition max 1.1e-14 (k uniform in [-5,5], seed 0; paper 1.1e-14, distribution not stated)
+PASS Sec 9 pair composition (Prop pair) max ||M(t1+t2)-M(t2)M(t1)|| = 1.1e-14 (paper 1.1e-14)
+N-TABLE NR limit 3.672
+PASS Sec 9 predicted limit (t/8)||k^4 psihat|| 3.6715 (paper 3.672)
+N-TABLE NR c=2 err 6.058e-01 errc2 2.423 drift 2.2e-16
+PASS Table 7 row c=2 6.058e-01, x c^2 = 2.423 (paper 6.058e-01, 2.423)
+N-TABLE NR c=4 err 2.076e-01 errc2 3.321 drift 2.2e-16
+PASS Table 7 row c=4 2.076e-01, x c^2 = 3.321 (paper 2.076e-01, 3.321)
+N-TABLE NR c=8 err 5.608e-02 errc2 3.589 drift 2.2e-16
+PASS Table 7 row c=8 5.608e-02, x c^2 = 3.589 (paper 5.608e-02, 3.589)
+N-TABLE NR c=16 err 1.426e-02 errc2 3.651 drift 0.0e+00
+PASS Table 7 row c=16 1.426e-02, x c^2 = 3.651 (paper 1.426e-02, 3.651)
+N-TABLE NR c=32 err 3.581e-03 errc2 3.667 drift 2.2e-16
+PASS Table 7 row c=32 3.581e-03, x c^2 = 3.667 (paper 3.581e-03, 3.667)
+N-TABLE trace mixed c=1 equal mix a+ = a- = psihat         rel spread ||J||^2 1.87e+00 ; KG charge spread 1.2e-16 (mean -0.000)
+N-TABLE trace mixed c=1 a- = 0.5 a+                        rel spread ||J||^2 1.49e+00 ; KG charge spread 2.1e-16 (mean 1.078)
+N-TABLE trace mixed c=1 J real part: a-(k) = conj a+(-k)   rel spread ||J||^2 3.61e-02 ; KG charge spread 0.0e+00 (mean 0.000)
+N-TABLE trace mixed c=2 equal mix a+ = a- = psihat         rel spread ||J||^2 1.97e+00 ; KG charge spread 8.2e-17 (mean -0.000)
+N-TABLE trace mixed c=2 a- = 0.5 a+                        rel spread ||J||^2 1.58e+00 ; KG charge spread 2.6e-16 (mean 0.847)
+N-TABLE trace mixed c=2 J real part: a-(k) = conj a+(-k)   rel spread ||J||^2 3.65e-02 ; KG charge spread 0.0e+00 (mean 0.000)
+failed: ['Table 5 row eps=0.02', 'Table 5 row eps=0.01', 'Table 5 row eps=0.005', 'Table 5 row eps=0.0025', 'Table 6 row t=8']

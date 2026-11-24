@@ -1,0 +1,51 @@
+=== sanity: W(e^t) for alpha>1 by continuation vs direct sum ===
+  alpha=1.01 t=0.03 diff=6.61e-39
+  alpha=1.01 t=0.1 diff=1.65e-39
+  alpha=1.01 t=0.5 diff=4.59e-41
+  alpha=1.001 t=0.03 diff=0.0
+  alpha=1.001 t=0.1 diff=7.35e-40
+  alpha=1.001 t=0.5 diff=9.18e-41
+
+=== Thm feedback (2): real root z*>1, growth ln z* vs sqrt(alpha-1) ===
+  alpha-1=1e-1  ln z* = 0.3282226652  sqrt(alpha-1) = 0.316227766  ratio = 1.037931202   (flat-weight s=acosh((1+alpha)/2) = 0.3149247566)
+  alpha-1=1e-2  ln z* = 0.1010015582  sqrt(alpha-1) = 0.1  ratio = 1.010015582   (flat-weight s=acosh((1+alpha)/2) = 0.09995838014)
+  alpha-1=1e-3  ln z* = 0.03167439005  sqrt(alpha-1) = 0.0316227766  ratio = 1.001632161   (flat-weight s=acosh((1+alpha)/2) = 0.03162145913)
+  alpha-1=1e-4  ln z* = 0.01000223816  sqrt(alpha-1) = 0.01  ratio = 1.000223816   (flat-weight s=acosh((1+alpha)/2) = 0.009999958334)
+  alpha-1=1e-6  ln z* = 0.001000003409  sqrt(alpha-1) = 0.001  ratio = 1.000003409   (flat-weight s=acosh((1+alpha)/2) = 0.0009999999583)
+  alpha-1=1e-8  ln z* = 0.0001000000046  sqrt(alpha-1) = 0.0001  ratio = 1.000000046   (flat-weight s=acosh((1+alpha)/2) = 9.999999996e-5)
+  paper: 0.1010 at alpha=1.01, 0.03167 at alpha=1.001
+
+=== Table feedback, alpha = 1.01: growth per update = ln(real root) ===
+  b=0     mine: +0.101002 +0.064725 +0.096348 | paper: +0.1010 +0.0647 +0.0964
+  b=0.05  mine: +0.077451 +0.029311 +0.071541 | paper: +0.0775 +0.0293 +0.0715
+  b=0.2   mine: +0.035599 -0.045626 +0.026998 | paper: +0.0356 -0.0456 +0.0270
+  b=0.5   mine: +0.010304 -0.087381 +0.000506 | paper: +0.0103 -0.0874 +0.0005
+  b=0.9   mine: +0.001188 -0.098674 -0.008799 | paper: +0.0012 -0.0987 -0.0088
+
+=== criterion thresholds: (1-b)(alpha + (alpha-1) W_lambda(1)) < 1  <=>  b > 1 - 1/(alpha+(alpha-1)W(e^lambda)) ===
+  alpha=1.01 lambda=0.1  W_lambda(1)=9.730180459  threshold b* = 0.096903847
+  alpha=1.01 lambda=0.01  W_lambda(1)=104.190222  threshold b* = 0.51264734
+  alpha=1.001 lambda=0.1  W_lambda(1)=9.53028797  threshold b* = 0.010420557
+  alpha=1.001 lambda=0.01  W_lambda(1)=99.96011413  threshold b* = 0.091701882
+  paper (alpha=1.01): b>0.095 (lambda=0.1), b>0.501 (lambda=0.01)
+  flat weights w_j=1 instead (W_lambda(1)=1/(e^lambda-1)), alpha=1.01: thresholds ['0.0950909', '0.501249']
+  which threshold is real? ln(real root) just above the paper's value and around mine (power-law weights, alpha=1.01):
+    lambda=0.1: b=0.0955: 0.0008069  b=0.0965: 0.0002316  b=0.0969: 2.205e-6  b=0.0970: -5.509e-5
+    lambda=0.01: b=0.502: 0.0004241  b=0.510: 0.0001039  b=0.5126: 1.849e-6  b=0.5127: -2.056e-6
+  lambda=0: W(e^t) as t->0+ : ['9.73018', '1070.98', '1.14815e+6', '1.23027e+9'] (diverges => no brake b<1 settles)
+    lambda=0, b=0.9: ln z* = 0.0011875779
+    lambda=0, b=0.99: ln z* = 0.00011063617
+    lambda=0, b=0.999: ln z* = 1.1218434e-5
+
+=== criterion necessary AND sufficient on a grid: sign(ln z_real) vs criterion; plus root count in |z|>=1 by argument principle ===
+  grid points: 480, mismatches between criterion and sign of ln z_real: 0
+  argument-principle checks: 30, mismatches (criterion true <=> zero roots in |z|>1): 0
+
+=== direct iteration (numpy, own code): slope of log|J_n| over second half of 6000 updates, zero past ===
+  b=0.0   iteration: +0.1010 +0.0647 +0.0963 | root: +0.1010 +0.0647 +0.0963 | paper: +0.1010 +0.0647 +0.0964
+  b=0.05  iteration: +0.0775 +0.0293 +0.0715 | root: +0.0775 +0.0293 +0.0715 | paper: +0.0775 +0.0293 +0.0715
+  b=0.2   iteration: +0.0356 -0.0456 +0.0270 | root: +0.0356 -0.0456 +0.0270 | paper: +0.0356 -0.0456 +0.0270
+  b=0.5   iteration: +0.0103 -0.0874 +0.0005 | root: +0.0103 -0.0874 +0.0005 | paper: +0.0103 -0.0874 +0.0005
+  b=0.9   iteration: +0.0012 -0.0987 -0.0088 | root: +0.0012 -0.0987 -0.0088 | paper: +0.0012 -0.0987 -0.0088
+  b=0.505, lambda=0.01 (paper criterion says settles, mine says runs away): iteration slope +3.029e-04 over 6000, +3.029e-04 over 40000 updates; root 0.00030292
+  alpha=1.001, b=0, lambda=0: iteration slope +0.03167 ; root 0.0316744 ; paper 0.03167

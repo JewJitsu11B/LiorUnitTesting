@@ -1,0 +1,138 @@
+PASS Thm near2 (1) k=0 branch +1 alpha=2 root 1.0, Im = 0.0
+PASS Thm near2 (1) k=0 branch -1 alpha=2 root -1.0, Im = 0.0
+PASS Thm near2 (1) k=0.1 branch +1 alpha=2 root 1.00498756211209, Im = 0.0
+PASS Thm near2 (1) k=0.1 branch -1 alpha=2 root -1.00498756211209, Im = 0.0
+PASS Thm near2 (1) k=1 branch +1 alpha=2 root 1.4142135623731, Im = 0.0
+PASS Thm near2 (1) k=1 branch -1 alpha=2 root -1.4142135623731, Im = 0.0
+PASS Thm near2 (1) k=5 branch +1 alpha=2 root 5.09901951359278, Im = 0.0
+PASS Thm near2 (1) k=5 branch -1 alpha=2 root -5.09901951359278, Im = 0.0
+PASS Thm near2 k=0 exact alpha=1.5 root (0.5887959215 - 0.339941483776j) vs i*rho*exp(-i pi/alpha); Im omega = rho cos(pi/alpha) = -0.339941483776
+PASS Thm near2 k=0 exact alpha=1.9 root (0.951116709847 - 0.0788117775443j) vs i*rho*exp(-i pi/alpha); Im omega = rho cos(pi/alpha) = -0.0788117775443
+PASS Thm near2 k=0 exact alpha=2.1 root (1.03650634372 + 0.0776754122756j) vs i*rho*exp(-i pi/alpha); Im omega = rho cos(pi/alpha) = 0.0776754122756
+PASS Thm near2 k=0 exact alpha=2.7 root (1.09407476169 + 0.471937785009j) vs i*rho*exp(-i pi/alpha); Im omega = rho cos(pi/alpha) = 0.471937785009
+PASS Table near2 alpha=1.90 root (+) printed 1.370022, mine 1.370022 (1.37002154552), 7 of 7 printed digits agree
+PASS Table near2 alpha=1.90 Im omega printed -5.435e-2, mine -0.05435 (-0.0543540782989), 4 of 4 printed digits agree
+PASS Table near2 alpha=1.90 both branches minus-branch root = -conj(plus-branch root): same Im omega
+PASS Table near2 alpha=1.90 formula column printed 5.03e-2, mine 0.0503 (0.0502738090413), 3 of 3 printed digits agree
+INFO Table near2 alpha=1.90 formula variants with (Re omega)^2-k^2 and Re omega: 0.050274; with moduli: 0.050787; with alpha=2 values mu=1, omega=sqrt2: 0.055536; true |Im omega| 0.054354
+PASS Table near2 alpha=1.99 root (+) printed 1.410296, mine 1.410296 (1.41029607651), 7 of 7 printed digits agree
+PASS Table near2 alpha=1.99 Im omega printed -5.546e-3, mine -0.005546 (-0.00554589809197), 4 of 4 printed digits agree
+PASS Table near2 alpha=1.99 both branches minus-branch root = -conj(plus-branch root): same Im omega
+PASS Table near2 alpha=1.99 formula column printed 5.51e-3, mine 0.00551 (0.00550740914652), 3 of 3 printed digits agree
+INFO Table near2 alpha=1.99 formula variants with (Re omega)^2-k^2 and Re omega: 0.0055074; with moduli: 0.0055079; with alpha=2 values mu=1, omega=sqrt2: 0.0055536; true |Im omega| 0.0055459
+PASS Table near2 alpha=2.01 root (+) printed 1.418025, mine 1.418025 (1.41802547085), 7 of 7 printed digits agree
+PASS Table near2 alpha=2.01 Im omega printed 5.560e-3, mine 0.005560 (0.00556049962205), 4 of 4 printed digits agree
+PASS Table near2 alpha=2.01 both branches minus-branch root = -conj(plus-branch root): same Im omega
+PASS Table near2 alpha=2.01 formula column printed 5.60e-3, mine 0.00560 (0.00559847142124), 3 of 3 printed digits agree
+INFO Table near2 alpha=2.01 formula variants with (Re omega)^2-k^2 and Re omega: 0.0055985; with moduli: 0.0055989; with alpha=2 values mu=1, omega=sqrt2: 0.0055536; true |Im omega| 0.0055605
+PASS Table near2 alpha=2.05 root (+) printed 1.432250, mine 1.432250 (1.43225022666), 7 of 7 printed digits agree
+PASS Table near2 alpha=2.05 Im omega printed 2.790e-2, mine 0.02790 (0.0279024809933), 4 of 4 printed digits agree
+PASS Table near2 alpha=2.05 both branches minus-branch root = -conj(plus-branch root): same Im omega
+PASS Table near2 alpha=2.05 formula column printed 2.88e-2, mine 0.0288 (0.028826005706), 3 of 3 printed digits agree
+INFO Table near2 alpha=2.05 formula variants with (Re omega)^2-k^2 and Re omega: 0.028826; with moduli: 0.028882; with alpha=2 values mu=1, omega=sqrt2: 0.027768; true |Im omega| 0.027902
+PASS Table near2 alpha=2.10 root (+) printed 1.447853, mine 1.447853 (1.44785281664), 7 of 7 printed digits agree
+PASS Table near2 alpha=2.10 Im omega printed 5.590e-2, mine 0.05590 (0.0559017963896), 4 of 4 printed digits agree
+PASS Table near2 alpha=2.10 both branches minus-branch root = -conj(plus-branch root): same Im omega
+PASS Table near2 alpha=2.10 formula column printed 5.95e-2, mine 0.0595 (0.0594683757929), 3 of 3 printed digits agree
+INFO Table near2 alpha=2.10 formula variants with (Re omega)^2-k^2 and Re omega: 0.059468; with moduli: 0.059901; with alpha=2 values mu=1, omega=sqrt2: 0.055536; true |Im omega| 0.055902
+INFO Thm near2 rate sweep: ratio = Im(omega) / [(pi/4) delta mu0^2/omega0], mu0 = 1, omega0 = sqrt(k^2+1); c1 = (ratio-1)/delta
+INFO   k=0   delta=+1e-02  Re omega-omega0=0.00417144  Im omega=0.007847666242  ratio-1=-0.000804101  c1=-0.080410072  | paper's convention (root's own mu, omega): ratio-1=-0.00495487 c1=-0.49548676
+INFO   k=0   delta=+1e-03  Re omega-omega0=0.000422669  Im omega=0.0007853376196  ratio-1=-7.70868e-5  c1=-0.077086779  | paper's convention (root's own mu, omega): ratio-1=-0.000499545 c1=-0.49954482
+INFO   k=0   delta=+1e-04  Re omega-omega0=4.23225e-5  Im omega=7.853921354e-5  ratio-1=-7.67506e-6  c1=-0.076750601  | paper's convention (root's own mu, omega): ratio-1=-4.99954e-5 c1=-0.49995444
+INFO   k=0   delta=+1e-05  Re omega-omega0=4.23281e-6  Im omega=7.853975609e-6  ratio-1=-7.67169e-7  c1=-0.076716945  | paper's convention (root's own mu, omega): ratio-1=-4.99995e-6 c1=-0.49999544
+INFO   k=0   delta=+1e-06  Re omega-omega0=4.23286e-7  Im omega=7.853981031e-7  ratio-1=-7.67136e-8  c1=-0.076713579  | paper's convention (root's own mu, omega): ratio-1=-5.0e-7 c1=-0.49999954
+INFO   k=0   delta=+1e-07  Re omega-omega0=4.23287e-8  Im omega=7.853981574e-8  ratio-1=-7.67132e-9  c1=-0.076713242  | paper's convention (root's own mu, omega): ratio-1=-5.0e-8 c1=-0.49999995
+INFO   k=0   delta=+1e-08  Re omega-omega0=4.23287e-9  Im omega=7.853981628e-9  ratio-1=-7.67132e-10  c1=-0.076713209  | paper's convention (root's own mu, omega): ratio-1=-5.0e-9 c1=-0.5
+INFO   k=0   delta=-1e-02  Re omega-omega0=-0.00429503  Im omega=-0.007859709484  ratio-1=0.000729293  c1=-0.072929256  | paper's convention (root's own mu, omega): ratio-1=0.005046 c1=-0.50459994
+INFO   k=0   delta=-1e-03  Re omega-omega0=-0.000423905  Im omega=-0.0007854581197  ratio-1=7.63388e-5  c1=-0.07633876  | paper's convention (root's own mu, omega): ratio-1=0.000500456 c1=-0.50045605
+INFO   k=0   delta=-1e-04  Re omega-omega0=-4.23349e-5  Im omega=-7.854041855e-5  ratio-1=7.66758e-6  c1=-0.0766758  | paper's convention (root's own mu, omega): ratio-1=5.00046e-5 c1=-0.50004557
+INFO   k=0   delta=-1e-05  Re omega-omega0=-4.23293e-6  Im omega=-7.853987659e-6  ratio-1=7.67095e-7  c1=-0.076709465  | paper's convention (root's own mu, omega): ratio-1=5.00005e-6 c1=-0.50000456
+INFO   k=0   delta=-1e-06  Re omega-omega0=-4.23287e-7  Im omega=-7.853982236e-7  ratio-1=7.67128e-8  c1=-0.076712831  | paper's convention (root's own mu, omega): ratio-1=5.0e-7 c1=-0.50000046
+INFO   k=0   delta=-1e-07  Re omega-omega0=-4.23287e-8  Im omega=-7.853981694e-8  ratio-1=7.67132e-9  c1=-0.076713167  | paper's convention (root's own mu, omega): ratio-1=5.0e-8 c1=-0.50000005
+INFO   k=0   delta=-1e-08  Re omega-omega0=-4.23287e-9  Im omega=-7.85398164e-9  ratio-1=7.67132e-10  c1=-0.076713201  | paper's convention (root's own mu, omega): ratio-1=5.0e-9 c1=-0.5
+INFO   k=0.1 delta=+1e-02  Re omega-omega0=0.00416697  Im omega=0.00780891634  ratio-1=-0.000778947  c1=-0.077894736  | paper's convention (root's own mu, omega): ratio-1=-0.0049869 c1=-0.49869008
+INFO   k=0.1 delta=+1e-03  Re omega-omega0=0.000422221  Im omega=0.0007814421359  ratio-1=-7.45308e-5  c1=-0.074530803  | paper's convention (root's own mu, omega): ratio-1=-0.000502841 c1=-0.50284117
+INFO   k=0.1 delta=+1e-04  Re omega-omega0=4.22776e-5  Im omega=7.814945837e-5  ratio-1=-7.41905e-6  c1=-0.074190519  | paper's convention (root's own mu, omega): ratio-1=-5.0326e-5 c1=-0.50326028
+INFO   k=0.1 delta=+1e-05  Re omega-omega0=4.22832e-6  Im omega=7.814998022e-6  ratio-1=-7.41565e-7  c1=-0.074156452  | paper's convention (root's own mu, omega): ratio-1=-5.03302e-6 c1=-0.50330223
+INFO   k=0.1 delta=+1e-06  Re omega-omega0=4.22837e-7  Im omega=7.815003238e-7  ratio-1=-7.4153e-8  c1=-0.074153044  | paper's convention (root's own mu, omega): ratio-1=-5.03306e-7 c1=-0.50330643
+INFO   k=0.1 delta=+1e-07  Re omega-omega0=4.22838e-8  Im omega=7.815003759e-8  ratio-1=-7.41527e-9  c1=-0.074152704  | paper's convention (root's own mu, omega): ratio-1=-5.03307e-8 c1=-0.50330685
+INFO   k=0.1 delta=+1e-08  Re omega-omega0=4.22838e-9  Im omega=7.815003811e-9  ratio-1=-7.41527e-10  c1=-0.07415267  | paper's convention (root's own mu, omega): ratio-1=-5.03307e-9 c1=-0.50330689
+INFO   k=0.1 delta=-1e-02  Re omega-omega0=-0.00429052  Im omega=-0.007820499528  ratio-1=0.000703226  c1=-0.070322557  | paper's convention (root's own mu, omega): ratio-1=0.00508015 c1=-0.50801462
+INFO   k=0.1 delta=-1e-03  Re omega-omega0=-0.000423456  Im omega=-0.0007815580358  ratio-1=7.37736e-5  c1=-0.073773648  | paper's convention (root's own mu, omega): ratio-1=0.000503774 c1=-0.50377353
+INFO   k=0.1 delta=-1e-04  Re omega-omega0=-4.229e-5  Im omega=-7.815061738e-5  ratio-1=7.41148e-6  c1=-0.074114804  | paper's convention (root's own mu, omega): ratio-1=5.03354e-5 c1=-0.50335352
+INFO   k=0.1 delta=-1e-05  Re omega-omega0=-4.22844e-6  Im omega=-7.815009612e-6  ratio-1=7.41489e-7  c1=-0.07414888  | paper's convention (root's own mu, omega): ratio-1=5.03312e-6 c1=-0.50331156
+INFO   k=0.1 delta=-1e-06  Re omega-omega0=-4.22839e-7  Im omega=-7.815004397e-7  ratio-1=7.41523e-8  c1=-0.074152287  | paper's convention (root's own mu, omega): ratio-1=5.03307e-7 c1=-0.50330736
+INFO   k=0.1 delta=-1e-07  Re omega-omega0=-4.22838e-8  Im omega=-7.815003875e-8  ratio-1=7.41526e-9  c1=-0.074152628  | paper's convention (root's own mu, omega): ratio-1=5.03307e-8 c1=-0.50330694
+INFO   k=0.1 delta=-1e-08  Re omega-omega0=-4.22838e-9  Im omega=-7.815003823e-9  ratio-1=7.41527e-10  c1=-0.074152662  | paper's convention (root's own mu, omega): ratio-1=5.03307e-9 c1=-0.5033069
+INFO   k=1   delta=+1e-02  Re omega-omega0=0.00381191  Im omega=0.005560499622  ratio-1=0.00124171  c1=0.12417071  | paper's convention (root's own mu, omega): ratio-1=-0.00678253 c1=-0.67825298
+INFO   k=1   delta=+1e-03  Re omega-omega0=0.000385915  Im omega=0.0005554329265  ratio-1=0.000130653  c1=0.1306526  | paper's convention (root's own mu, omega): ratio-1=-0.000687359 c1=-0.68735911
+INFO   k=1   delta=+1e-04  Re omega-omega0=3.8639e-5  Im omega=5.553676596e-5  ratio-1=1.31308e-5  c1=0.13130779  | paper's convention (root's own mu, omega): ratio-1=-6.88284e-5 c1=-0.6882844
+INFO   k=1   delta=+1e-05  Re omega-omega0=3.86437e-6  Im omega=5.553610969e-6  ratio-1=1.31373e-6  c1=0.13137338  | paper's convention (root's own mu, omega): ratio-1=-6.88377e-6 c1=-0.68837708
+INFO   k=1   delta=+1e-06  Re omega-omega0=3.86442e-7  Im omega=5.553604402e-7  ratio-1=1.3138e-7  c1=0.13137994  | paper's convention (root's own mu, omega): ratio-1=-6.88386e-7 c1=-0.68838635
+INFO   k=1   delta=+1e-07  Re omega-omega0=3.86442e-8  Im omega=5.553603746e-8  ratio-1=1.31381e-8  c1=0.1313806  | paper's convention (root's own mu, omega): ratio-1=-6.88387e-8 c1=-0.68838728
+INFO   k=1   delta=+1e-08  Re omega-omega0=3.86442e-9  Im omega=5.55360368e-9  ratio-1=1.31381e-9  c1=0.13138067  | paper's convention (root's own mu, omega): ratio-1=-6.88387e-9 c1=-0.68838737
+INFO   k=1   delta=-1e-02  Re omega-omega0=-0.00391749  Im omega=-0.005545898092  ratio-1=-0.00138749  c1=0.1387492  | paper's convention (root's own mu, omega): ratio-1=0.00698858 c1=-0.69885756
+INFO   k=1   delta=-1e-03  Re omega-omega0=-0.000386971  Im omega=-0.0005552869984  ratio-1=-0.00013211  c1=0.13211033  | paper's convention (root's own mu, omega): ratio-1=0.000689419 c1=-0.68941901
+INFO   k=1   delta=-1e-04  Re omega-omega0=-3.86495e-5  Im omega=-5.553530669e-5  ratio-1=-1.31454e-5  c1=0.13145357  | paper's convention (root's own mu, omega): ratio-1=6.8849e-5 c1=-0.68849039
+INFO   k=1   delta=-1e-05  Re omega-omega0=-3.86448e-6  Im omega=-5.553596376e-6  ratio-1=-1.31388e-6  c1=0.13138796  | paper's convention (root's own mu, omega): ratio-1=6.88398e-6 c1=-0.68839768
+INFO   k=1   delta=-1e-06  Re omega-omega0=-3.86443e-7  Im omega=-5.553602943e-7  ratio-1=-1.31381e-7  c1=0.1313814  | paper's convention (root's own mu, omega): ratio-1=6.88388e-7 c1=-0.68838841
+INFO   k=1   delta=-1e-07  Re omega-omega0=-3.86442e-8  Im omega=-5.5536036e-8  ratio-1=-1.31381e-8  c1=0.13138075  | paper's convention (root's own mu, omega): ratio-1=6.88387e-8 c1=-0.68838748
+INFO   k=1   delta=-1e-08  Re omega-omega0=-3.86442e-9  Im omega=-5.553603665e-9  ratio-1=-1.31381e-9  c1=0.13138068  | paper's convention (root's own mu, omega): ratio-1=6.88387e-9 c1=-0.68838739
+INFO   k=5   delta=+1e-02  Re omega-omega0=0.00215294  Im omega=0.001558699069  ratio-1=0.01195  c1=1.1950033  | paper's convention (root's own mu, omega): ratio-1=-0.00937715 c1=-0.93771511
+INFO   k=5   delta=+1e-03  Re omega-omega0=0.00021611  Im omega=0.0001542150854  ratio-1=0.00120648  c1=1.2064789  | paper's convention (root's own mu, omega): ratio-1=-0.000952927 c1=-0.95292724
+INFO   k=5   delta=+1e-04  Re omega-omega0=2.1619e-5  Im omega=1.540478534e-5  ratio-1=0.000120763  c1=1.2076298  | paper's convention (root's own mu, omega): ratio-1=-9.54477e-5 c1=-0.95447685
+INFO   k=5   delta=+1e-05  Re omega-omega0=2.16198e-6  Im omega=1.540311126e-6  ratio-1=1.20774e-5  c1=1.207745  | paper's convention (root's own mu, omega): ratio-1=-9.54632e-6 c1=-0.9546321
+INFO   k=5   delta=+1e-06  Re omega-omega0=2.16199e-7  Im omega=1.540294384e-7  ratio-1=1.20776e-6  c1=1.2077565  | paper's convention (root's own mu, omega): ratio-1=-9.54648e-7 c1=-0.95464763
+INFO   k=5   delta=+1e-07  Re omega-omega0=2.16199e-8  Im omega=1.54029271e-8  ratio-1=1.20776e-7  c1=1.2077576  | paper's convention (root's own mu, omega): ratio-1=-9.54649e-8 c1=-0.95464918
+INFO   k=5   delta=+1e-08  Re omega-omega0=2.16199e-9  Im omega=1.540292542e-9  ratio-1=1.20776e-8  c1=1.2077577  | paper's convention (root's own mu, omega): ratio-1=-9.54649e-9 c1=-0.95464934
+INFO   k=5   delta=-1e-02  Re omega-omega0=-0.00217084  Im omega=-0.001521491914  ratio-1=-0.0122059  c1=1.220587  | paper's convention (root's own mu, omega): ratio-1=0.00972235 c1=-0.97223496
+INFO   k=5   delta=-1e-03  Re omega-omega0=-0.000216289  Im omega=-0.0001538430252  ratio-1=-0.00120904  c1=1.2090374  | paper's convention (root's own mu, omega): ratio-1=0.000956378 c1=-0.95637798
+INFO   k=5   delta=-1e-04  Re omega-omega0=-2.16208e-5  Im omega=-1.540106474e-5  ratio-1=-0.000120789  c1=1.2078857  | paper's convention (root's own mu, omega): ratio-1=9.54822e-5 c1=-0.95482192
+INFO   k=5   delta=-1e-05  Re omega-omega0=-2.162e-6  Im omega=-1.54027392e-6  ratio-1=-1.20777e-5  c1=1.2077705  | paper's convention (root's own mu, omega): ratio-1=9.54667e-6 c1=-0.95466661
+INFO   k=5   delta=-1e-06  Re omega-omega0=-2.16199e-7  Im omega=-1.540290663e-7  ratio-1=-1.20776e-6  c1=1.207759  | paper's convention (root's own mu, omega): ratio-1=9.54651e-7 c1=-0.95465108
+INFO   k=5   delta=-1e-07  Re omega-omega0=-2.16199e-8  Im omega=-1.540292337e-8  ratio-1=-1.20776e-7  c1=1.2077579  | paper's convention (root's own mu, omega): ratio-1=9.5465e-8 c1=-0.95464953
+INFO   k=5   delta=-1e-08  Re omega-omega0=-2.16199e-9  Im omega=-1.540292505e-9  ratio-1=-1.20776e-8  c1=1.2077578  | paper's convention (root's own mu, omega): ratio-1=9.54649e-9 c1=-0.95464937
+PASS Thm near2 (2) first-order rate Im omega = (pi/4) delta mu^2/|omega| (1+O(delta)) for delta = +-1e-2..+-1e-8, k = 0, 0.1, 1, 5; decay below 2, growth above; |ratio-1| <= 2|delta| throughout
+PASS Thm near2 next correction k=0 relative correction is c1*delta: c1 = -0.076713209 (alpha=2 values mu=1, omega0), c1 = -0.5 (root's own mu^2, omega as in the paper's table); same from both sides
+PASS Thm near2 next correction k=0.1 relative correction is c1*delta: c1 = -0.07415267 (alpha=2 values mu=1, omega0), c1 = -0.50330689 (root's own mu^2, omega as in the paper's table); same from both sides
+PASS Thm near2 next correction k=1 relative correction is c1*delta: c1 = 0.13138067 (alpha=2 values mu=1, omega0), c1 = -0.68838737 (root's own mu^2, omega as in the paper's table); same from both sides
+PASS Thm near2 next correction k=5 relative correction is c1*delta: c1 = 1.2077577 (alpha=2 values mu=1, omega0), c1 = -0.95464934 (root's own mu^2, omega as in the paper's table); same from both sides
+PASS Thm near2 next correction k=0 closed form c1(k=0) = (ln 2 - 1)/4 = -0.07671320486
+PASS Table near2 alpha=1.90 growing modes (paper's rectangle Im in [0.002,12]) printed (0, 0, 0), mine (0, 0, 0)
+PASS Table near2 alpha=1.99 growing modes (paper's rectangle Im in [0.002,12]) printed (0, 0, 0), mine (0, 0, 0)
+PASS Table near2 alpha=2.01 growing modes (paper's rectangle Im in [0.002,12]) printed (2, 2, 0), mine (2, 2, 0)
+PASS Table near2 alpha=2.05 growing modes (paper's rectangle Im in [0.002,12]) printed (2, 2, 2), mine (2, 2, 2)
+PASS Table near2 alpha=2.10 growing modes (paper's rectangle Im in [0.002,12]) printed (2, 2, 2), mine (2, 2, 2)
+PASS Thm near2 growing-mode count alpha=1.90 (lower edge 1e-6) zeros in Im omega > 1e-6, |Re|<40, Im<40 for k=0,0.1,1,5: (0, 0, 0, 0)
+PASS Thm near2 growing-mode count alpha=1.99 (lower edge 1e-6) zeros in Im omega > 1e-6, |Re|<40, Im<40 for k=0,0.1,1,5: (0, 0, 0, 0)
+PASS Thm near2 growing-mode count alpha=2.01 (lower edge 1e-6) zeros in Im omega > 1e-6, |Re|<40, Im<40 for k=0,0.1,1,5: (2, 2, 2, 2)
+PASS Thm near2 growing-mode count alpha=2.05 (lower edge 1e-6) zeros in Im omega > 1e-6, |Re|<40, Im<40 for k=0,0.1,1,5: (2, 2, 2, 2)
+PASS Thm near2 growing-mode count alpha=2.10 (lower edge 1e-6) zeros in Im omega > 1e-6, |Re|<40, Im<40 for k=0,0.1,1,5: (2, 2, 2, 2)
+FAIL Table near2 caption alpha=2.01 k=5 growth rate printed 1.5e-3, mine 0.0016 (0.00155869906943), 1 of 2 printed digits agree
+INFO Table near2 caption alpha=2.01 k=5 exact Im omega = 0.0015586991 rounds to 1.6e-3; the printed 1.5e-3 is the first-order value (pi/4)(0.01)/sqrt(26) = 0.0015402925. Either way it is below the 0.002 edge, so the printed count 0 is a threshold artifact; the true count is 2.
+INFO extra roots alpha=0.5 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (1, 1, 1, 0)
+INFO extra roots alpha=1.2 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (0, 0, 0, 0)
+INFO extra roots alpha=1.5 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (0, 0, 0, 0)
+INFO extra roots alpha=1.8 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (0, 0, 0, 0)
+INFO extra roots alpha=2.2 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (2, 2, 2, 2)
+INFO extra roots alpha=2.5 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (2, 2, 2, 2)
+INFO extra roots alpha=3.0 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (2, 2, 2, 2)
+INFO extra roots alpha=4.0 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (2, 3, 2, 2)
+INFO extra roots alpha=5.0 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (2, 3, 4, 4)
+INFO extra roots alpha=7.0 number of growing modes (Im omega > 0) at k=0,0.1,1,5: (4, 6, 6, 6)
+INFO extra roots alpha<1 for 0<alpha<1 the same law has a real growing mode at k=0, s = ((1-alpha)/alpha)^(1/alpha)/tau_c (= 1.4142136 at alpha=0.5; D there = 0.0). Outside the theorem's range 'alpha near 2'.
+PASS Thm KG (1) time-stepped alpha=2 own Volterra stepping (h=0.02, k=1) vs S/2 - (mu^2/2) G_mu*S: max diff 2.12e-04 on [0,60]; max|J| after source 0.3097 (bounded)
+PASS Thm near2 time-stepped alpha=1.95 fitted envelope rate on t in [50,200]: -0.02753; root Im omega: -0.02753; first-order formula (alpha=2 values): -0.02777
+INFO Table near2 caption alpha=1.95 my run (k=1, source sin^2(pi t/2) on [0,2]): envelope 7.839e-02 at t=50, 1.389e-03 at t=200. Paper prints 8.0e-2 -> 1.4e-3; its source, k and the meaning of |J| are not stated, so the two amplitudes cannot be reproduced from the text. Rate implied by the printed pair: -0.02697
+PASS Thm near2 time-stepped alpha=2.05 fitted envelope rate on t in [50,200]: 0.02790; root Im omega: 0.02790; first-order formula (alpha=2 values): 0.02777
+INFO Table near2 caption alpha=2.05 my run (k=1, source sin^2(pi t/2) on [0,2]): envelope 1.202e+00 at t=50, 7.713e+01 at t=200. Paper prints 6.3e-1 -> 5.9e1; its source, k and the meaning of |J| are not stated, so the two amplitudes cannot be reproduced from the text. Rate implied by the printed pair: 0.03026
+PASS Thm near2 long-time tail alpha=1.9 (not in paper) for t in [450,700], J(t) matches the branch-point tail 2 Re[C e^{-ikt}] t^{-alpha}, C = S~(-ik)(-2ik) tau_c^alpha... /Gamma(1-alpha), to rel L2 0.029; fitted power-law exponent of the envelope on [300,700]: -1.902 (alpha = 1.9); |J| near t=600 is 9.99e-07 while exp(Im omega * 600) = 6.9e-15
+INFO tail alpha=1.9 envelope t=  50  |J|env=2.243e-02   exp-only estimate 2.243e-02
+INFO tail alpha=1.9 envelope t= 100  |J|env=1.475e-03   exp-only estimate 1.481e-03
+INFO tail alpha=1.9 envelope t= 150  |J|env=9.662e-05   exp-only estimate 9.780e-05
+INFO tail alpha=1.9 envelope t= 200  |J|env=1.062e-05   exp-only estimate 6.457e-06
+INFO tail alpha=1.9 envelope t= 250  |J|env=5.304e-06   exp-only estimate 4.264e-07
+INFO tail alpha=1.9 envelope t= 300  |J|env=3.636e-06   exp-only estimate 2.815e-08
+INFO tail alpha=1.9 envelope t= 400  |J|env=2.093e-06   exp-only estimate 1.227e-10
+INFO tail alpha=1.9 envelope t= 600  |J|env=9.678e-07   exp-only estimate 2.332e-15
+SUMMARY A_near2: 1 failed check(s): Table near2 caption alpha=2.01 k=5 growth rate

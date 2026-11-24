@@ -1,0 +1,116 @@
+PASS Def profile d=1 :: FT of uniform density on [-c tau, c tau] is sinc
+PASS Def profile d=3 :: radial FT of delta(|y|-c tau)/(4 pi c^2 tau^2) is sinc
+PASS Def profile d=3 mass :: shell measure has total mass 1
+PASS Def profile d=2 mass :: d=2 density has total mass 1
+PASS Def profile d=2 :: Hankel transform of d=2 density equals sinc, power series terms j=0..8
+PASS Def profile d=2 numeric :: quadrature at k=2.1, c tau=1.3, 30 digits
+PASS Def profile projection :: d=2 density projects to the uniform d=1 density (hat-box)
+PASS Def profile projection 3->2 :: sphere projects to the d=2 density
+PASS Def memory bound :: int_0^T tau^(alpha-1)/Gamma(alpha) = T^alpha/Gamma(alpha+1)
+PASS Def memory vs Axiom order2 :: at alpha=2 the lag weight is tau, kernel tau_c^-2 tau nu_tau
+PASS Prop symbol series :: closed form = termwise Gamma integrals, coefficients b^0..b^12, symbolic alpha
+PASS Prop symbol k=0 :: limit b->0 is s^-alpha
+PASS Thm lorentz m_2 :: closed form at alpha=2 is 1/(s^2+c^2k^2)
+PASS Cor green symbol :: direct Laplace integral of tau sinc(b tau) is 1/(s^2+b^2): sign +, normalization 1
+PASS Prop symbol alpha=3 direct :: direct integral at alpha=3 equals closed form
+PASS Prop symbol quadrature :: definition vs closed form, alpha in {0.3,0.5,1,1.5,2,2.5,3}, real and complex s, b<s and b>s; max abs diff 3.17e-29
+NOTE Prop symbol: the paper's proof uses int tau^(beta-1) e^(-z tau) = Gamma(beta) z^(-beta) with beta = alpha-1; that integral diverges for 0<alpha<=1 (beta<=0). The formula still holds there (checked by series and by quadrature at alpha=0.3, 0.5); the proof needs analytic continuation in alpha or the termwise series used here.
+PASS Prop symbol polar form :: R^-alpha h_alpha(phi) equals closed form (incl. alpha=1: phi/sin phi)
+PASS Prop symbol alpha=1 :: alpha->1 limit is arctan(b/s)/b
+PASS Thm lorentz leading defect :: phi^2 coefficient is alpha(2-alpha)/6
+PASS Thm lorentz next term :: phi^4 coefficient is alpha(2-alpha)(4+6alpha-3alpha^2)/360 = (1-beta^2)(7-3beta^2)/360, beta=alpha-1
+     phi^4 coeff: alpha*(alpha - 2)*(3*alpha**2 - 6*alpha - 4)/360 | phi^6 coeff: -alpha*(alpha - 2)*(3*alpha**4 - 12*alpha**3 + 24*alpha + 16)/15120
+PASS Thm lorentz equivalence :: phi^2 coefficient vanishes only at alpha=0,2; h_2 = h_0 = 1 identically
+PASS Thm lorentz alpha=1 :: h_1 = phi/sin phi = 1 + phi^2/6 + 7 phi^4/360; not constant; expansion continuous at alpha=1
+PASS Thm lorentz symmetry :: h_alpha = h_(2-alpha)
+PASS Thm lorentz alpha->0 :: closed form at alpha=0 is 1 (identity)
+PASS Thm lorentz defect sign :: h>1 for 0<alpha<2 and h<1 for 2<alpha<10 on a 400 x 59 grid of (alpha, phi) in (0, pi/2)
+PASS Cor green G3 :: t nu_t in d=3 is delta(|x|-ct)/(4 pi c^2 t)
+PASS Cor green G2 G1 :: t nu_t in d=2 and d=1 match the printed forms
+PASS Cor green Kirchhoff :: equals delta(t-r/c)/(4 pi c^2 r), the retarded Green's function of d_t^2 - c^2 Laplacian
+PASS Cor green box(G*f)=f :: (d_t^2 + c^2 k^2) of G*f returns f for f = t^2 e^{ik.x}, any d
+PASS Prop nulllegs operator :: box = 4 c^2 d_u d_v on exp(pu+qv) (all p,q) and two other test functions
+PASS Prop nulllegs Jacobian :: du dv = 2c dt dx
+PASS Prop nulllegs integral :: direct (t,x) convolution with theta/(2c) equals (4c^2)^-1 int int du' dv' for three test sources at c=2, t=1, x=1/4
+PASS Prop descent :: 3D FT of -(2 pi r)^-1 f1'(r) equals 1D FT of f1 for f1 = exp(-x^2/2) and exp(-|x|)
+PASS Prop descent G :: D G1 = delta(r-ct)/(4 pi c r) = G3
+PASS Prop checker (1) terms :: G^{*(n+1)} = theta theta/(2c) (uv/4c^2)^n/(n!)^2 for n=0..6 by iterated null integration
+PASS Thm pathsum (3) telescoping :: box G^{*(n+1)} = G^{*n} inside the cone, n=1..6
+PASS Prop checker (1) J0 :: sum (-mu^2)^n G^{*(n+1)} matches J0(mu sqrt(t^2-x^2/c^2))/(2c) through order mu^12
+PASS Prop checker (1) I0 :: absolute sum matches I0/(2c) through order mu^12
+PASS Prop checker (1) argument :: uv/c^2 = t^2 - x^2/c^2
+PASS Prop checker (1) KG :: (box + mu^2) J0(mu sqrt(uv)/c) = 0 inside the cone (evaluated at two rational points, residual 0)
+PASS Prop checker (1) source :: 4c^2 d_u d_v [theta(u)theta(v)/(2c)] = 2c delta(u)delta(v) = delta(t)delta(x)
+PASS Thm pathsum (4)/(1) mass :: int dx G^{*(n+1)}(t,x) = t^(2n+1)/(2n+1)! for n=0..4 (matches k=0 symbol and prod tau_i weights)
+PASS Thm pathsum (1) bound :: n-fold iterate of int_0^T tau F(T-tau) on the constant 1 is T^(2n)/(2n)!, n=1..5 (bound is attained by S = const)
+PASS Thm pathsum (1) cosh :: sum mu^(2n) T^(2n)/(2n)! is cosh(mu T) (series to T^10)
+PASS Thm pathsum (3) symbol :: (D+mu^2) sum_{n<N} (-mu^2)^n D^-(n+1) = 1 - (-mu^2/D)^N, N=1..8: sum is 1/(D+mu^2) for |D|>mu^2 (symbol series converges only there; the kernel series converges everywhere)
+PASS Thm KG (1) resummation :: symbol of J = S/2 - (mu^2/2) G_mu*S equals 1/(2 + tau_c^-2/D)
+PASS Prop descent3 terms :: D applied to Prop checker(1): G^{*(n+1)} = theta n w^(n-1)/(2 pi c (4c^2)^n (n!)^2), n=1..6
+PASS Prop descent3 / Thm pathsum (4) symbol :: 3D FT of the n=1,2,3 terms solves (d_t^2+c^2k^2)F_n = F_(n-1) with zero data: symbol (s^2+c^2k^2)^-(n+1)
+PASS Prop descent G^{*2} :: 1D FT of G1^{*2} equals 3D FT of G3^{*2} (same function of |k|)
+PASS Thm pathsum (4) n=1 :: two-leg history integral (time convolution of tau sinc) equals FT of theta/(8 pi c^3)
+PASS Prop descent3 mass :: int d^3x G^{*(n+1)} = t^(2n+1)/(2n+1)!, n=1..4
+PASS Prop descent3 J1 tail :: sum_{n>=1} (-mu^2)^n G^{*(n+1)} = -mu J1(mu sqrt(w)/c)/(4 pi c^2 sqrt(w)), through mu^12
+PASS Prop descent3 I1 bound :: absolute tail sum is mu I1/(4 pi c^2 sqrt(w)), through mu^12
+PASS Prop descent3 closed form :: -(2 pi r)^-1 d_r [J0/(2c)] = -mu J1/(4 pi c^2 sqrt w) inside the cone; shell term from -d_r theta(ct-r) = +delta(r-ct)
+PASS Thm KG (3) root :: 2 + tau_c^-2/(s^2+c^2k^2) = 0 iff s^2+c^2k^2 = -1/(2 tau_c^2) = -mu^2
+PASS Thm KG mass :: mu tau_c = 1/sqrt 2
+PASS Thm KG (3) dispersion :: at s = -iE/hbar: E^2 = hbar^2 c^2 k^2 + (hbar mu)^2, so m c^2 = hbar mu (massive sign)
+PASS Thm KG box convention :: symbol of box = d_t^2 - c^2 d_x^2 is s^2 + c^2 k^2
+PASS Remark phase tachyon :: factor -1 on the memory: s^2+c^2k^2 = +mu^2, i.e. E^2 = hbar^2c^2k^2 - m^2c^4, growth rate s = sqrt(mu^2-c^2k^2) for c|k|<mu
+PASS Thm KG (2) symbol :: symbol identity (D+mu^2) J^ = D S^/2
+PASS Thm near2 symbol phase :: alpha + (alpha-1) m_alpha on omega>c|k| is alpha + tau_c^-alpha e^{i pi alpha/2}[(omega-b)^(1-alpha)-(omega+b)^(1-alpha)]/(2b); phase e^{i alpha pi/2}; at alpha=2 it is 2 - tau_c^-2/(omega^2-b^2)
+PASS Thm near2 dF/domega :: omega-derivative of the symbol of T at the root is 4 omega/mu^2
+PASS Thm near2 rate :: first-order root shift: Im omega = (pi/4) delta mu^2/omega (delta = alpha-2; decay below 2, growth above)
+     Re d omega/d delta = P*(-P*b - 2*b**2 + log(2**(b*(P + 2*b))*P**(-P**2 - 3*P*b - 2*b**2)*(P + 2*b)**(P**2 + 3*P*b + 2*b**2)))/(4*b*(P + b))
+PASS Thm near2 real shift :: Re omega also shifts at first order in delta (the paper's proof keeps only the phase change -i pi delta); it does not affect the stated Im rate
+     delta=0.01  omega=(1.25395034738105 + 0.00628601080103768j)  Im/pred=1.00044969131
+     delta=0.001  omega=(1.25040015539095 + 0.000628350144391385j)  Im/pred=1.00005031472
+     delta=0.0001  omega=(1.25004006703111 + 6.28321726045673e-5j)  Im/pred=1.00000508552
+     delta=1.0e-6  omega=(1.25000040072698 + 6.28318562708634e-7j)  Im/pred=1.00000005091
+     delta=-1.0e-6  omega=(1.24999959927187 - 6.28318498726528e-7j)  Im/pred=0.999999949084
+     delta=-0.0001  omega=(1.24995992151917 - 6.28315327834213e-5j)  Im/pred=0.999994902452
+     delta=-0.001  omega=(1.2495986996364 - 0.000628286161440753j)  Im/pred=0.999948482695
+     delta=-0.01  omega=(1.2459351546991 - 0.00627960414530559j)  Im/pred=0.999430040386
+PASS Thm near2 exact roots :: exact dispersion roots (b=0.75, mu=1): Im omega/[(pi/4) delta mu^2/omega0] = 1 + O(delta) for delta = +-1e-2..1e-6; negative-frequency root is -conj(omega), same Im
+PASS Thm near2 second order :: roots agree with omega0 + w1 delta + w2 delta^2 to O(delta^3); w1 = (0.400727556485 + 0.628318530718j), w2 = (-0.57248629555 + 0.0319910530798j)
+     relative correction to the rate: Im(w2)/Im(w1) = 0.0509153423236 per unit delta at b=0.75, mu=1
+PASS Prop checker (2) leg volume :: n+1 positive leg durations with fixed sum A have volume A^n/n!, n=0..4
+PASS Prop checker (2) identity :: (i mu)^(2n+1)/(2 i c mu) = (-mu^2)^n/(2c), n=0..8
+PASS Prop checker (2) term by term :: (-mu^2)^n G^{*(n+1)} = Phi_(2n+1)/(2 i c mu) with Phi = (i mu)^(2n+1) (v/2c)^n (u/2c)^n/(n!)^2, n=0..6
+PASS Prop checker (2) normalization :: one-corner density in x is i mu/(2c): the divisor 2 i c mu = (Jacobian 2c of x vs corner time) x (one corner i mu); Phi as printed is the leg-duration volume, not a density in x
+PASS Prop checker (3) corner count :: paths with N_R right, N_L left steps, first step right, last left, 2n+1 corners: C(N_R-1,n) C(N_L-1,n); all 2^N paths, N=2..16 (1630 classes)
+PASS Prop checker (3) orientation :: the mirror class (first left, last right) has the same count, so ALL corner-odd paths number 2 C C: the paper's L_eps is one fixed (first,last) orientation, not every corner-odd path
+PASS Prop checker (3) limit :: eps^n C(v/(2 eps)-1, n) -> (v/2)^n/n! (c=1), n=0..5, exact polynomial in eps
+PASS Prop checker (3) O(eps) :: first correction is -eps n(n+1)/v relative, so the error of L_eps/eps is O(eps)
+PASS Prop checker (3) domination :: C(N-1,n) <= N^n/n! for N=1..39
+PASS Prop checker (3) numeric :: L_eps/eps -> i mu J0 at (t,x)=(3,0.75): (L/eps - limit)/eps = (0.0 + 0.047001272j) at eps=0.000122, predicted coefficient (-1.3899714e-124 + 0.046877226j)
+PASS Prop checker (2) sum :: (2 i c mu)^-1 sum Phi_(2n+1) = J0/(2c) = G_mu (c=mu=1, 30 digits)
+PASS Prop pair group law :: M_k(t+t') = M_k(t) M_k(t'), M_k(0) = 1
+PASS Prop pair flow :: d/dt M = [[0,1],[-omega^2,0]] M, det M = 1: flow of J'' = -omega^2 J on (J, dJ/dt)
+PASS Thm unitary (1) :: |e^{-i omega t}| = 1 for real omega: each mode multiplier is unimodular, generator hbar omega(k) = sqrt(m^2c^4 + hbar^2c^2k^2)
+PASS Thm unitary (2) :: per mode J J^dagger = A A^dagger for J = A e^{-i omega t}, A in M_2(C): closure Q, Tr Q and P_m Q constant on one sign of frequency
+PASS Thm unitary (3) cross term :: mixed mode: J J^dagger = AA^dagger + BB^dagger + A B^dagger e^{-2 i omega t} + B A^dagger e^{+2 i omega t}; trace cross term 2 Re tr(A B^dagger e^{-2 i omega t})
+     counterexample to the universal reading of (3): A = E11, B = E22 (same k) gives J J^dagger = identity for all t: True
+NOTE Thm unitary (3): 'on a solution with both signs of frequency ||J||^2 is not constant' is false as a universal statement. ||J(t)||^2 varies iff int tr(a_+(k)^dagger a_-(k)) e^{2 i omega t} dk is not identically 0. Smallest example: J^ = E11 e^{-i omega t} + E22 e^{+i omega t} (or scalar a_+, a_- with disjoint k-supports): Q(t) constant.
+PASS Thm unitary (4) charge :: (i/2)(J* dJ/dt - dJ*/dt J) per mode = omega(|a_+|^2 - |a_-|^2): cross terms cancel, time independent; times hbar/(mc^2) gives the stated density
+PASS Thm unitary (4) inequality :: 1 <= sqrt(1+x) <= 1 + x/2: upper gap is (sqrt(1+x)-1)^2/2 >= 0, so 0 <= q - ||J||^2 <= hbar^2/(2m^2c^2) ||grad J||^2
+PASS Thm NR inequality :: sqrt(1+x)-1-x/2 = -(y-1)^2/2 <= 0 and + x^2/8 = (y-1)^3 (y+3)/8 >= 0 with y = sqrt(1+x) >= 1
+PASS Thm NR expansion :: omega - mc^2/hbar = hbar k^2/2m - hbar^3 k^4/(8 m^3 c^2) + hbar^5 k^6/(16 m^5 c^4) + O(c^-6): error is exactly order 1/c^2, phase error coefficient t hbar^3 k^4/(8 m^3) (constant 1/8 is sharp)
+PASS Thm NR bound constant :: (t/hbar) m c^2 x^2/8 = t hbar^3 k^4/(8 m^3 c^2), matching |t| hbar^3/(8m^3c^2) ||Delta^2 psi||
+PASS Cor feynman positive-frequency part :: e^{-i omega t} part of sin(omega t)/omega is (i/2 omega) e^{-i omega t}
+PASS Cor feynman multiplier :: (2mc^2/(i hbar)) (i/2omega) = mc^2/(hbar omega)
+PASS Cor feynman amplitude bound :: x/2 - (1 - 1/sqrt(1+x)) = (y-1)^2 (y+2)/(2y) >= 0 and 1-1/y >= 0: 0 <= 1 - mc^2/(hbar omega) <= hbar^2k^2/(2m^2c^2)
+PASS Cor feynman amplitude order :: amplitude error is hbar^2k^2/(2m^2c^2) + O(c^-4): order 1/c^2, constant sharp
+PASS Cor feynman kernel :: K_F(t;x) solves i hbar d_t K = -(hbar^2/2m) Laplacian K for d=1,2,3
+PASS Cor feynman composition :: with A = m/(2 hbar), p = 1/(i t): K_p * K_q = K_(pq/(p+q)), i.e. times add, and int K = 1 (Gaussian identity, continued to imaginary time parameter)
+PASS Cor feynman group law :: multipliers: K_F(t)K_F(t') = K_F(t+t') and the relativistic group law, mode by mode
+NOTE Cor feynman: the rescaled positive-frequency object has multiplier (mc^2/hbar omega) e^{-i(omega - mc^2/hbar)t}; the prefactor is not 1, so this family is NOT itself a group for finite c (U(t)U(t') has prefactor squared). The group law holds for e^{-i(H-mc^2)t/hbar} of Thm unitary(1), which is what the corollary cites; only the limit of [G_mu]^+ composes.
+PASS Cor feynman finite-c non-group :: (mc^2/hbar omega)^2 != mc^2/hbar omega for k != 0
+
+elapsed 39.5 s
+NOTE-SUMMARY Prop symbol: the paper's proof uses int tau^(beta-1) e^(-z tau) = Gamma(beta) z^(-beta) with beta = alpha-1; that integral diverges for 0<alpha<=1 (beta<=0). The formula still holds there (checked by series and by quadrature at alpha=0.3, 0.5); the proof needs analytic continuation in alpha or the termwise series used here.
+NOTE-SUMMARY Thm unitary (3): 'on a solution with both signs of frequency ||J||^2 is not constant' is false as a universal statement. ||J(t)||^2 varies iff int tr(a_+(k)^dagger a_-(k)) e^{2 i omega t} dk is not identically 0. Smallest example: J^ = E11 e^{-i omega t} + E22 e^{+i omega t} (or scalar a_+, a_- with disjoint k-supports): Q(t) constant.
+NOTE-SUMMARY Cor feynman: the rescaled positive-frequency object has multiplier (mc^2/hbar omega) e^{-i(omega - mc^2/hbar)t}; the prefactor is not 1, so this family is NOT itself a group for finite c (U(t)U(t') has prefactor squared). The group law holds for e^{-i(H-mc^2)t/hbar} of Thm unitary(1), which is what the corollary cites; only the limit of [G_mu]^+ composes.
+ALL CHECKS PASSED
