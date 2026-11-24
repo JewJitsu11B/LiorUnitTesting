@@ -1,0 +1,15 @@
+(a) Table packet, my iteration, author's metric definitions (CAL renormalised, Schr at exactly 0.5, undamped fit, ratio cm/cp)
+ eps=1e-02 r2=0.06 N=1010: err(renorm)=6.962e-02 err(phase only, no renorm)=6.194e-01 floor=1.142e-02 ||J_N||-1=-6.179e-01 counter cm/cp undamped-fit=5.6e-05 damped-fit=2.4e-05 | two-cycle history: cm/cp=0.890 cm/(cm+cp)=0.471 ||J_N||=0.249
+ eps=1e-03 r2=0.06 N=3168: err(renorm)=2.631e-02 err(phase only, no renorm)=1.036e-01 floor=1.238e-02 ||J_N||-1=-1.006e-01 counter cm/cp undamped-fit=7.2e-07 damped-fit=3.0e-07 | two-cycle history: cm/cp=0.963 cm/(cm+cp)=0.490 ||J_N||=0.588
+ eps=1e-04 r2=0.24 N=2501: err(renorm)=4.827e-02 err(phase only, no renorm)=4.886e-02 floor=4.813e-02 ||J_N||-1=-8.880e-03 counter cm/cp undamped-fit=1.2e-07 damped-fit=6.0e-08 | two-cycle history: cm/cp=0.677 cm/(cm+cp)=0.404 ||J_N||=0.814
+ eps=1e-04 r2=0.12 N=5001: err(renorm)=2.569e-02 err(phase only, no renorm)=2.785e-02 floor=2.483e-02 ||J_N||-1=-1.111e-02 counter cm/cp undamped-fit=4.3e-08 damped-fit=1.9e-08 | two-cycle history: cm/cp=0.883 cm/(cm+cp)=0.469 ||J_N||=0.736
+ eps=1e-04 r2=0.06 N=10002: err(renorm)=1.459e-02 err(phase only, no renorm)=2.100e-02 floor=1.259e-02 ||J_N||-1=-1.521e-02 counter cm/cp undamped-fit=1.8e-08 damped-fit=7.5e-09 | two-cycle history: cm/cp=0.967 cm/(cm+cp)=0.492 ||J_N||=0.635
+(b) Thm feedback (4) criterion thresholds at alpha=1.01: flat weights vs the power-law weights the run uses
+ lam=0.1: W_lam(1) flat=9.5083 -> b>0.0951;  power-law=9.7302 -> b>0.0969
+ lam=0.01: W_lam(1) flat=99.5008 -> b>0.5012;  power-law=104.1902 -> b>0.5126
+(c) author's Euler-Maclaurin W vs mpmath (30 digits)
+ max relative difference = 5.0e-15
+(d) Table closure, my packets (same-width, both centred at 0), r2=0.12, swing = ptp/mean over all updates, 8 seeds
+ eps=1e-02: zero-past trQ ptp/mean 3.46..3.57
+ eps=1e-03: zero-past trQ ptp/mean 2.16..2.19
+ eps=1e-04: zero-past trQ ptp/mean 2.03..2.04

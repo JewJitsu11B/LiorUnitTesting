@@ -1,0 +1,6 @@
+=== Table normalizable: kernel truncated at 400 lags and normalized over those lags; companion-matrix roots, polished in mpmath ===
+=== Thm normalizable: search for a counterexample (random nonnegative kernels, sum 1, 60 lags) ===
+lags=400  exponential width 100: 0.99205   power law j^-1.5: 0.98656
+lags=800  exponential width 100: 0.99097   power law j^-1.5: 0.99217
+lags=1600  exponential width 100: 0.99101   power law j^-1.5: 0.99566
+lags=3200  exponential width 100: 0.99069   power law j^-1.5: 0.99766

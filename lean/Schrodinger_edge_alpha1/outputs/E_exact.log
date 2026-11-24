@@ -1,0 +1,88 @@
+PASS  Def memory: d/dtau [tau^a/Gamma(a+1)] = tau^(a-1)/Gamma(a)
+PASS  Def memory: integral over [j-1,j] equals w_j, j=1..5, alpha in {1/3,1/2,9/10}
+PASS  Lemma W proof line 1: coefficientwise to order x^60, symbolic alpha
+PASS  Lemma modes (1): residual of z^n in eq. update = z^n F(z) (generic w_1..w_7)
+PASS  Lemma modes (3): series of z J0/F(z) in 1/z reproduces zero-past J_0..J_7
+PASS  Lemma modes (4): history part = c h^n (W(h) - sum_{j<=n} w_j h^-j), n=0..6
+PASS  Lemma flat: (z-1)F = z^2-(1+a)z+a+(1-a)ghat
+PASS  Lemma flat (1): e^{+-i phi}, cos phi=(1+a)/2, are the roots at ghat=1
+PASS  Lemma flat (1): (1+a)/2 in (1/2,1) for a in (0,1), so phi real, |z|=1   | by inspection
+PASS  Lemma flat (2): alpha=1 gives (z-1)^2   | note: F itself is z-1 at alpha=1 (simple root); the double root is of (z-1)F
+PASS  Lemma flat (3) / Thm feedback (2) flat roots: e^{+-s}, cosh s=(1+a)/2
+      phi(alpha<1), t=sqrt(1-alpha): 5*t**7/7168 + 3*t**5/640 + t**3/24 + t
+      s(alpha>1),   t=sqrt(alpha-1): -5*t**7/7168 + 3*t**5/640 - t**3/24 + t
+PASS  Lemma flat: phi = sqrt(eps)(1 + eps/24 + 3 eps^2/640 + ...)
+PASS  Lemma flat: s = sqrt(d)(1 - d/24 + 3 d^2/640 - ...), d=alpha-1
+PASS  Cor dispersion: 1 - sqrt(ghat) = <r^2>k^2/12 + O(k^4)
+      k^4 coefficient of 1-sqrt(ghat): (-144*c4 + r2**2)/288
+PASS  Cor dispersion: Gaussian closed form 1 - exp(-<r^2>k^2/12)
+      Gaussian lag series: k**2*r2/12 - k**4*r2**2/288 + O(k**6)
+      Table mass  <r^2>=3/50 k=1/10  eps->0 exact value 0.0049998750   paper(eps=1e-5) 0.005000
+      Table mass  <r^2>=3/5 k=1/10  eps->0 exact value 0.049987502   paper(eps=1e-5) 0.049988
+      Table mass  <r^2>=3/5 k=1/5  eps->0 exact value 0.049950033   paper(eps=1e-5) 0.049950
+      Table mass  <r^2>=6 k=1/20  eps->0 exact value 0.49968763   paper(eps=1e-5) 0.499688
+      Table mass  <r^2>=6 k=1/5  eps->0 exact value 0.49503317   paper(eps=1e-5) 0.495034
+PASS  Thm unitary: first displayed exponent follows from Thm rotation / sqrt(eps)
+PASS  Thm unitary (2): (decay_k - decay_0)/(1-sqrt g) = (1/2)sqrt(eps)(1+sqrt g) - (pi/4)eps exactly
+      first display to O(K) minus second display: pi*K*T*epsilon/4
+PASS  Thm unitary: second display equals first to O(k^2) up to the term +(pi/4) eps K t   | paper drops -(pi/4)eps in the diffusive coefficient; exact O(K) coefficient is -(i+sqrt(eps)-(pi/4)eps)
+      Table diffusion predicted, eps=1e-2,k=0.1,<r^2>=0.06: 0.092143518  paper says 0.0921
+      amplitude decay per radian to O(K): K*(sqrt(epsilon) - pi*epsilon/4) + pi*epsilon/4
+PASS  Prop born (1): |amp|^2 rate = 2[(pi/4)eps + sqrt(eps) K] up to -(pi/2) eps K   | leading order in k^2 and eps; <k^2> average is the initial rate only
+PASS  Thm feedback (1): alpha=1 in eq. update gives J_{n+1}=J_n
+PASS  Thm feedback (3): difference of consecutive updates = J_{n+1}-(1+a)J_n+J_{n-1}
+PASS  Thm feedback (3): G=e^{-s|n-n0|}/(2 sinh s) solves the recurrence for n != n0
+      jump at n0: G(1)-(1+a)G(0)+G(-1) = -1
+FAIL  Thm feedback (3): jump at n0 equals +1 (unit source)   | actual value is -1: Green's function of the displayed operator is -e^{-s|n-n0|}/(2 sinh s)
+      update-rule residual of J_n=2^-|n| (alpha=3/2), n=-6..6: ['0', '0', '0', '0', '0', '0', '-3/2', '-3/2', '-3/2', '-3/2', '-3/2', '-3/2', '-3/2']
+PASS  Thm feedback (3): in eq. update, e^{-s|n|} needs a source -2 sinh(s) at EVERY n>=0 (step, not impulse)   | 2 sinh s = 3/2 here
+      residual of H_n=-(G_n-G_{n-1}), n=-6..6: ['0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0']
+      H_n, n=-3..3: ['-1/24', '-1/12', '-1/6', '-1/3', '1/3', '1/6', '1/12']
+PASS  Thm feedback (3): bounded response to a unit impulse S_n=delta_{n,0} in J_{n+1}=T_n+S_n is H_n=-(G_n-G_{n-1})   | two-sided, nonzero before the source; amplitudes differ in size and sign on the two sides
+PASS  Thm feedback (4): F(1) = 1-(1-b)(a+(a-1)W_lambda(1))
+PASS  Thm normalizable: |z-a|^2 - (|z|-a)^2 = 2a(|z|-Re z) >= 0   | equality iff z >= 0 real; with 1-a=|z|-a this forces z=1
+PASS  Thm normalizable: F(1) = 2(1-a) when sum w = 1, ghat = 1
+PASS  Thm normalizable: exact Schur-Cohn test, 4075 rational kernels, no root with |z|>=1
+PASS  Thm normalizable sharpness: total weight M=1/(1-a) (Dirac, a=1/2, M=2) puts roots ON the circle   | z^2 - z/2 + 1 = 0, |z|=1
+PASS  Thm normalizable sharpness: signed weights with sum 1 can fail (w=(3,-2), a=1/2 -> root z=-1.186)
+      Table normalizable, Dirac eps=1e-2: largest |z| = 0.97979377  paper 0.97979
+      Table normalizable, exponential width 10 (infinite kernel, q=e^(-1/10)): |z| = [0.91806670, 0.97677072]  paper 0.97677
+      Table normalizable, exponential width 100 (infinite kernel, q=e^(-1/100)): |z| = [0.99007517 + 0.e-17*I, 0.99007517 + 0.e-17*I]  paper 0.99205
+      a = 1/3  integral = sqrt(3)*gamma(2/3)/(2*pi*tau**(2/3))   ratio to tau^(a-1)/Gamma(a): 1
+      a = 1/2  integral = 1/(sqrt(pi)*sqrt(tau))   ratio to tau^(a-1)/Gamma(a): 1
+      a = 4/5  integral = sqrt(5/8 - sqrt(5)/8)*gamma(1/5)/(pi*tau**(1/5))   ratio to tau^(a-1)/Gamma(a): 1
+PASS  Prop accumulator: Laplace representation of tau^(a-1)/Gamma(a), a in {1/3,1/2,4/5}
+PASS  Prop accumulator: Gamma(a)Gamma(1-a)=pi/sin(pi a) closes the general case
+PASS  Prop accumulator: mass fraction in [0,delta] of [0,S] is (delta/S)^(1-a)
+PASS  Prop accumulator: w_j -> 1 as a -> 1-, j=1..7
+PASS  Prop carrier (1): Tr_right |J>><<J| = J J^dagger
+PASS  Prop carrier (1) converse: Tr_left gives (J^dagger J)^T, not J J^dagger
+PASS  Prop carrier (3): det(J J^dagger) = |det J|^2
+PASS  Prop carrier (3): tr(J J^dagger) = sum |J_ij|^2
+PASS  Prop carrier (4): Q = x0 I + x.sigma with real x
+PASS  Prop carrier (4): (2|det J|/tr Q)^2 = 1 - |x|^2/x0^2
+PASS  Prop carrier (4): eigenvalues x0 +- |x|; 4 p+ p- = 1 - |x|^2/x0^2
+PASS  Prop carrier (2): product (rank-one) J has det 0   | converse needs J != 0: J=0 has det 0 and rank 0
+PASS  Prop lorentz (1): det(GJ) = det G det J
+PASS  Prop lorentz: (n.sigma)^2 = I
+PASS  Prop lorentz (3): boost of Q=rho I is rho(cosh eta + sinh eta n.sigma)
+PASS  Prop lorentz (1): det Q invariant (rho^2), tr Q = 2 rho cosh eta changes
+PASS  Prop lorentz (3): C = sqrt(1-tanh^2) = sech eta
+PASS  Prop lorentz (3): p+- = e^{+-eta}/(2 cosh eta), p+/p- = e^{2 eta}
+PASS  Prop lorentz (3): collinear boosts add rapidities
+PASS  Prop lorentz (2): G in SU(2) (up to norm) gives G G^dagger = |G|^2 I, so tr Q and C unchanged
+      Table readout: sech(1.6) = 0.38797819  paper 0.387978
+PASS  Lemma minors: diag(2,2,0): 2J=JJ^dagger, det 0, tr(J/2)=2, rank 2
+PASS  Table readout: diag(2,2,0,0): det 0, largest 2x2 minor 4, tr P 2
+PASS  Lemma minors: J=2 psi psi^dagger satisfies 2J=JJ^dagger, det 0, tr(J/2)=1
+PASS  Lemma minors: 2J=JJ^dagger forces J=J^dagger (2(J-J^dagger) = JJ^dagger-(JJ^dagger)^dagger = 0)
+PASS  Prop composition (1): (JA x JB)(JA x JB)^dagger = JA JA^dagger x JB JB^dagger
+PASS  Prop composition (2): marginals consistent, random exact rank-4 J_AB, rotated bases
+PASS  Prop composition: p_mn real, >=0, sum 1
+PASS  Prop composition (1): product carriers give p(m,n)=pA(m)pB(n) exactly
+PASS  Prop composition (3): J=Phi+ eta^dagger: Q = |eta|^2 Phi+Phi+^dagger (rank one, pure)
+PASS  Prop composition (3): Tr_B Q = |eta|^2 I/2 (= I/2 only after normalising by Tr Q)
+
+SUMMARY: 61 checks, 60 PASS, 1 FAIL
+  FAILED: Thm feedback (3): jump at n0 equals +1 (unit source)
+exit 0

@@ -1,0 +1,63 @@
+CalChecks/CliffordNative.lean:448:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+CalChecks/CliffordNative.lean:445:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+CalChecks/CliffordNative.lean:445:25: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CalChecks/CliffordNative.lean:448:25: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CalChecks/CliffordNative.lean:448:29: warning: Unused tactic linter: `try ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'CalChecks.dict_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_involute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_cconj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_N' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.gradeZero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_par' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_apar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.grade_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.par_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.apar_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.dict_Ips' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.Ips_central' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.Ips_mem_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.Ips_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.cl_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.cl_par' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.cl_equivariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_central' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_mem_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_mem_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_pre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_Ips' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_Ips_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.biv_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.biv_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.biv_involute' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.biv_cconj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_biv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_biv_val' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_Cl3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_Cl3_vector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_Cl3_bivector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_Cl3_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_Cl3_Ips_pre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.gradeZero_pre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.threeway_Cl3_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.biv_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_spin3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.killing_spin3_biv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.N_biv_killing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.threeway_spin3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.toM2_γ0_physlib' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.toM2_γ1_physlib' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.toM2_γ2_physlib' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.cliffordEquiv_γ_physlib' depends on axioms: [propext, Classical.choice, Quot.sound]

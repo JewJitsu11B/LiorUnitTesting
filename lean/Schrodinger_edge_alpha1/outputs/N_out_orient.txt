@@ -1,0 +1,16 @@
+=== Prop orientation (1): flat weights, one-way past, exact continuation ===
+ alpha=0.999: max|J_n - e^(i phi n)| = 8.75e-12, counter amp |B/A| = 4.7e-14
+ alpha=0.9: max|J_n - e^(i phi n)| = 1.33e-12, counter amp |B/A| = 4.7e-15
+ alpha=0.5: max|J_n - e^(i phi n)| = 1.42e-11, counter amp |B/A| = 4.0e-15
+ flat weights, zero past (for contrast):
+  |A|=0.5001 |B|=0.5001
+=== Prop orientation (2),(3),(4) at k=0, power law ===
+ eps=1e-02 N=1010: one-way past  |B/A|=4.51e-03 |B|^2/(|A|^2+|B|^2)=2.04e-05
+            zero past     |A|=0.2044 |B|=0.2044 counter frac=0.500
+            two-cycle past |A|=0.2085 |B|=0.1978 counter frac=0.474
+ eps=1e-03 N=3168: one-way past  |B/A|=4.20e-04 |B|^2/(|A|^2+|B|^2)=1.76e-07
+            zero past     |A|=0.4600 |B|=0.4600 counter frac=0.500
+            two-cycle past |A|=0.4610 |B|=0.4586 counter frac=0.497
+ eps=1e-04 N=10002: one-way past  |B/A|=4.04e-05 |B|^2/(|A|^2+|B|^2)=1.63e-09
+            zero past     |A|=0.4960 |B|=0.4960 counter frac=0.500
+            two-cycle past |A|=0.4961 |B|=0.4959 counter frac=0.500

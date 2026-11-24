@@ -1,0 +1,117 @@
+====================================================================================
+A. Exact memory sum (Hurwitz-zeta form) against direct summation, |z| > 1 where the sum converges
+   alpha=0.900000  phi=(0.3-0.02j):  |formula - series| = 9.4e-16   (|W| = 2.939)
+   alpha=0.900000  phi=(0.05-0.005j):  |formula - series| = 2.1e-14   (|W| = 14.723)
+   alpha=0.990000  phi=(0.3-0.02j):  |formula - series| = 6.7e-16   (|W| = 3.267)
+   alpha=0.990000  phi=(0.05-0.005j):  |formula - series| = 3.0e-14   (|W| = 19.268)
+   alpha=0.999999  phi=(0.3-0.02j):  |formula - series| = 2.4e-15   (|W| = 3.305)
+   alpha=0.999999  phi=(0.05-0.005j):  |formula - series| = 3.2e-14   (|W| = 19.853)
+====================================================================================
+B. Modes of the iterated CAL at k = 0.  Unitary in the limit: decay per radian / (1-alpha) -> pi/4 = 0.7854
+    1-alpha  rotation/update  /sqrt(1-alpha)  decay/update  decay per radian  /(1-alpha)
+      1e-02       0.09897219        0.989722     8.922e-04         9.015e-03     0.90146
+      1e-03       0.03157031        0.998341     2.652e-05         8.401e-04     0.84005
+      1e-04       0.00999775        0.999775     8.082e-07         8.084e-05     0.80843
+      1e-05       0.00316219        0.999972     2.512e-08         7.945e-06     0.79450
+      1e-06       0.00100000        0.999997     7.888e-10         7.889e-07     0.78885
+      1e-07       0.00031623        1.000000     2.488e-11         7.867e-08     0.78667
+   Flat weights (w_j = 1) give z^2 - (1+alpha) z + 1 = 0: both roots exactly on |z| = 1 at k = 0.
+   Cross-check by direct iteration (zero past, J_0 = 1), alpha = 0.999, 24000 updates:
+     iteration: rotation 0.031570, decay 2.652e-05;   root: rotation 0.031570, decay 2.652e-05
+====================================================================================
+C. Dispersion and mass at 1-alpha = 1e-5:  (phi(0) - phi(k)) / (phi(0) k^2)  ->  <r^2>/12  (hbar/2m in rest radians)
+    <r^2>     k     measured   <r^2>/12    ratio
+     0.06  0.05     0.005000   0.005000   1.0000
+     0.06  0.10     0.005000   0.005000   1.0000
+     0.06  0.20     0.005000   0.005000   0.9999
+     0.60  0.05     0.049997   0.050000   0.9999
+     0.60  0.10     0.049988   0.050000   0.9998
+     0.60  0.20     0.049950   0.050000   0.9990
+     6.00  0.05     0.499688   0.500000   0.9994
+     6.00  0.10     0.498753   0.500000   0.9975
+     6.00  0.20     0.495034   0.500000   0.9901
+   Diffusive admixture: extra decay of mode k over its kinetic rotation, (Im phi(k) - Im phi(0)) / (phi(0) - phi(k))
+    1-alpha     k=0.1     k=0.3       k=1  sqrt(1-alpha)
+      1e-02   0.09187   0.09185   0.09163        0.10000
+      1e-03   0.03081   0.03080   0.03073        0.03162
+      1e-04   0.00992   0.00992   0.00990        0.01000
+      1e-05   0.00315   0.00315   0.00315        0.00316
+      1e-06   0.00100   0.00100   0.00100        0.00100
+   -> the edge evolves as exp(-(i + sqrt(1-alpha)) (hbar/2m) k^2 t): Schrodinger plus a diffusion term
+      of relative size sqrt(1-alpha), on top of the uniform (pi/4)(1-alpha) per radian; both vanish at 1-.
+====================================================================================
+D. Wavepacket evolved by the iterated CAL vs free Schrodinger, Schrodinger time (hbar/2m) t = 0.5
+   packet exp(-x^2/2 + i x) on a box of 40 (128 points); past: the carrier has always rotated one way.
+    1-alpha  <r^2>  updates  |CAL - Schr|  |eigen - Schr|  norm drift  pred drift  counter-rot
+      1e-02   0.24      253     7.664e-02       4.537e-02   -2.47e-01   -2.02e-01      4.8e-05
+      1e-02   0.12      505     7.038e-02       2.350e-02   -4.00e-01   -3.63e-01      5.0e-05
+      1e-02   0.06     1010     6.962e-02       1.142e-02   -6.18e-01   -5.94e-01      5.6e-05
+      1e-03   0.24      792     5.169e-02       4.802e-02   -4.11e-02   -2.08e-02      1.8e-06
+      1e-03   0.12     1584     3.306e-02       2.461e-02   -6.17e-02   -4.11e-02      1.0e-06
+      1e-03   0.06     3168     2.631e-02       1.238e-02   -1.01e-01   -8.06e-02      7.2e-07
+      1e-04   0.24     2501     4.827e-02       4.813e-02   -8.88e-03   -2.02e-03      1.2e-07
+      1e-04   0.12     5001     2.569e-02       2.483e-02   -1.11e-02   -4.03e-03      4.3e-08
+      1e-04   0.06    10002     1.459e-02       1.259e-02   -1.52e-02   -8.05e-03      1.8e-08
+   |eigen - Schr| is the long-wavelength floor (k^4 terms), falling with the kernel width <r^2>;
+   the norm drift is the predicted (pi/4)(1-alpha) per radian, vanishing as alpha -> 1.
+====================================================================================
+E. Closure Q = sum_k J J^dagger for an M2(C) carrier J = psi_a U + psi_b V; Born readout tr(P Q)/tr Q
+    1-alpha                  start  radians  tr Q drift per radian  tr Q spread   max |dp|
+      1e-02 one direction (oriented)     60.0             -2.132e-02     1.28e+00   5.48e-03
+      1e-02  zero past (both dirs)     60.0             -2.795e-02     3.50e+00   3.68e-02
+      1e-03 one direction (oriented)     60.0             -2.849e-03     1.71e-01   1.86e-03
+      1e-03  zero past (both dirs)     60.0             -1.039e-02     2.17e+00   3.57e-02
+      1e-04 one direction (oriented)     60.0             -5.458e-04     3.27e-02   6.05e-04
+      1e-04  zero past (both dirs)     60.0             -8.365e-03     2.03e+00   3.70e-02
+   oriented: tr Q decays at 2[(pi/4)(1-alpha) + sqrt(1-alpha)(hbar/2m)<k^2>] per radian -> conserved in the limit;
+   both directions: the trace swings (cross terms at twice the rotation), as for mixed frequencies at alpha = 2.
+====================================================================================
+F. Feedback across alpha = 1 (k = 0, zero past, J_0 = 1)
+    alpha behaviour  rate/update  sqrt|1-a|   flat-weight roots
+    0.990   rotates     0.098972   0.100000   [0.995+0.099875j 0.995-0.099875j]
+    0.999   rotates     0.031570   0.031623   [0.9995+0.031619j 0.9995-0.031619j]
+    1.000    frozen     0.000000   0.000000   [1. 1.]
+    1.001     grows     0.031674   0.031623   [1.032127 0.968873]
+    1.010     grows     0.101002   0.100000   [1.105125 0.904875]
+   Braking kappa (J_next = (1-kappa) T) and fading past lam (weights x e^(-lam j)), alpha = 1.01:
+   growth per update (> 0 runs away, < 0 settles)
+    kappa  never fades  lam = 0.1  lam = 0.01
+     0.00     0.10100     0.06473     0.09635
+     0.05     0.07745     0.02931     0.07154
+     0.20     0.03560    -0.04563     0.02700
+     0.50     0.01030    -0.08738     0.00051
+     0.90     0.00119    -0.09867    -0.00880
+   flat-weight criterion F(1) > 0  <=>  kappa > 1 - 1/(alpha + (alpha-1)/(e^lam - 1)) = 0.095  (lam = 0.1)
+   flat-weight criterion F(1) > 0  <=>  kappa > 1 - 1/(alpha + (alpha-1)/(e^lam - 1)) = 0.501  (lam = 0.01)
+====================================================================================
+G. Normalizable memory, sum_j w_j = 1: every root strictly inside |z| = 1
+                         kernel  1-alpha  max |root|  slowest decay/update
+          exponential, width 10    1e-02    0.976771             2.350e-02
+          exponential, width 10    1e-04    0.999800             2.002e-04
+         exponential, width 100    1e-02    0.992054             7.978e-03
+         exponential, width 100    1e-04    0.999798             2.019e-04
+    power law j^-1.5 (summable)    1e-02    0.986562             1.353e-02
+    power law j^-1.5 (summable)    1e-04    0.999800             2.003e-04
+             delta (j = 1 only)    1e-02    0.979794             2.041e-02
+             delta (j = 1 only)    1e-04    0.999800             2.000e-04
+   (kernels truncated to 400 lags and renormalized; slowest decay -> 2(1-alpha) when (1-alpha) x mean lag << 1)
+   Proof: on |z| >= 1, |eps W(z)| <= eps <= |z| - alpha <= |z - alpha|, equality only at z = 1,
+   where F(1) = 2 eps != 0.  The power law escapes because its total weight is infinite.
+==============================================================================
+H. Readout: one carrier as two factors, and composition (paper Sec. 7.3)
+   H1 one carrier (200 random J): max|Tr_right|J>><<J| - JJ^dag| = 1.8e-15,  max|C - 1/gamma| = 1.2e-15
+   H2 Tr(P_m JJ^dag)/Tr(JJ^dag) vs |<Phi_m|Psi>|^2/|Psi|^2, N in {2,4,16,1024}: max diff = 4.0e-16
+   H3 product J_A(x)J_B: max|p(m,n) - pA pB| = 1.1e-16;  rank-4 J_AB: marginal mismatch = 0.0e+00
+   H4 J_AB = Phi+ eta^dag: rank 1, Tr_B Q = diag(0.50, 0.50)  (pure, maximally A-B entangled)
+   H5 2|Phi+><Phi+|  2J=JJ^dag: True, det = 0, max 2x2 minor = 0, tr P = 1
+   H5 diag(2,2,0,0)  2J=JJ^dag: True, det = 0, max 2x2 minor = 4, tr P = 2
+   H5 diag(2,2,2,0)  2J=JJ^dag: True, det = 0, max 2x2 minor = 4, tr P = 3
+   H6 carrier at rest boosted by rapidity eta (det J = 2.0000 at rest):
+        eta          C   sech eta       p+/p-   e^(2 eta)  |det J|
+        0.0   1.000000   1.000000    1.000000    1.000000   2.0000
+        0.5   0.886819   0.886819    2.718282    2.718282   2.0000
+        1.0   0.648054   0.648054    7.389056    7.389056   2.0000
+        2.0   0.265802   0.265802   54.598150   54.598150   2.0000
+      rotation (SU(2) on the left): |C(VJ) - C(J)| = 1.1e-16
+      collinear boosts 0.7 then 0.9: C = 0.387978, sech(1.6) = 0.387978
+[11.8 s]

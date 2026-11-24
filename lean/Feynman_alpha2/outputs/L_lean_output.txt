@@ -1,0 +1,47 @@
+CalChecks/FeynmanAlphaTwo.lean:93:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+CalChecks/FeynmanAlphaTwo.lean:103:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+CalChecks/FeynmanAlphaTwo.lean:103:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+CalChecks/FeynmanAlphaTwo.lean:156:11: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+CalChecks/FeynmanAlphaTwo.lean:163:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+'CalChecks.AlphaTwo.sin_mul_eq_mul_sin_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.lorentz_selects_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.hfun_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.hfun_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.kg_symbol_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.kg_symbol_zero_flipped' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.mu_tau' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.kg_dispersion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.kg_dispersion_flipped' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.neg_mu_sq_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.checker_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.checker_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.checker_binomial_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.rl_two_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.pathsum_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.pathsum_symbol_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.Mk_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.Mk_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.norm_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.closure_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.closure_two_modes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.mixed_mode_not_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.charge_ratio_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.sqrt_expansion_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.nr_dispersion_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.nr_mode_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CalChecks.AlphaTwo.feynman_amplitude_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

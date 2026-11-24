@@ -1,0 +1,56 @@
+PASS Thm KG (1) solution formula 2J + K_2 J - S for J = S/2 - (mu^2/2) G_mu*S, mode k=0.7, c=1.3, tau_c=0.9, mu = 1/(sqrt2 tau_c): residuals at t=0.5,2,5: 0.0, 0.0, 0.0 (S there: 0.151633, 0.541341, 0.168449)
+PASS Thm KG mass constant is sharp same formula with mu tau_c = 1 instead of 1/sqrt2 leaves residual 0.183354
+PASS Prop pair composition max ||M(t1+t2) - M(t2)M(t1)|| over 200 random modes at 40 digits: 1.23e-38 (paper prints 1.1e-14, which is double-precision rounding noise and not reproducible digit for digit)
+PASS packet normalization int |psi^|^2 dk = 1
+PASS Sec9 bullet predicted limit (t/8)||k^4 psi^|| printed 3.672, mine 3.672 (3.6715113683), 4 of 4 printed digits agree
+PASS Table NR c=2 error printed 6.058e-1, mine 0.6058 (0.60577395738), 4 of 4 printed digits agree
+PASS Table NR c=2 error*c^2 printed 2.423, mine 2.423 (2.42309582952), 4 of 4 printed digits agree
+PASS Thm NR bound c=2 error 0.60577396 <= t ||k^4 psi^||/(8 c^2) = 0.91787784
+PASS Table NR c=4 error printed 2.076e-1, mine 0.2076 (0.20756537354), 4 of 4 printed digits agree
+PASS Table NR c=4 error*c^2 printed 3.321, mine 3.321 (3.32104597665), 4 of 4 printed digits agree
+PASS Thm NR bound c=4 error 0.20756537 <= t ||k^4 psi^||/(8 c^2) = 0.22946946
+PASS Table NR c=8 error printed 5.608e-2, mine 0.05608 (0.0560759825695), 4 of 4 printed digits agree
+PASS Table NR c=8 error*c^2 printed 3.589, mine 3.589 (3.58886288445), 4 of 4 printed digits agree
+PASS Thm NR bound c=8 error 0.056075983 <= t ||k^4 psi^||/(8 c^2) = 0.057367365
+PASS Table NR c=16 error printed 1.426e-2, mine 0.01426 (0.014263592781), 4 of 4 printed digits agree
+PASS Table NR c=16 error*c^2 printed 3.651, mine 3.651 (3.65147975194), 4 of 4 printed digits agree
+PASS Thm NR bound c=16 error 0.014263593 <= t ||k^4 psi^||/(8 c^2) = 0.014341841
+PASS Table NR c=32 error printed 3.581e-3, mine 0.003581 (0.00358061443278), 4 of 4 printed digits agree
+PASS Table NR c=32 error*c^2 printed 3.667, mine 3.667 (3.66654917917), 4 of 4 printed digits agree
+PASS Thm NR bound c=32 error 0.0035806144 <= t ||k^4 psi^||/(8 c^2) = 0.0035854603
+INFO Table NR norm drift column both multipliers have modulus exactly 1, so the drift is identically 0; the printed 0 and 2.2e-16 are double-precision rounding and are not a mathematical quantity to reproduce
+INFO Thm NR error*c^2 for growing c; predicted C0 - C1/c^2 with C0 = (t/8)||k^4 psi^|| = 3.6715113683, C1 = (t/16)<k^10>/||k^4 psi^|| = 5.06507549929
+INFO   c=     2  err=0.6057739574  err*c^2=2.42309582952  (C0-err*c^2)*c^2=4.993662155
+INFO   c=     4  err=0.2075653735  err*c^2=3.32104597665  (C0-err*c^2)*c^2=5.607446266
+INFO   c=     8  err=0.05607598257  err*c^2=3.58886288445  (C0-err*c^2)*c^2=5.289502967
+INFO   c=    16  err=0.01426359278  err*c^2=3.65147975194  (C0-err*c^2)*c^2=5.128093787
+INFO   c=    32  err=0.003580614433  err*c^2=3.66654917917  (C0-err*c^2)*c^2=5.08128167
+INFO   c=    64  err=0.0008960629349  err*c^2=3.67027378149  (C0-err*c^2)*c^2=5.069155551
+INFO   c=   128  err=0.0002240723974  err*c^2=3.67120215826  (C0-err*c^2)*c^2=5.066097299
+INFO   c=   256  err=5.602163815e-5  err*c^2=3.67143407748  (C0-err*c^2)*c^2=5.065331061
+INFO   c=   512  err=1.400563067e-5  err*c^2=3.67149204632  (C0-err*c^2)*c^2=5.065139397
+INFO   c=  1024  err=3.501421488e-6  err*c^2=3.67150653785  (C0-err*c^2)*c^2=5.065091474
+INFO   c=  2048  err=8.753562357e-7  err*c^2=3.67151016069  (C0-err*c^2)*c^2=5.065079493
+INFO   c=  4096  err=2.188391129e-7  err*c^2=3.6715110664  (C0-err*c^2)*c^2=5.065076498
+PASS Thm NR order O(1/c^2) error*c^2 increases to C0 = 3.671511368 (the bound of Thm NR is attained in the limit, so the order 1/c^2 is exact, not better); next term -C1/c^2 with C1 = 5.0650755 (measured 5.0650765 at c=4096)
+INFO Cor feynman c=2 error 0.55624725, bound 1.0854373, error*c^2 2.224989 (limit sqrt((||k^2 psi^||/2)^2 + C0^2) = 3.7321863)
+INFO Cor feynman c=4 error 0.2034988, bound 0.27135932, error*c^2 3.2559808 (limit sqrt((||k^2 psi^||/2)^2 + C0^2) = 3.7321863)
+INFO Cor feynman c=8 error 0.056429387, bound 0.067839831, error*c^2 3.6114808 (limit sqrt((||k^2 psi^||/2)^2 + C0^2) = 3.7321863)
+INFO Cor feynman c=16 error 0.014461674, bound 0.016959958, error*c^2 3.7021884 (limit sqrt((||k^2 psi^||/2)^2 + C0^2) = 3.7321863)
+INFO Cor feynman c=32 error 0.0036374063, bound 0.0042399895, error*c^2 3.7247041 (limit sqrt((||k^2 psi^||/2)^2 + C0^2) = 3.7321863)
+INFO Cor feynman c=256 error 5.6946861e-5, bound 6.6249835e-5, error*c^2 3.7320695 (limit sqrt((||k^2 psi^||/2)^2 + C0^2) = 3.7321863)
+PASS Cor feynman error bound error <= ||Delta psi||/(2c^2) + t ||Delta^2 psi||/(8c^2) for c = 2..256, and error*c^2 tends to the stated limit
+PASS Cor feynman positive-frequency part e^{-i omega t} part of sin(omega t)/omega is (i/2omega) e^{-i omega t}; (2mc^2/i hbar) e^{imc^2 t/hbar} [G^_mu]^+ = (mc^2/hbar omega) e^{-i(omega - mc^2/hbar)t}
+PASS Cor feynman composition law int K_F(t;x,y) K_F(t';y,z) dy = K_F(t+t';x,z) including the prefactor (m/2 pi i hbar t)^(1/2), principal branch: diff 8.12e-42
+PASS Thm unitary (2) trace conserved on positive frequency spread of ||J(t)||^2 over 5 times in [0,10]: 0.0
+PASS Thm unitary (3) trace not conserved on mixed frequency ||J(t)||^2 at t=0,1.3,3.3,7.1,10 with a_- = 0.4 e^{0.7 i k} a_+: 1.7534191, 0.98764517, 1.0080335, 1.1520261, 1.1490751
+PASS Thm unitary (4) charge conserved on mixed frequency q(J) constant to 0.0 and equal to int (hbar omega/mc^2)(|a+|^2-|a-|^2) = 1.20766386312
+INFO Thm unitary (4) c=0.5 q - ||J||^2 = 1.264623869, bound hbar^2||grad J||^2/(2m^2c^2) = 2.25
+INFO Thm unitary (4) c=1.0 q - ||J||^2 = 0.4376950751, bound hbar^2||grad J||^2/(2m^2c^2) = 0.5625
+INFO Thm unitary (4) c=2.0 q - ||J||^2 = 0.1292032592, bound hbar^2||grad J||^2/(2m^2c^2) = 0.140625
+INFO Thm unitary (4) c=8.0 q - ||J||^2 = 0.008735066801, bound hbar^2||grad J||^2/(2m^2c^2) = 0.0087890625
+PASS Thm unitary (4) inequality 0 <= q(J) - ||J||^2 <= hbar^2 ||grad J||^2/(2 m^2 c^2) on the positive-frequency packet, c = 0.5, 1, 2, 8
+PASS Thm unitary (4) sign on negative frequency q = -1.4376951 < 0
+INFO Sec9 bullet trace readout the printed spreads 2.5e-16 (positive frequency) and 4.4e-16 (charge) are double-precision zeros; the printed 1.6e-1 for 'a mixed solution' cannot be reproduced from the text because the mixed state (a_+, a_-) and the definition of 'relative spread' are not stated
+SUMMARY A_nr: 0 failed check(s)
+exit=0

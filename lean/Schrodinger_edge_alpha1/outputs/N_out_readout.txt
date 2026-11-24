@@ -1,0 +1,14 @@
+=== Table readout ===
+ row1 ||Tr_right|J>><<J| - JJ^dag|| (200 random J, max) = 2.5e-15   [paper 1.8e-15]
+ row2 |C - 1/gamma| max = 2.8e-15; C vs Wootters concurrence max = 4.4e-16   [paper 1.2e-15]
+ row3 trace readout vs Born, N in 2,4,16,1024 (rank-one J): max diff = 3.7e-16   [paper 3.7e-16]
+ row4 product carriers |p(m,n)-pA pB| max = 2.2e-16   [paper 1.1e-16]
+ row5 rank-4 J_AB marginal mismatch max = 6.7e-16   [paper 0]
+ row6 Phi+ eta^dag: rank=1, purity tr Q^2=1.000000000000, ||Tr_B Q - I/2|| = 0.0e+00   [paper 1, I/2]
+ row7 diag(2,2,0,0): det=0, largest 2x2 minor=4, tr P=2, ||2J - JJ^dag||=0   [paper 0, 4, 2]
+ row8 boost eta=0.5: C=0.886819 sech=0.886819
+ row8 boost eta=1.0: C=0.648054 sech=0.648054
+ row8 boost eta=2.0: C=0.265802 sech=0.265802
+ row9 boosts 0.7 then 0.9 (collinear): C=0.387978 sech(1.6)=0.387978   [paper 0.387978]
+      (non-collinear axes, for contrast: C=0.421665)
+      boost on a carrier NOT at rest (random J, C0=0.4742): C=0.2057; SU(2) rotation: C=0.4742

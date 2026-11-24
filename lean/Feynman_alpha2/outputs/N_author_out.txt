@@ -1,0 +1,81 @@
+==============================================================================
+1. Light-cone memory of order alpha: m_a(s,k) = (1/G(a)) int tau^(a-1) e^{-s tau} sinc(kc tau)
+   closed form R^-a sin((a-1)phi)/((a-1) sin phi), with s = R cos phi, kc = R sin phi
+    alpha    numeric     closed   R^a m_a at phi = 0.2, 0.6, 1.0, 1.4
+      1.5   1.054093   1.054093   1.0050  1.0468  1.1395  1.3075
+      2.0   1.000000   1.000000   1.0000  1.0000  1.0000  1.0000
+      2.5   0.913547   0.913547   0.9917  0.9249  0.7903  0.5840
+      3.0   0.800000   0.800000   0.9801  0.8253  0.5403  0.1700
+   Lorentz-invariance defect max_phi |R^a m_a(phi) - R^a m_a(0+)| over phi in (0, pi/2]:
+   a=0: 0.0e+00,  a=0.5: 4.1e-01,  a=1.5: 4.1e-01,  a=1.9: 9.7e-02,  a=2: 0.0e+00,  a=2.1: 1.0e-01,  a=3: 1.0e+00
+   -> only alpha = 2 (and trivially alpha = 0) depends on s^2 + c^2 k^2 alone.
+   alpha = 2: m_2(0.8, 0.6) = 1.000000 = 1/(s^2 + c^2 k^2) = 1.000000
+==============================================================================
+2. The alpha = 2 law  T = 2J + tau_c^-2 G * J  (transport chain = 1); balance T = 0 on plane waves
+   tau_c = 1/sqrt(2): mu^2 = 1/(2 tau_c^2) = 1.000000   (mu tau_c = 1/sqrt 2; only this ratio is physical)
+       k         root E  sqrt(k^2+mu^2)  E^2 with an extra factor -1
+     0.0   1.0000000000    1.0000000000                      -1.0000
+     0.5   1.1180339887    1.1180339887                      -0.7500
+     1.0   1.4142135624    1.4142135624                      -0.0000
+     2.0   2.2360679775    2.2360679775                       3.0000
+     4.0   4.1231056256    4.1231056256                      15.0000
+   -> Klein-Gordon dispersion E^2 = k^2 + mu^2.  The double accumulation supplies the half turn itself;
+      a further factor -1 on the memory (the old edge prefactor at alpha = 2) would make E^2 = k^2 - mu^2.
+==============================================================================
+3. Path sum in 1+1: sum_n (-mu^2)^n G0^{*(n+1)} by iterated null-leg accumulation
+   against the massive retarded propagator (1/2) J0(mu sqrt(uv)),  mu = 1,  u, v in [0, 12]
+   grid h = 0.020:  n=2: 1.44e+02  n=5: 1.15e+03  n=10: 3.28e+01  n=20: 3.35e-05  n=40: 3.35e-05  n=60: 3.35e-05
+   grid h = 0.010:  n=2: 1.44e+02  n=5: 1.15e+03  n=10: 3.28e+01  n=20: 8.38e-06  n=40: 8.38e-06  n=60: 8.38e-06
+   -> partial sums swing (alternating series) and then converge; the residual error
+      falls by 4 when h halves (trapezoid), so it is discretization, not the series.
+==============================================================================
+3b. Feynman's checkerboard: corner-odd amplitude / (i eps mu) vs J0(mu sqrt(t^2 - x^2))
+    (the CAL term (-mu^2)^n G^{*(n+1)} equals the (2n+1)-corner amplitude / (2 i c mu))
+    eps = 0.02    max |L/(i eps mu) - J0| on |x| <= 7.5: 3.697e-02
+    eps = 0.01    max |L/(i eps mu) - J0| on |x| <= 7.5: 1.810e-02   ratio 2.04
+    eps = 0.005   max |L/(i eps mu) - J0| on |x| <= 7.5: 8.950e-03   ratio 2.02
+    eps = 0.0025  max |L/(i eps mu) - J0| on |x| <= 7.5: 4.451e-03   ratio 2.01
+    -> converges as eps: the alpha = 2 path sum is the checkerboard's corner-odd sum;
+       n real insertions weigh as 2n corners, (-mu^2)^n = (i mu)^(2n).
+==============================================================================
+4. Path sum in 3+1 by exact descent  G_3(t,r) = -(1/(2 pi r)) d/dr G_1(t,r)
+   inside the cone: tail of the summed series vs -mu J1(mu sqrt(w))/(4 pi sqrt(w)), w = t^2 - r^2
+   t =   4: max |G3 tail - exact| = 5.28e-07   (max |exact| = 3.090e-02, 351 points with 0.25 <= r, t - r)
+   t =   8: max |G3 tail - exact| = 2.46e-06   (max |exact| = 2.330e-03, 376 points with 0.25 <= r, t - r)
+   -> the shells on the cone, summed with mass insertions, build the J1 tail inside the cone.
+==============================================================================
+5. Positive frequency, composition on the pair, and the nonrelativistic limit
+   5a pair propagator: max |M(t1+t2) - M(t2) M(t1)| over 200 modes = 1.1e-14
+   5b packet k0 = 1, t = 10: positive-frequency KG (rest phase removed) vs Schrodinger
+          c  ||KG - Schrodinger||    x c^2  norm drift
+          2             6.058e-01    2.423     2.2e-16
+          4             2.076e-01    3.321     2.2e-16
+          8             5.608e-02    3.589     0.0e+00
+         16             1.426e-02    3.651     4.4e-16
+         32             3.581e-03    3.667     4.4e-16
+      predicted limit of err x c^2:  (t/8) ||k^4 psi_hat|| = 3.672
+   -> unitary at every c; converges to Feynman's free kernel as 1/c^2.
+   5c trace sum_k |J|^2 over t in [0, 10] (each sign of frequency has its own conserved norm):
+      positive frequency only : relative spread 2.5e-16
+      mixed (+) and (-)       : relative spread 1.6e-01
+      mixed, Klein-Gordon charge: relative spread 4.4e-16  (value 64.720; the (-) part counts negatively)
+==============================================================================
+6. The CAL near alpha = 2: T = alpha J - (1 - alpha) tau_c^-alpha K_alpha J, light-cone kernel, no factor
+   tau_c = 1/sqrt 2 (mu = 1 at alpha = 2), k = 1.  Root near E = +-sqrt 2:  Im E < 0 decays, Im E > 0 grows
+    alpha             E (+ branch)             E (- branch)  (pi/4)|a-2| mu^2/w  growing modes k=0.1,1,5
+     1.90    +1.370022-5.435e-02i    -1.370022-5.435e-02i           5.027e-02                [0, 0, 0]
+     1.99    +1.410296-5.546e-03i    -1.410296-5.546e-03i           5.507e-03                [0, 0, 0]
+     2.00    +1.414214-1.580e-30i    -1.414214-1.580e-30i           0.000e+00          ['-', '-', '-']
+     2.01    +1.418025+5.560e-03i    -1.418025+5.560e-03i           5.598e-03                [2, 2, 0]
+     2.05    +1.432250+2.790e-02i    -1.432250+2.790e-02i           2.883e-02                [2, 2, 2]
+     2.10    +1.447853+5.590e-02i    -1.447853+5.590e-02i           5.947e-02                [2, 2, 2]
+   time-stepped field, k = 1, real Gaussian source at t0 = 10 (zero past):
+     alpha = 1.95: |J| at t = 50, 100, 150, 200: 8.03e-02, 6.31e-03, 2.41e-03, 1.43e-03
+     alpha = 2.00: |J| at t = 50, 100, 150, 200: 6.63e-03, 3.26e-01, 2.32e-02, 3.25e-01
+     alpha = 2.05: |J| at t = 50, 100, 150, 200: 6.31e-01, 3.11e-01, 8.27e+00, 5.85e+01
+   -> conservative exactly at alpha = 2; below, both signs decay (no sign is selected); above, both grow
+      (causal runaway).  One sign of frequency must come from the source's past, as at the edge.
+
+real	0m16.328s
+user	0m0.000s
+sys	0m0.015s

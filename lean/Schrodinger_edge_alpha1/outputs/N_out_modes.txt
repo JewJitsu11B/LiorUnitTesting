@@ -1,0 +1,46 @@
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:75: RuntimeWarning: overflow encountered in divide
+  mem = mem + J0 / epow * (W_h - S)
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:76: RuntimeWarning: overflow encountered in multiply
+  epow = epow * e
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:77: RuntimeWarning: invalid value encountered in multiply
+  S = S + w[n] * epow         # adds w_{n+1} e^{-i phi_h (n+1)}
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:75: RuntimeWarning: invalid value encountered in multiply
+  mem = mem + J0 / epow * (W_h - S)
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:75: RuntimeWarning: invalid value encountered in divide
+  mem = mem + J0 / epow * (W_h - S)
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:76: RuntimeWarning: invalid value encountered in multiply
+  epow = epow * e
+C:\Users\Sam Leizerman\cal-checks\schrodinger\N_own.py:163: RuntimeWarning: overflow encountered in divide
+  f" max rel dev over {N} updates = {np.max(np.abs(J/ex - 1)):.2e}")
+=== Lemma W sanity: Jonquiere vs direct sum at |z|>1 ===
+ alpha=0.5 |direct - jonq| = 2.22e-16
+ alpha=0.999 |direct - jonq| = 1.05e-15
+=== Table modes (roots of F through eq. jonquiere, mpmath) ===
+ eps=1e-02 rot=0.09897219 /sqrt=0.989722 decay=8.9219e-04 per rad=9.0146e-03 /eps=0.90146
+ eps=1e-03 rot=0.03157031 /sqrt=0.998341 decay=2.6521e-05 per rad=8.4005e-04 /eps=0.84005
+ eps=1e-04 rot=0.00999775 /sqrt=0.999775 decay=8.0824e-07 per rad=8.0843e-05 /eps=0.80843
+ eps=1e-05 rot=0.00316219 /sqrt=0.999972 decay=2.5124e-08 per rad=7.9450e-06 /eps=0.79450
+ eps=1e-06 rot=0.00100000 /sqrt=0.999997 decay=7.8885e-10 per rad=7.8885e-07 /eps=0.78885
+ eps=1e-07 rot=0.00031623 /sqrt=1.000000 decay=2.4877e-11 per rad=7.8667e-08 /eps=0.78667
+=== Table modes caption: direct iteration alpha=0.999, k=0, 24000 updates ===
+ root: rot=0.031570 decay=2.6521e-05
+ (iteration time 1.5s)
+ one-way past, fit n>=0: rot=0.031570 decay=2.6521e-05
+ one-way past, fit n>=12000: rot=0.031570 decay=2.6521e-05
+ one-way past, endpoints: decay=2.6537e-05
+ zero past, raw log-fit n>=0: rot=0.000000 decay=2.6360e-05
+ zero past, raw log-fit n>=12000: rot=-0.000001 decay=2.6602e-05
+ zero past, order-2 linear prediction n>=0: rot=+0.031570 decay=2.6482e-05
+ zero past, order-2 linear prediction n>=0: rot=-0.031570 decay=2.6482e-05
+ zero past, order-2 linear prediction n>=12000: rot=+0.031570 decay=2.6521e-05
+ zero past, order-2 linear prediction n>=12000: rot=-0.031570 decay=2.6521e-05
+ zero past, zero crossings: rot=0.031570 (imag part max 0.0e+00)
+ zero past, peak envelope fit (peaks 0..): decay=2.6521e-05
+ zero past, peak envelope fit (peaks 120..): decay=2.6521e-05
+=== Lemma modes (4)/(1): exact one-way past, pure mode z0^n continues as z0^n ===
+ alpha=0.999 ghat=1.0 phi=0.03157031+0.00002652j |F|=6.3e-18 max rel dev over 5000 updates = 2.53e-13
+ alpha=0.99 ghat=0.8 phi=0.08849637+0.00179910j |F|=1.1e-17 max rel dev over 5000 updates = 1.42e-10
+ alpha=0.9999 ghat=1.0 phi=0.00999775+0.00000081j |F|=1.0e-18 max rel dev over 5000 updates = 3.50e-13
+ alpha=0.5 ghat=1.0 phi=0.96349201+0.22378531j |F|=5.7e-17 max rel dev over 5000 updates = nan
+ control: same but history at real phi_h = Re phi (not an exact mode):
+  max |J/z0^n - 1| = 8.40e-04

@@ -1,0 +1,124 @@
+=== Thm rotation: co-rotating root of the exact F ===
+ghat = 1.0
+  eps=1e-02  Re phi=0.0989721887931079776  Im phi=0.000892194164371170541  |F|=4.42e-82  Re/sqrt(eps g)-1=-0.010278112  (Im-paper Im)/paper Im=0.13597689
+  eps=1e-03  Re phi=0.0315703060856776347  Im phi=0.0000265207393151637217  |F|=1.28e-82  Re/sqrt(eps g)-1=-0.0016592634  (Im-paper Im)/paper Im=0.067814331
+  eps=1e-04  Re phi=0.00999774716985828241  Im phi=8.08243782640634771e-7  |F|=3.01e-82  Re/sqrt(eps g)-1=-0.00022528301  (Im-paper Im)/paper Im=0.029087946
+  eps=1e-05  Re phi=0.00316218803986674551  Im phi=2.51235841558079422e-8  |F|=3.02e-82  Re/sqrt(eps g)-1=-2.8340428e-5  (Im-paper Im)/paper Im=0.011560157
+  eps=1e-06  Re phi=0.000999996588580058765  Im phi=7.88849352819411511e-10  |F|=5.72e-82  Re/sqrt(eps g)-1=-3.4114199e-6  (Im-paper Im)/paper Im=0.0043941908
+  eps=1e-07  Re phi=0.000316227639917597662  Im phi=2.48767559871286324e-11  |F|=1.73e-82  Re/sqrt(eps g)-1=-3.9876081e-7  (Im-paper Im)/paper Im=0.0016220228
+  eps=1e-08  Re phi=0.0000999999954365751228  Im phi=7.85858644557870056e-13  |F|=8.46e-82  Re/sqrt(eps g)-1=-4.5634249e-8  (Im-paper Im)/paper Im=0.00058630282
+  eps=1e-09  Re phi=0.0000316227764391703933  Im phi=2.48416513532895359e-14  |F|=3.93e-82  Re/sqrt(eps g)-1=-5.1391249e-9  (Im-paper Im)/paper Im=0.00020859199
+  eps=1e-10  Re phi=9.99999999428521179e-6  Im phi=7.85455727575906748e-16  |F|=8.73e-82  Re/sqrt(eps g)-1=-5.7147882e-10  (Im-paper Im)/paper Im=7.3292988e-5
+  eps=1e-11  Re phi=3.16227765996945816e-6  Im phi=2.48371038738284688e-17  |F|=9.79e-83  Re/sqrt(eps g)-1=-6.2904399e-11  (Im-paper Im)/paper Im=2.5495142e-5
+  eps=1e-12  Re phi=9.99999999993133912e-7  Im phi=7.85405071147334637e-19  |F|=5.05e-82  Re/sqrt(eps g)-1=-6.8660878e-12  (Im-paper Im)/paper Im=8.7952203e-6
+ghat = 0.9
+  eps=1e-02  Re phi=0.0938821778662417417  Im phi=0.0013467216284936423  |F|=6.67e-82  Re/sqrt(eps g)-1=-0.010394954  (Im-paper Im)/paper Im=0.08162235
+  eps=1e-03  Re phi=0.029949972909025947  Im phi=0.0000751293483029112922  |F|=3.27e-82  Re/sqrt(eps g)-1=-0.0016675697  (Im-paper Im)/paper Im=0.021307259
+  eps=1e-04  Re phi=0.00948468881558036752  Im phi=5.76616590677958843e-6  |F|=8.99e-83  Re/sqrt(eps g)-1=-0.00022601483  (Im-paper Im)/paper Im=0.0036677879
+  eps=1e-05  Re phi=0.0029999147679473947  Im phi=5.23825456152995307e-7  |F|=1.94e-82  Re/sqrt(eps g)-1=-2.8410684e-5  (Im-paper Im)/paper Im=0.00050330482
+  eps=1e-06  Re phi=0.000948680055113045933  Im phi=5.0748251337739767e-8  |F|=6.85e-82  Re/sqrt(eps g)-1=-3.4183562e-6  (Im-paper Im)/paper Im=6.2217203e-5
+  eps=1e-07  Re phi=0.000299999880164502881  Im phi=5.02359871349746465e-9  |F|=2.37e-83  Re/sqrt(eps g)-1=-3.9945166e-7  (Im-paper Im)/paper Im=7.3192281e-6
+  eps=1e-08  Re phi=0.0000948683254692607688  Im phi=5.00745513672560514e-10  |F|=1.33e-82  Re/sqrt(eps g)-1=-4.5703246e-8  (Im-paper Im)/paper Im=8.3785669e-7
+  eps=1e-09  Re phi=0.0000299999998456193429  Im phi=5.00235666587240045e-11  |F|=4.68e-83  Re/sqrt(eps g)-1=-5.1460219e-9  (Im-paper Im)/paper Im=9.4232036e-8
+  eps=1e-10  Re phi=9.48683297507707167e-6  Im phi=5.00074514643974177e-12  |F|=5.41e-82  Re/sqrt(eps g)-1=-5.7216843e-10  (Im-paper Im)/paper Im=1.0462402e-8
+  eps=1e-11  Re phi=2.99999999981107993e-6  Im phi=5.00023562519910886e-13  |F|=4.59e-82  Re/sqrt(eps g)-1=-6.2973357e-11  (Im-paper Im)/paper Im=1.1499637e-9
+  eps=1e-12  Re phi=9.48683298043993515e-7  Im phi=5.00007451003881155e-14  |F|=3.58e-83  Re/sqrt(eps g)-1=-6.8729836e-12  (Im-paper Im)/paper Im=1.2536175e-10
+ghat = 0.5
+  eps=1e-02  Re phi=0.0698710702872356507  Im phi=0.00313752241030554945  |F|=8.91e-82  Re/sqrt(eps g)-1=-0.011873848  (Im-paper Im)/paper Im=0.026891114
+  eps=1e-03  Re phi=0.0223204539391828976  Im phi=0.000268678780456863149  |F|=3.96e-83  Re/sqrt(eps g)-1=-0.0017989541  (Im-paper Im)/paper Im=0.0041737746
+  eps=1e-04  Re phi=0.00706938004701852288  Im phi=0.0000255695157737459211  |F|=2.67e-82  Re/sqrt(eps g)-1=-0.00023868599  (Im-paper Im)/paper Im=0.00055391144
+  eps=1e-05  Re phi=0.00223600164668588517  Im phi=2.5177329492613925e-6  |F|=5.63e-82  Re/sqrt(eps g)-1=-2.9664042e-5  (Im-paper Im)/paper Im=6.7888072e-5
+  eps=1e-06  Re phi=0.000707104275715046554  Im phi=2.50557359825023977e-7  |F|=3.16e-82  Re/sqrt(eps g)-1=-3.5432718e-6  (Im-paper Im)/paper Im=7.9801037e-6
+  eps=1e-07  Re phi=0.000223606705639604544  Im phi=2.50175849197388425e-8  |F|=2.27e-82  Re/sqrt(eps g)-1=-4.1193012e-7  (Im-paper Im)/paper Im=9.1467391e-7
+  eps=1e-08  Re phi=0.000070710674798740309  Im phi=2.50055561801750756e-9  |F|=4.72e-82  Re/sqrt(eps g)-1=-4.695068e-8  (Im-paper Im)/paper Im=1.0303721e-7
+  eps=1e-09  Re phi=0.0000223606796571402915  Im phi=2.5001756490129763e-10  |F|=1.15e-83  Re/sqrt(eps g)-1=-5.2707523e-9  (Im-paper Im)/paper Im=1.1457075e-8
+  eps=1e-10  Re phi=7.07106780773143864e-6  Im phi=2.50005553918907274e-11  |F|=4.1e-82  Re/sqrt(eps g)-1=-5.8464106e-10  (Im-paper Im)/paper Im=1.2609103e-9
+  eps=1e-11  Re phi=2.23606797735618805e-6  Im phi=2.50001756238084637e-12  |F|=1.18e-81  Re/sqrt(eps g)-1=-6.4220607e-11  (Im-paper Im)/paper Im=1.3760654e-10
+  eps=1e-12  Re phi=7.07106781181599397e-7  Im phi=2.50000555364095287e-13  |F|=1.69e-82  Re/sqrt(eps g)-1=-6.9977082e-12  (Im-paper Im)/paper Im=1.4912037e-11
+
+=== Coefficient extraction, ghat = 1 ===
+Im phi/eps^1.5 -> pi/4 ? ; fit Im/eps^1.5 = c0 + sqrt(eps)(c1 ln eps + c2)
+  eps=1e-7  Im/eps^1.5 = 0.78667209715556853231   minus pi/4 = 0.0012739338   (that)/(sqrt(eps) ln eps) = -0.249938476051
+  eps=1e-12  Im/eps^1.5 = 0.78540507114733463746   minus pi/4 = 6.9077499e-6   (that)/(sqrt(eps) ln eps) = -0.249999804833
+  eps=1e-20  Im/eps^1.5 = 0.78539816454874085602   minus pi/4 = 1.1512925e-9   (that)/(sqrt(eps) ln eps) = -0.24999999998
+  eps=1e-30  Im/eps^1.5 = 0.785398163397465579   minus pi/4 = 1.7269388e-14   (that)/(sqrt(eps) ln eps) = -0.25
+  eps=1e-40  Im/eps^1.5 = 0.78539816339744830985   minus pi/4 = 2.3025851e-19   (that)/(sqrt(eps) ln eps) = -0.25
+  3-point fit (eps=1e-30,1e-35,1e-40): c0=0.7853981633974483096157 (pi/4=0.7853981633974483096157, c0-pi/4=-1.3516e-34)  c1=-0.25  c2=-9.46702366163e-14
+  candidates: c1 = -1/4 ; c2 = ? ; (pi/4-related: 0.78539816 0.39269908 0.61685028 )
+
+Re phi/sqrt(eps) - 1 = eps (a ln eps + b): prediction from my own expansion a=1/4, b=1/24
+  eps=1e-10,1e-12: a=0.250001535269  b=0.0417098731363 (1/24=0.0416666666667)
+  eps=1e-20,1e-25: a=0.250000000007  b=0.0416666670584 (1/24=0.0416666666667)
+  eps=1e-35,1e-40: a=0.25  b=0.0416666666667 (1/24=0.0416666666667)
+
+=== Coefficient extraction, ghat < 1 ===
+ghat = 0.9
+  eps=1e-6  Im/eps=0.05074825133774 ((1-g)/2=0.05)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7887261631751901  minus pi/4: 0.003328  /(sqrt(eps)ln eps): -0.2408886565
+  eps=1e-12  Im/eps=0.050000745100388 ((1-g)/2=0.05)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7854047706401767  minus pi/4: 6.60724e-6  /(sqrt(eps)ln eps): -0.2391240881
+  eps=1e-20  Im/eps=0.050000000074509 ((1-g)/2=0.05)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7853981644950579  minus pi/4: 1.09761e-9  /(sqrt(eps)ln eps): -0.2383428981
+  eps=1e-30  Im/eps=0.050000000000001 ((1-g)/2=0.05)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7853981633974647  minus pi/4: 1.64372e-14  /(sqrt(eps)ln eps): -0.2379522069
+  eps=1e-40  Im/eps=0.05 ((1-g)/2=0.05)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7853981633974483  minus pi/4: 2.18982e-19  /(sqrt(eps)ln eps): -0.2377568613
+  3-point fit: c0=0.78539816339744830962 (c0-pi/4=-1.3441e-34)  c1=-0.237170824513  c2=0.0539759855878
+  Re phi/sqrt(eps g) - 1 = eps(a ln eps + b): a=0.25  b=0.0347709821967 ; my expansion: a=1/4, b=(1/4)ln g + g/24 + (1-g)/4 - (1-g)^2/(8g) = 0.0347709821967
+ghat = 0.5
+  eps=1e-6  Im/eps=0.25055735982502 ((1-g)/2=0.25)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7882258236708035  minus pi/4: 0.00282766  /(sqrt(eps)ln eps): -0.2046728756
+  eps=1e-12  Im/eps=0.2500005553641 ((1-g)/2=0.25)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7854034356103546  minus pi/4: 5.27221e-6  /(sqrt(eps)ln eps): -0.1908077477
+  eps=1e-20  Im/eps=0.25000000005554 ((1-g)/2=0.25)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7853981642503048  minus pi/4: 8.52856e-10  /(sqrt(eps)ln eps): -0.1851954354
+  eps=1e-30  Im/eps=0.25 ((1-g)/2=0.25)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7853981633974609  minus pi/4: 1.2599e-14  /(sqrt(eps)ln eps): -0.1823891887
+  eps=1e-40  Im/eps=0.25 ((1-g)/2=0.25)   [Im - eps(1-g)/2]/(eps^1.5 sqrt g)=0.7853981633974483  minus pi/4: 1.66694e-19  /(sqrt(eps)ln eps): -0.1809860654
+  3-point fit: c0=0.78539816339744830962 (c0-pi/4=-1.3129e-34)  c1=-0.176776695297  c2=0.387697310878
+  Re phi/sqrt(eps g) - 1 = eps(a ln eps + b): a=0.25  b=-0.0899534618067 ; my expansion: a=1/4, b=(1/4)ln g + g/24 + (1-g)/4 - (1-g)^2/(8g) = -0.0899534618067
+
+=== Table modes (k=0, ghat=1) ===
+  row eps=1e-2  mine: rot=0.09897219 ratio=0.989722 decay=8.9219e-04 perrad=9.0146e-03 /eps=0.90146
+              paper: rot=0.09897219 ratio=0.989722 decay=8.922e-4 perrad=9.015e-3 /eps=0.90146
+  row eps=1e-3  mine: rot=0.03157031 ratio=0.998341 decay=2.6521e-05 perrad=8.4005e-04 /eps=0.84005
+              paper: rot=0.03157031 ratio=0.998341 decay=2.652e-5 perrad=8.401e-4 /eps=0.84005
+  row eps=1e-4  mine: rot=0.00999775 ratio=0.999775 decay=8.0824e-07 perrad=8.0843e-05 /eps=0.80843
+              paper: rot=0.00999775 ratio=0.999775 decay=8.082e-7 perrad=8.084e-5 /eps=0.80843
+  row eps=1e-5  mine: rot=0.00316219 ratio=0.999972 decay=2.5124e-08 perrad=7.9450e-06 /eps=0.79450
+              paper: rot=0.00316219 ratio=0.999972 decay=2.512e-8 perrad=7.945e-6 /eps=0.79450
+  row eps=1e-6  mine: rot=0.00100000 ratio=0.999997 decay=7.8885e-10 perrad=7.8885e-07 /eps=0.78885
+              paper: rot=0.00100000 ratio=0.999997 decay=7.888e-10 perrad=7.889e-7 /eps=0.78885
+  row eps=1e-7  mine: rot=0.00031623 ratio=1.000000 decay=2.4877e-11 perrad=7.8667e-08 /eps=0.78667
+              paper: rot=0.00031623 ratio=1.000000 decay=2.488e-11 perrad=7.867e-8 /eps=0.78667
+  remark '0.78667 at 1e-7 tends to pi/4': decay per radian / eps at smaller eps:
+    eps=1e-7: 0.78667241085   minus pi/4: 0.0012742
+    eps=1e-8: 0.78585868042   minus pi/4: 0.00046052
+    eps=1e-10: 0.785455728025   minus pi/4: 5.7565e-5
+    eps=1e-12: 0.785405071153   minus pi/4: 6.9078e-6
+    eps=1e-16: 0.785398255501   minus pi/4: 9.2103e-8
+    eps=1e-20: 0.785398164549   minus pi/4: 1.1513e-9
+
+=== Table mass (Cor dispersion), eps=1e-5, ghat = exp(-<r^2> k^2/6) ===
+  <r2>=0.06 k=0.10  mine=0.005000 ratio=1.0000 | paper=0.005000 ratio=1.0000 | leading-order (1-sqrt g)/k^2=0.005000
+  <r2>=0.60 k=0.10  mine=0.049988 ratio=0.9998 | paper=0.049988 ratio=0.9998 | leading-order (1-sqrt g)/k^2=0.049988
+  <r2>=0.60 k=0.20  mine=0.049950 ratio=0.9990 | paper=0.049950 ratio=0.9990 | leading-order (1-sqrt g)/k^2=0.049950
+  <r2>=6.00 k=0.05  mine=0.499688 ratio=0.9994 | paper=0.499688 ratio=0.9994 | leading-order (1-sqrt g)/k^2=0.499688
+  <r2>=6.00 k=0.20  mine=0.495034 ratio=0.9901 | paper=0.495034 ratio=0.9901 | leading-order (1-sqrt g)/k^2=0.495033
+
+=== Table diffusion (Thm unitary), <r^2>=0.06 ===
+  eps=1e-2  mine: 0.09187 0.09185 0.09163 | paper: 0.09187 0.09185 0.09163 | predicted formula: 0.09214 0.09212 0.09190
+  eps=1e-3  mine: 0.03081 0.03080 0.03073 | paper: 0.03081 0.03080 0.03073 | predicted formula: 0.03084 0.03083 0.03076
+  eps=1e-4  mine: 0.00992 0.00992 0.00990 | paper: 0.00992 0.00992 0.00990 | predicted formula: 0.00992 0.00992 0.00990
+  eps=1e-6  mine: 0.00100 0.00100 0.00100 | paper: 0.00100 0.00100 0.00100 | predicted formula: 0.00100 0.00100 0.00100
+
+=== Thm unitary (1): does every mode decay? Im phi > 0 on a grid ===
+  eps=1e-2 ghat=1  phi=0.09897218879 + 0.0008921941644 i  converged=True  paper phi: 0.1 + 0.0007853981634 i
+  eps=1e-2 ghat=0.99  phi=0.09847517982 + 0.0009377325167 i  converged=True  paper phi: 0.09949874371 + 0.0008314613057 i
+  eps=1e-2 ghat=0.9  phi=0.09388217787 + 0.001346721628 i  converged=True  paper phi: 0.09486832981 + 0.00124509412 i
+  eps=1e-2 ghat=0.5  phi=0.06987107029 + 0.00313752241 i  converged=True  paper phi: 0.07071067812 + 0.003055360367 i
+  eps=1e-2 ghat=0.1  phi=0.03082615855 + 0.004810432043 i  converged=True  paper phi: 0.0316227766 + 0.004748364707 i
+  eps=1e-2 ghat=0.01  phi=0.008438171745 + 0.005097781222 i  converged=True  paper phi: 0.01 + 0.005028539816 i
+  eps=1e-4 ghat=1  phi=0.00999774717 + 8.082437826e-7 i  converged=True  paper phi: 0.01 + 7.853981634e-7 i
+  eps=1e-4 ghat=0.99  phi=0.009947632353 + 1.304128475e-6 i  converged=True  paper phi: 0.009949874371 + 1.281461306e-6 i
+  eps=1e-4 ghat=0.9  phi=0.009484688816 + 5.766165907e-6 i  converged=True  paper phi: 0.009486832981 + 5.74509412e-6 i
+  eps=1e-4 ghat=0.5  phi=0.007069380047 + 2.556951577e-5 i  converged=True  paper phi: 0.007071067812 + 2.555536037e-5 i
+  eps=1e-4 ghat=0.1  phi=0.00316112046 + 4.525550019e-5 i  converged=True  paper phi: 0.00316227766 + 4.524836471e-5 i
+  eps=1e-4 ghat=0.01  phi=0.0009984531098 + 4.958389404e-5 i  converged=True  paper phi: 0.001 + 4.957853982e-5 i
+  eps=1e-8 ghat=1  phi=9.999999544e-5 + 7.858586446e-13 i  converged=True  paper phi: 0.0001 + 7.853981634e-13 i
+  eps=1e-8 ghat=0.99  phi=9.949873917e-5 + 5.078191768e-11 i  converged=True  paper phi: 9.949874371e-5 + 5.078146131e-11 i
+  eps=1e-8 ghat=0.9  phi=9.486832547e-5 + 5.007455137e-10 i  converged=True  paper phi: 9.486832981e-5 + 5.007450941e-10 i
+  eps=1e-8 ghat=0.5  phi=7.07106748e-5 + 2.500555618e-9 i  converged=True  paper phi: 7.071067812e-5 + 2.50055536e-9 i
+  eps=1e-8 ghat=0.1  phi=3.162277472e-5 + 4.500248459e-9 i  converged=True  paper phi: 3.16227766e-5 + 4.500248365e-9 i
+  eps=1e-8 ghat=0.01  phi=9.999998224e-6 + 4.950078595e-9 i  converged=True  paper phi: 1.0e-5 + 4.95007854e-9 i

@@ -1,0 +1,72 @@
+PASS Prop checker (1) term n=1 G * G^{*(1)} by 2D quadrature in (t,x), c=1.7, vs theta theta/(2c) (uv/4c^2)^n/(n!)^2: max rel diff 5.11e-46
+PASS Prop checker (1) term n=2 G * G^{*(2)} by 2D quadrature in (t,x), c=1.7, vs theta theta/(2c) (uv/4c^2)^n/(n!)^2: max rel diff 9.84e-46
+PASS Prop checker (1) term n=3 G * G^{*(3)} by 2D quadrature in (t,x), c=1.7, vs theta theta/(2c) (uv/4c^2)^n/(n!)^2: max rel diff 1.41e-45
+PASS Prop checker (1) term n=4 G * G^{*(4)} by 2D quadrature in (t,x), c=1.7, vs theta theta/(2c) (uv/4c^2)^n/(n!)^2: max rel diff 1.79e-45
+PASS Prop checker (1) term n=5 G * G^{*(5)} by 2D quadrature in (t,x), c=1.7, vs theta theta/(2c) (uv/4c^2)^n/(n!)^2: max rel diff 2.24e-45
+PASS Thm pathsum (1) bound total mass of G^{*(n+1)}(t,.) = t^(2n+1)/(2n+1)! in d=1 and d=3, n<=6, hence sup|G^{*n}*theta| = t^(2n)/(2n)! (bound attained): max rel diff 1.73e-46
+PASS Prop checker (1) resummation 1+1 sum_n (-mu^2)^n G^{*(n+1)} vs theta theta J0(mu sqrt(t^2-x^2/c^2))/(2c), 5 points up to z=59.8: max abs diff 3.48e-62
+PASS Prop checker (1) absolute sum sum of absolute values vs I0/(2c): max rel diff 1.36e-64
+PASS Prop descent3 resummation 3+1 tail sum_{n>=1} (-mu^2)^n G^{*(n+1)} vs -(mu/4 pi c^2) J1(mu sqrt w/c)/sqrt w: max abs diff 4.91e-63
+PASS Prop descent3 absolute sum sum of absolute values vs (mu/4 pi c^2) I1/sqrt w: max rel diff 2.98e-63
+INFO Thm pathsum convergence terms needed for 1e-60 absolute accuracy as a function of z = mu sqrt(t^2-x^2/c^2): {'2.8284': 33, '3.8231': 36, '12.0': 56, '49.153': 119, '59.791': 134}; the alternating series loses about z/2.3 digits to cancellation (terms reach I0(z))
+PASS Thm pathsum (3) symbol 1+1 spatial FT of theta J0/(2c) by quadrature vs sin(omega t)/omega, omega^2 = c^2k^2+mu^2: max diff 8.76e-47
+PASS Thm pathsum (3) / Prop descent3 symbol 3+1 spatial FT of [shell - (mu/4 pi c^2) J1/sqrt w] by quadrature vs sin(omega t)/omega (sign and normalization of shell and tail): max diff 2.19e-46
+PASS Prop descent3 term n=1 (two null legs) G*G in 3+1 paired with exp(-|x|^2), from two shells with weights tau (Thm pathsum (4), n=1), vs theta(ct-r)/(8 pi c^3): diff 0.0
+PASS Prop descent3 term n=2 shell-convolution of G^{*(2)} by quadrature vs n w^(n-1)/(2 pi c (4c^2)^n (n!)^2): max rel diff 0.0
+PASS Prop descent3 term n=3 shell-convolution of G^{*(3)} by quadrature vs n w^(n-1)/(2 pi c (4c^2)^n (n!)^2): max rel diff 2.96e-46
+PASS Prop descent3 term n=4 shell-convolution of G^{*(4)} by quadrature vs n w^(n-1)/(2 pi c (4c^2)^n (n!)^2): max rel diff 3.8e-46
+PASS Prop checker (3) corner count, brute force all 2^(N-2) paths, N=2..14, first step right, last step left: number with N_R right steps and 2n+1 corners is C(N_R-1,n) C(N_L-1,n); no even-corner paths
+PASS Prop checker (3) corner count, exact transfer recursion N=60 integer corner polynomials at every site agree with C(N_R-1,n) C(N_L-1,n)
+INFO Prop checker (2),(3) term by term: rel diff between lattice term (i eps mu)^(2n+1) C C / eps / (2 i mu) and (-mu^2)^n G^{*(n+1)} at (t,x)=(2,0.5), mu=1.3
+INFO   N=   128  n=0:0.0 n=1:-0.03307 n=2:-0.09653 n=3:-0.1848 n=4:-0.2901 n=5:-0.4038 n=6:-0.5174
+INFO   N=  1024  n=0:0.0 n=1:-0.004163 n=2:-0.01245 n=3:-0.02475 n=4:-0.04094 n=5:-0.06083 n=6:-0.08417
+INFO   N=  8192  n=0:0.0 n=1:-0.0005208 n=2:-0.001562 n=3:-0.003121 n=4:-0.005197 n=5:-0.007786 n=6:-0.01088
+INFO   N= 65536  n=0:0.0 n=1:-6.51e-5 n=2:-0.0001953 n=3:-0.0003906 n=4:-0.0006509 n=5:-0.0009761 n=6:-0.001366
+PASS Prop checker (2) term by term each (2n+1)-corner lattice term / (2 i c mu) -> (-mu^2)^n G^{*(n+1)}, n=0..6; n=0 exact; error first order in eps with coefficient -n(n+1)(1/u+1/v) eps (my derivation), ratio 8 per 8-fold refinement
+PASS Prop checker (2) factor 1/(2 i c mu) Phi_(2n+1)/(2 i c mu) = (-mu^2)^n G^{*(n+1)} with the paper's Phi, c = 0.4 and 2.5, n <= 5
+INFO Prop checker (3) full lattice sum at (t,x)=(2,0.5), mu=1.3: err = L_eps/(i eps mu) - J0(mu sqrt(t^2-x^2))
+INFO   N=     64 eps=0.03125 err=0.019666741  err/eps=0.6293357091
+INFO   N=    256 eps=0.007813 err=0.0045384957  err/eps=0.5809274454
+INFO   N=   1024 eps=0.001953 err=0.0011115563  err/eps=0.5691168191
+INFO   N=   4096 eps=0.0004883 err=0.00027645669  err/eps=0.5661833042
+INFO   N=  16384 eps=0.0001221 err=6.9024797e-5  err/eps=0.5654511353
+INFO   N=  65536 eps=3.052e-5 err=1.7250616e-5  err/eps=0.5652681689
+INFO   N= 262144 eps=7.629e-6 err=4.3123049e-6  err/eps=0.565222432
+PASS Prop checker (3) lattice limit L_eps/(i eps mu) -> J0, i.e. L_eps/eps -> 2 i c mu G_mu; error O(eps), err/eps -> 0.56522243
+PASS Table checker eps=0.02 max error printed 3.697e-2, mine 0.03697 (0.036972407358), 4 of 4 printed digits agree
+PASS Table checker eps=0.02 mp cross-check binomial sum at the worst site x=-6.7600 in 45-digit arithmetic: 0.036972407 (lattice run 3.697241e-02)
+PASS Table checker eps=0.01 max error printed 1.810e-2, mine 0.01810 (0.0180954203755), 4 of 4 printed digits agree
+PASS Table checker eps=0.01 mp cross-check binomial sum at the worst site x=-6.7800 in 45-digit arithmetic: 0.01809542 (lattice run 1.809542e-02)
+PASS Table checker eps=0.01 ratio printed 2.04, mine 2.04 (2.04319140372), 3 of 3 printed digits agree
+PASS Table checker eps=0.005 max error printed 8.950e-3, mine 0.008950 (0.00895034528153), 4 of 4 printed digits agree
+PASS Table checker eps=0.005 mp cross-check binomial sum at the worst site x=-6.7900 in 45-digit arithmetic: 0.0089503453 (lattice run 8.950345e-03)
+PASS Table checker eps=0.005 ratio printed 2.02, mine 2.02 (2.02175668159), 3 of 3 printed digits agree
+PASS Table checker eps=0.0025 max error printed 4.451e-3, mine 0.004451 (0.00445086837519), 4 of 4 printed digits agree
+PASS Table checker eps=0.0025 mp cross-check binomial sum at the worst site x=6.7950 in 45-digit arithmetic: 0.0044508684 (lattice run 4.450868e-03)
+PASS Table checker eps=0.0025 ratio printed 2.01, mine 2.01 (2.01092113427), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 n=2 printed 1.44e2, mine 144 (144.476155345), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 n=5 printed 1.15e3, mine 1.15E+3 (1145.08776507), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 n=10 printed 3.28e1, mine 32.8 (32.8437440761), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 n=20 printed 3.35e-5, mine 0.0000335 (3.35081588001e-5), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 n=40 printed 3.35e-5, mine 0.0000335 (3.35081588001e-5), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 n=60 printed 3.35e-5, mine 0.0000335 (3.35081588001e-5), 3 of 3 printed digits agree
+PASS Table pathsum h=0.020 mp cross-check n=60 residual at its worst grid point (u,v)=(1.1,12.0) recomputed with 40-digit trapezoid iterates: 3.3508159e-5
+PASS Table pathsum h=0.010 n=2 printed 1.44e2, mine 144 (144.476155345), 3 of 3 printed digits agree
+PASS Table pathsum h=0.010 n=5 printed 1.15e3, mine 1.15E+3 (1145.05482468), 3 of 3 printed digits agree
+PASS Table pathsum h=0.010 n=10 printed 3.28e1, mine 32.8 (32.8332276158), 3 of 3 printed digits agree
+PASS Table pathsum h=0.010 n=20 printed 8.38e-6, mine 0.00000838 (8.37685209645e-6), 3 of 3 printed digits agree
+PASS Table pathsum h=0.010 n=40 printed 8.38e-6, mine 0.00000838 (8.37685209645e-6), 3 of 3 printed digits agree
+PASS Table pathsum h=0.010 n=60 printed 8.38e-6, mine 0.00000838 (8.37685209645e-6), 3 of 3 printed digits agree
+PASS Table pathsum h=0.010 mp cross-check n=60 residual at its worst grid point (u,v)=(1.1,12.0) recomputed with 40-digit trapezoid iterates: 8.3768521e-6
+PASS Table pathsum caption ratio 4.0 residual ratio when h halves: 4.0001 (printed 4.0)
+PASS Table descent t=4 max error (d_v - d_u, one-sided at the grid edge) printed 5.28e-7, mine 5.28E-7 (5.28306918844e-7), 3 of 3 printed digits agree
+INFO Table descent t=4 worst point r=3.75 (on grid edge v=12: False); max error over points not on the grid edge: 5.283e-07; with a central difference along the diagonal instead: 9.146e-07; r range covered [0.25, 3.75]
+PASS Table descent t=4 max|exact| printed 3.090e-2, mine 0.03090 (0.0308996819794), 4 of 4 printed digits agree
+PASS Table descent t=4 points printed 351, mine 351
+PASS Table descent t=8 max error (d_v - d_u, one-sided at the grid edge) printed 2.46e-6, mine 0.00000246 (2.45658301418e-6), 3 of 3 printed digits agree
+INFO Table descent t=8 worst point r=4.00 (on grid edge v=12: True); max error over points not on the grid edge: 8.438e-08; with a central difference along the diagonal instead: 8.792e-08; r range covered [0.25, 4.00]
+PASS Table descent t=8 max|exact| printed 2.330e-3, mine 0.002330 (0.00232955836977), 4 of 4 printed digits agree
+PASS Table descent t=8 points printed 376, mine 376
+INFO Table descent t=8 coverage the stated window r>=0.25, t-r>=0.25 has 751 grid points at t=8; the grid u,v<=12 only reaches r<=4, hence 376 points. Over the full stated window max|exact| = 0.023167, ten times the printed 2.330e-3; the outer half 4<r<=7.75 of the cone interior at t=8 is not tested by the table.
+SUMMARY A_pathsum: 0 failed check(s)
+exit=0

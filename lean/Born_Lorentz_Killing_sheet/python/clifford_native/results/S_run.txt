@@ -1,0 +1,110 @@
+PASS ALG1 generator relations s_j s_k + s_k s_j = 2 delta_jk hold in the computed table
+PASS ALG2 the blade product is associative (all 512 triples)
+PASS ALG3 reversion and Clifford conjugation are anti-automorphisms, grade involution an automorphism (64 pairs)
+PASS ALG4 N(q) = q qbar = qbar q lies in the centre span{1, I} for a general q (8 real symbols)
+PASS ALG5 N is multiplicative, N(ab) = N(a) N(b), and N(q~) = N(q)~
+PASS ALG6 Cl3 is free of rank 4 over the centre on e_a: q = sum_a <q e_a~>_{0+3} e_a
+PASS ALG7 every commutator lies in grades 1+2 (no central part)
+PASS Q1 e_j e_k = -delta_jk + eps_jkl e_l  (e_j = -I s_j)
+PASS B0 alpha J - (1-alpha) J' at alpha = 2 equals 2J + J'  (J, J' general elements)
+PASS B1 <J J~>_0 = sum_a |Z_a|^2
+PASS B2 N(J) = J Jbar = sum_a Z_a^2, an element of the centre
+PASS B3 J J~ is reversion-even: a paravector (grades 2, 3 vanish)
+PASS B4 N(J J~) = |N(J)|^2 = N(J) N(J)~ is a real scalar, and <J J~>_0 is a sum of squares (closed future cone)
+PASS B5 U = e^{I phi}(u.e), e^{I phi} = cos phi + I sin phi (solves E' = I E, E(0) = 1): U U~ = U~ U = |u|^2
+PASS B6 J J~ invariant under J -> J U, U U~ = 1  (here (JU)(JU)~ = |u|^2 J J~)
+PASS B7 congruence covariance (GJ)(GJ)~ = G (J J~) G~ for a general G
+PASS B8 left rotor multiplication acts on (Z_a) by a REAL matrix L (no I part), L^T L = |p|^2
+PASS B9 right rotor multiplication acts on (Z_a) by a REAL matrix R, R^T R = |p|^2
+PASS B10 det L = det R = |p|^4 (> 0, so both land in SO(4) at |p| = 1)
+PASS B11 L and R commute (two commuting rotor factors)
+PASS B12 sum Z_a^2 (a centre element) is preserved by L up to |p|^2, for Z_a in the centre
+PASS B13 <E rho>_0 invariant under rho -> G rho G~, E -> G~^-1 E G^-1  (G^-1 = Gbar N(G)~/|N(G)|^2, E, rho general paravectors; identity cleared of the denominator |N(G)|^4)
+PASS B14 sum_n E_n = 1 maps to G~^-1 G^-1 = (G G~)^-1  (so it stays 1 only if G G~ = 1)
+PASS L1 H(q) = (q + q~)/2 is a projector and equals <q>_0 + <q>_1
+PASS L2 A(q) = (q - q~)/2 = <q>_2 + <q>_3 is a projector, H + A = 1, H A = 0
+PASS L3 H commutes with q -> G q G~ (any G)
+PASS L4 A commutes with q -> G q G~
+PASS L5 I * (paravector slice) = generator slice: A(I H(q)) = I H(q)
+PASS L6 X = t + x is reversion-fixed; the image of H has 4 real dimensions
+PASS L7 N(X) = t^2 - x^2 - y^2 - z^2 (a real scalar)
+PASS L8 N(G X G~) = |N(G)|^2 N(X), |N(G)|^2 = N(G) N(G)~
+PASS L9 G = -1 acts trivially on paravectors (kernel contains +-1)
+PASS L10 (I e_j)^2 = +1 and I e_1, I e_2, I e_3 anticommute: they are the generators s_j
+PASS L11 the 8 words in I e_j are R-independent and span Cl3 (real dim 8); the isomorphism with M2(C) is REP1-REP2
+PASS L12 paravector norm X Xbar = (t + x)(t - x) = t^2 - |x|^2 (Minkowski)
+PASS L13 2<rho^2>_0 = 1 - 2 N(rho) at 2<rho>_0 = 1
+PASS L14 2<rho^2>_0 = (1 + v^2)/2, v = |x|/t
+PASS L15 [algebra-independent] 1 - (1 + v^2)/2 = 1/(2 gamma^2)
+PASS L16 rotor conjugation x -> R x R~ keeps vectors vectors and acts by a 3x3 R with R^T R = 1, det R = +1 (|u| = 1)
+PASS L17 a boost (paravector with N = 1, here 5/4 + 3/4 s_3) preserves N(X) but changes <X>_0
+PASS P1 v^2 = 1 - 4 N(rho) = 1 - |sum Z^2|^2/(sum |Z|^2)^2, rho = J J~/(2<J J~>_0)  (cross-multiplied)
+PASS P2 (sum |Z|^2)^2 - |sum Z^2|^2 = 4 sum_{a<b} Im(Z_a Z_b~)^2  (Lagrange, in the centre)
+PASS P3 |w|^2 - Re(w^2) = 2 (Im w)^2 for w in the centre
+PASS P4 real Z_a: J is even, J J~ = J Jbar = sum Z_a^2 (a scalar), so rho = 1/2 and v = 0
+PASS P5 v = 1 <=> N(J) = 0: with v = |x|/t the Bloch radius of the closure, (1 - v^2) <J J~>_0^2 = |N(J)|^2
+PASS P6 v invariant under a common central rescaling Z_a -> lambda Z_a, lambda in the centre
+PASS K1 A = y0 I + y_j e_j is reversion-odd; the reversion-odd elements are exactly grades 3+2 (4 real dims)
+PASS K2 N(A) = -(y0)^2 + |y|^2 (a real scalar)
+PASS K3 N(I X) = -N(X) for a paravector X (also for every q: N(I q) = -N(q))
+PASS K4 kappa(A,B) = tr_Zc(ad_A ad_B) = 8(<A'B'>_0 + <A'B'>_3), A' = <A>_1 + <A>_2 (Cl3 as a Lie algebra over its centre; value in the centre)
+PASS K5 the centre span{1, I} is in the radical of kappa (degenerate on the generator slice)
+PASS K6 on bivectors: N(A) = |y|^2 = -A^2 = -(1/8) kappa(A,A), kappa from tr(ad ad) both over the centre on Cl3 and on the 3-dim bivector Lie algebra
+PASS K7 kappa is Ad-invariant: kappa(G A Gbar, G B Gbar) = N(G)^2 kappa(A,B) on all 64 blade pairs, general G (kappa is bilinear over the centre, G^-1 = Gbar/N(G)); plus 3 exact random G with general A, B
+PASS K8 ad-invariant bilinear forms on the bivector Lie algebra ([e_i,e_j] = 2 eps_ijl e_l) are 1-dimensional
+PASS K9 real Killing form of grades 1+2 (6-dim, tr(ad ad)) = 16<AB>_0 = 2 Re kappa; the real Killing form of all of Cl3 (8-dim) is 16<A'B'>_0
+PASS K10 its signature is (3,3): bivectors (rotations) negative, vectors (boosts) positive
+PASS C1 joint closure rho = (1 + sum e_j (x) e_j)/4 in Cl3 (x)_Zc Cl3: idempotent, reversion-fixed, 4<rho>_0 = 1, and primitive (rho T rho = lambda(T) rho, lambda in the centre): the singlet
+PASS C2 E(a,b) = 4<(a (x) b) rho>_0 = -a.b in Cl3 (x)_Zc Cl3
+PASS C3 each marginal is a fair coin: 4<(a (x) 1) rho>_0 = 0 = 4<(1 (x) b) rho>_0
+NOTE C1/C2 in the 64-dim real tensor product Cl3 (x)_R Cl3: rho is still idempotent (True) but NOT primitive: it splits as rho(1 + I(x)I)/2 + rho(1 - I(x)I)/2, both non-zero (True); and the 1(x)1 coefficient of 4 (a(x)b) rho is 0 while its I(x)I coefficient is a1*b1 + a2*b2 + a3*b3. So E(a,b) = -a.b needs I(x)1 = 1(x)I, that is the tensor product over the centre, as the paper writes it; it FAILS over R.
+NOTE D17 over R: (1 + sum e_j(x)e_j)/4 = (1 - sum s_j(x)s_j)/4 is False in Cl3 (x)_R Cl3, True in Cl3 (x)_Zc Cl3
+PASS C4 [algebra-independent] deterministic +-1 answer sheets give S = +-2 exactly
+PASS C5 [algebra-independent] |S| = 2 sqrt 2 at b perp b', a ~ b-b', a' ~ b+b' (also with E taken from the native C2 correlation)
+PASS C6 [algebra-independent] |b-b'| + |b+b'| is maximised at b.b' = 0 with value 2 sqrt 2
+PASS U1 n = n.s: reversion-fixed, <n>_0 = 0, n^2 = |n|^2
+PASS U2 J_l J_l~ = (1 + |l|^2 |n|^2) + (l + l~) n, l in the centre
+PASS U3 alpha J = J J~ with |lambda| = 1 forces alpha = 2, lambda = +-1 (equations read off the components of alpha J_l - J_l J_l~ at n = s_3; general n by U2)
+PASS U4 J/2 = (1 +- n)/2 is an idempotent for unit n, and primitive: P T P = 2<T P>_{0+3} P for all T
+PASS R1 [algebra-independent] (1/2,1/2) x (1/2,1/2) = (0,0) + (1,0) + (0,1) + (1,1)
+PASS R2 [algebra-independent] Sym^2 = (0,0)+(1,1), Alt^2 = (1,0)+(0,1) [2-forms; grades 1+2 in the Clifford edition]
+PASS R3 [algebra-independent] dimension count 16 = 1 + 3 + 3 + 9
+PASS R4 [algebra-independent] (1/2,0) x (0,1/2) = (1/2,1/2): complexified congruence rep is the vector
+PASS R5 [algebra-independent] 1/2 x 1/2 = 0 + 1 for SU(2): adjoint on the generator slice and on the channel index is 1 + 3
+PASS R6 rotor conjugation p J p~ on (Z_a): real, block 1 + 3, e_0 singlet, 3x3 block in SO(3) (|p| = 1)
+PASS R7 [algebra-independent] I^alpha e^{s tau} = s^-alpha e^{s tau} (fractional integral, real s > 0 as in the matrix suite)
+PASS X1 25 exact random cases: J -> p J q~ (p, q even) keeps sum Z^2 and sum |Z|^2 (up to |p|^2 |q|^2)
+PASS D1 s_j s_k + s_k s_j = 2 delta; I = s1 s2 s3 is central, I^2 = -1
+PASS D7 e_j = -I s_j are bivectors (e_1 = s3 s2, e_2 = s1 s3, e_3 = s2 s1), I e_j = s_j, e_j~ = -e_j, <e_a e_b~>_0 = delta_ab
+PASS D8 <J J~>_0 = sum |Z_a|^2; J Jbar = sum Z_a^2 (same as B1, B2)
+PASS D9 paravector X Xbar = t^2 - |x|^2; X^2 - 2tX + N(X) = 0, so the spectrum is t +- |x|
+PASS D10 N(G X G~) = |N(G)|^2 N(X) (same as L8)
+PASS D11 rho = (1 + v)/2: 2<rho^2>_0 = (1 + v^2)/2, N(rho) = (1 - v^2)/4
+PASS D12 A = y0 I + y.e: N(A) = -y0^2 + |y|^2; N(I X) = -N(X) (same as K2, K3)
+PASS D13 kappa(A,B) = 8<A'B'>_{0+3} (K4); on bivectors kappa = 8<AB>_0 is real, N(A) = -A^2 = -kappa(A,A)/8
+PASS D14 real Killing form (tr(ad ad) on grades 1+2): +16|x|^2 on vectors, -16|y|^2 on bivectors, cross term 0
+PASS D15 on the even subalgebra reversion = Clifford conjugation, so J J~ = J Jbar is a real scalar
+PASS D16 P+- = (1 +- s_3)/2 are complementary idempotents; Cl P+ and Cl P- are left ideals of real dim 4 with Cl = Cl P+ (+) Cl P-
+PASS D17 joint closure (1 + sum e_j (x) e_j)/4 = (1 - sum s_j (x) s_j)/4 in Cl3 (x)_Zc Cl3; E(a,b) = -a.b
+PASS N1 real-linear maps Cl3 -> paravectors equivariant for J -> GJ, X -> G X G~ (N(G) = 1; generators = grades 1+2): dimension 0
+PASS N2 real-quadratic equivariant maps: dimension 4
+PASS N3 quadratic, also invariant under J -> JU (U U~ = 1; generators = grades 3+2): dimension 1, and the closure J J~ is that map
+PASS W1 A = (1/4)(U Vbar - V Ubar) lies in grades 1+2 (no central part) and N(A) = (1/4) det h, a real scalar (eta(u,v) = <U Vbar>_0, N(U) = eta(u,u))
+PASS W2 real Killing norm (tr(ad ad) on grades 1+2): kappa(A,A) = 16<A^2>_0 = -4 det h, so -det h = kappa(A,A)/4 = -4 N(A)
+PASS W3 equivariance: dU = BU + UB~, dV likewise (B in grades 1+2) gives dA = [B, A]
+PASS W4 a timelike plane is boost-like (A a vector, -det h > 0); a spacelike plane is rotation-like (A a bivector, -det h < 0)
+PASS T1 N(X) = <X>_0^2 + (1/8) kappa(IX, IX) for a paravector X, kappa = tr(ad ad) over the centre on Cl3; the same with kappa of the bivector Lie algebra on I x (the central part I t drops out)
+PASS T2 rotor-invariant quadratic forms on the paravectors are 2-dimensional, so the constants 1 and 1/8 are forced
+NOTE three-way relation with the REAL Killing form of grades 1+2 (16<AB>_0): kappa_R(Ix,Ix) = -16*(x**2 + y**2 + z**2), so the constant is 1/16 there, not 1/8 (True). The 1/8 belongs to kappa over the centre (the paper's complex Lie algebra) and to the Killing form of the bivector algebra.
+--- REP: Pauli representation (matrices appear only here) ---
+PASS REP1 blades -> Pauli words is multiplicative on all 64 blade pairs (and 1 -> 1): an algebra homomorphism
+PASS REP2 the 8 images are real-independent: the homomorphism is injective, onto M2(C) by dimension 8
+PASS REP-D3 rep(q~) = rep(q)^dagger (reversion = Hermitian conjugate)
+PASS REP-D4 rep(qbar) = adj rep(q), rep(N(q)) = det rep(q) 1 (Clifford conjugate = adjugate, N = det)
+PASS REP-D5 <q>_0 = (1/2) Re tr rep(q); rep(<q>_0 + <q>_3) = (1/2) tr rep(q) 1; rep(I) = i 1
+PASS REP-D6 rep(grades 0+1) = Hermitian part, rep(grades 2+3) = anti-Hermitian part
+PASS REP-D18 rep(q q~) = rep(q) rep(q)^dagger (U U~ = 1 is unitarity); rep(q qbar) = det (N = 1 is det = 1)
+PASS REP-D7 rep(e_j) = -i sigma_j (the channel units of the matrix edition)
+PASS REP-C the Kronecker product kills I(x)1 - 1(x)I and is injective on Cl3 (x)_Zc Cl3 (rank 32 = dim M4(C)); on the 64-dim Cl3 (x)_R Cl3 its rank is also only 32, so the matrix edition's Bell block is the tensor product over the centre
+
+104 passed, 0 failed, 0 not ported, 104 total
